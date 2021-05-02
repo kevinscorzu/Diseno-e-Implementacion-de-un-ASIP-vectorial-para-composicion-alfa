@@ -32,11 +32,17 @@ def generacionDegradado(R,G,B,pos,size):
                 deg[x][y][0] = int(x/size*B+y/size*B)
                 deg[x][y][1] = int(x/size*G+y/size*G)
                 deg[x][y][2] = int(x/size*R+y/size*R)
-    # if(pos==4):
+    if(pos=="p"):
+        for y in range(size):
+            for x in range(size):
+                deg[x][y][0] = int(x/size*B-y/size*B)
+                deg[x][y][1] = int(x/size*G+y/size*G)
+                deg[x][y][2] = int(x/size*R-y/size*R)
+
     return deg
 
 def composicionAlfa(transparenciaDegradado, pixelesDegradado):
-    imagen = cv2.imread("/home/skryfall/Projects/Degradado-Composicion/src/choco.png")
+    imagen = cv2.imread("/home/skryfall/Projects/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/PythonImplementation/src/choco.png")
     pixelesImagen = imagen
 
     #degradado = cv2.imread("/home/skryfall/Projects/Degradado-Composicion/src/degradado.jpg")
@@ -51,8 +57,8 @@ def composicionAlfa(transparenciaDegradado, pixelesDegradado):
             resultado[i][j][1] = int(imagen[i][j][1] * (1 - transparenciaDegradado) + degradado[i][j][1] * transparenciaDegradado)
             resultado[i][j][2] = int(imagen[i][j][2] * (1 - transparenciaDegradado) + degradado[i][j][2] * transparenciaDegradado)
 
-    cv2.imwrite("/home/skryfall/Projects/Degradado-Composicion/src/deg.jpg", pixelesDegradado)
-    cv2.imwrite("/home/skryfall/Projects/Degradado-Composicion/src/holi.jpg", resultado)
+    cv2.imwrite("/home/skryfall/Projects/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/PythonImplementation/src/deg.jpg", pixelesDegradado)
+    cv2.imwrite("/home/skryfall/Projects/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/PythonImplementation/src/holi.jpg", resultado)
 
 if __name__ == "__main__":
     intensidadRojo = -1
