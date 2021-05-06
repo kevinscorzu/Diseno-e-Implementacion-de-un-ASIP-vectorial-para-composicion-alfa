@@ -1,0 +1,41 @@
+|ControlUnit
+op[0] => op[0].IN1
+op[1] => op[1].IN1
+inst[0] => rmemE.IN1
+inst[0] => wregE.IN0
+inst[0] => Add0.IN2
+inst[0] => CondEn.IN1
+inst[0] => CondEn.IN1
+inst[0] => jmpF[1].DATAIN
+inst[1] => wregE.IN1
+inst[1] => Add1.IN2
+inst[1] => CondEn.IN1
+inst[1] => rmemE.IN1
+inst[1] => CondEn.IN1
+inst[1] => jmpF.IN1
+VF => wmemE.IN0
+VF => rmemE.IN1
+VF => wregE.IN1
+memF => wmemE.IN1
+wmemE <= wmemE.DB_MAX_OUTPUT_PORT_TYPE
+rmemE <= rmemE.DB_MAX_OUTPUT_PORT_TYPE
+wregE <= wregE.DB_MAX_OUTPUT_PORT_TYPE
+CondEn <= CondEn.DB_MAX_OUTPUT_PORT_TYPE
+jmpF[0] <= jmpF.DB_MAX_OUTPUT_PORT_TYPE
+jmpF[1] <= inst[0].DB_MAX_OUTPUT_PORT_TYPE
+ALUins[0] <= <GND>
+ALUins[1] <= <GND>
+ALUins[2] <= <GND>
+ExtndSel[0] <= ExtendDeco:ExtDeco.port1
+ExtndSel[1] <= ExtendDeco:ExtDeco.port1
+
+
+|ControlUnit|ExtendDeco:ExtDeco
+in[0] => Equal0.IN3
+in[0] => Equal1.IN3
+in[1] => Equal0.IN2
+in[1] => Equal1.IN2
+out[0] <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+
+
