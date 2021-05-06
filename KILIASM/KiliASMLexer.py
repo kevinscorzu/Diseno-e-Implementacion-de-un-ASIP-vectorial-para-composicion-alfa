@@ -8,6 +8,9 @@ tokens = [
 
 
 reservadas = {
+    #Reservadas
+    'INICIO': 'INICIO',
+    'FIN': 'FIN',
     #Escalares
     'STR': 'STR',
     'LDR': 'LDR',
@@ -16,12 +19,11 @@ reservadas = {
     'ADD': 'ADD',
     'SUB': 'SUB',
     'MUL': 'MUL',
-    'MOD': 'MOD',
     'CMPR': 'CMPR',
     'CMPI': 'CMPI',
     'JMP': 'JMP',
     'JEQ': 'JEQ',
-    'STL': 'SIG',
+    'STL': 'STL',
     #Vectoriales
     'STRV': 'STRV',
     'LDRV': 'LDRV',
@@ -46,7 +48,7 @@ def t_REGESCALAR(t):
     return t
 
 def t_REGVECTORIAL(t):
-    r'[V][0-9]+'
+    r'[V][0-7]+'
     if t.value.upper() in reservadas:
         t.value = t.value.upper()
         t.type = t.value
@@ -89,11 +91,8 @@ def KILIASMLexicalAnalizer(cadena):
         tok = analizador.token()
         if not tok: break
         lexerResult.append(tok)
-    print(lexerResult)
+    ##print(lexerResult)
     return lexerResult
 
 
-file = open("code")
-line = file.read()
 
-KILIASMLexicalAnalizer(line)
