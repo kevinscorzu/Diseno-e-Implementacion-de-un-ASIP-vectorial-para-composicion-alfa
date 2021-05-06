@@ -81,7 +81,7 @@ def p_REG(p):
         | REGVECTORIAL
     '''
     p[0] = p[1]
-    sintaxResult.append(p[0])
+    
     #print(p[0])
 
 def p_instructionDT(p):
