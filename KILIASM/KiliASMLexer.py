@@ -3,7 +3,7 @@ import ply.lex as lex
 
 tokens = [
     'COMA', 'PUNTOCOMA','DOSPUNTOS',
-    'REGESCALAR', 'REGVECTORIAL', 'IMM', 'LABEL'
+    'REGESCALAR', 'REGVECTORIAL', 'IMM', 'LABEL', "COMMENT"
 ]
 
 
@@ -45,6 +45,10 @@ def t_REGESCALAR(t):
     if t.value.upper() in reservadas:
         t.value = t.value.upper()
         t.type = t.value
+    return t
+
+def t_COMMENT(t):
+    r'(//.*?\n)'
     return t
 
 def t_REGVECTORIAL(t):

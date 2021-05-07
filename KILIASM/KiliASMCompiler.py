@@ -168,11 +168,12 @@ def analiceInst(inst, pc):
             jumpDir = jumpLabels.get(inst[1])
             pcmenosjmpAdd = int(jumpDir, 16) - int(pc, 16)
 
-            print(pcmenosjmpAdd)
+
 
             if (pcmenosjmpAdd < 0):
 
-                pcmenosjmpAdd = bin(abs(pcmenosjmpAdd))[4:]
+                pcmenosjmpAdd = bin(abs(pcmenosjmpAdd))[2:]
+
 
                 complemento = complementoADos(pcmenosjmpAdd)
                 binCode += complemento

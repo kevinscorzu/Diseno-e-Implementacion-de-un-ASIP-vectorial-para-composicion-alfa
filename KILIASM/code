@@ -1,8 +1,10 @@
 INICIO:
 
 
-
-MOVI R2,4;
-LDR R2,R3;
+oscar:
+MOVI R2,4; //hola
+LDR R2,R3; //como
+//estas
+JMP oscar;
 
 FIN

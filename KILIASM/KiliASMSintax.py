@@ -21,8 +21,17 @@ def p_cuerpo(p):
     '''
     cuerpo : instruccion
             | label
+            | comment
     '''
     p[0] = (p[1])
+    #sintaxResult.append(p[0])
+def p_Comment(p):
+    '''
+    comment : COMMENT  cuerpo
+            | COMMENT empty
+
+    '''
+
     #sintaxResult.append(p[0])
 
 def p_label(p):
