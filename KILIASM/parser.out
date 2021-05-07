@@ -18,80 +18,79 @@ Rule 12    instructionSTL -> STL PUNTOCOMA cuerpo
 Rule 13    instructionSTL -> empty
 Rule 14    instructionDI -> instructionDIName REG COMA REG PUNTOCOMA cuerpo
 Rule 15    instructionDI -> empty
-Rule 16    instructionI -> instructionIName LABEL PUNTOCOMA cuerpo
-Rule 17    instructionI -> instructionIName REG COMA IMM PUNTOCOMA cuerpo
-Rule 18    instructionI -> empty
-Rule 19    REG -> REGESCALAR
-Rule 20    REG -> REGVECTORIAL
-Rule 21    instructionDT -> instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo
-Rule 22    instructionDT -> empty
-Rule 23    instructionN -> instructionNName LABEL PUNTOCOMA cuerpo
-Rule 24    instructionN -> empty
-Rule 25    instructionDIName -> STR
-Rule 26    instructionDIName -> LDR
-Rule 27    instructionDIName -> MOVR
-Rule 28    instructionDIName -> CMPR
-Rule 29    instructionDIName -> STRV
-Rule 30    instructionDIName -> LDRV
-Rule 31    instructionIName -> MOVI
-Rule 32    instructionIName -> CMPI
-Rule 33    instructionDTName -> ADD
-Rule 34    instructionDTName -> SUB
-Rule 35    instructionDTName -> MUL
-Rule 36    instructionDTName -> ADDVV
-Rule 37    instructionDTName -> MULVE
-Rule 38    instructionDTName -> DIVVE
-Rule 39    instructionNName -> JMP
-Rule 40    instructionNName -> JEQ
-Rule 41    instructionNName -> STL
-Rule 42    empty -> <empty>
+Rule 16    instructionI -> instructionIName REG COMA IMM PUNTOCOMA cuerpo
+Rule 17    instructionI -> empty
+Rule 18    REG -> REGESCALAR
+Rule 19    REG -> REGVECTORIAL
+Rule 20    instructionDT -> instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo
+Rule 21    instructionDT -> empty
+Rule 22    instructionN -> instructionNName LABEL PUNTOCOMA cuerpo
+Rule 23    instructionN -> empty
+Rule 24    instructionDIName -> STR
+Rule 25    instructionDIName -> LDR
+Rule 26    instructionDIName -> MOVR
+Rule 27    instructionDIName -> CMPR
+Rule 28    instructionDIName -> STRV
+Rule 29    instructionDIName -> LDRV
+Rule 30    instructionIName -> MOVI
+Rule 31    instructionIName -> CMPI
+Rule 32    instructionDTName -> ADD
+Rule 33    instructionDTName -> SUB
+Rule 34    instructionDTName -> MUL
+Rule 35    instructionDTName -> ADDVV
+Rule 36    instructionDTName -> MULVE
+Rule 37    instructionDTName -> DIVVE
+Rule 38    instructionNName -> JMP
+Rule 39    instructionNName -> JEQ
+Rule 40    instructionNName -> STL
+Rule 41    empty -> <empty>
 
 Terminals, with rules where they appear
 
-ADD                  : 33
-ADDVV                : 36
-CMPI                 : 32
-CMPR                 : 28
-COMA                 : 14 17 21 21
-DIVVE                : 38
+ADD                  : 32
+ADDVV                : 35
+CMPI                 : 31
+CMPR                 : 27
+COMA                 : 14 16 20 20
+DIVVE                : 37
 DOSPUNTOS            : 2 5
 FIN                  : 2
-IMM                  : 17
+IMM                  : 16
 INICIO               : 2
-JEQ                  : 40
-JMP                  : 39
-LABEL                : 5 16 23
-LDR                  : 26
-LDRV                 : 30
-MOVI                 : 31
-MOVR                 : 27
-MUL                  : 35
-MULVE                : 37
-PUNTOCOMA            : 12 14 16 17 21 23
-REGESCALAR           : 19
-REGVECTORIAL         : 20
-STL                  : 12 41
-STR                  : 25
-STRV                 : 29
-SUB                  : 34
+JEQ                  : 39
+JMP                  : 38
+LABEL                : 5 22
+LDR                  : 25
+LDRV                 : 29
+MOVI                 : 30
+MOVR                 : 26
+MUL                  : 34
+MULVE                : 36
+PUNTOCOMA            : 12 14 16 20 22
+REGESCALAR           : 18
+REGVECTORIAL         : 19
+STL                  : 12 40
+STR                  : 24
+STRV                 : 28
+SUB                  : 33
 error                : 
 
 Nonterminals, with rules where they appear
 
-REG                  : 14 14 17 21 21 21
+REG                  : 14 14 16 20 20 20
 Start                : 0
 code                 : 1
-cuerpo               : 2 5 12 14 16 17 21 23
-empty                : 6 13 15 18 22 24
+cuerpo               : 2 5 12 14 16 20 22
+empty                : 6 13 15 17 21 23
 instruccion          : 3
 instructionDI        : 7
 instructionDIName    : 14
 instructionDT        : 9
-instructionDTName    : 21
+instructionDTName    : 20
 instructionI         : 8
-instructionIName     : 16 17
+instructionIName     : 16
 instructionN         : 10
-instructionNName     : 23
+instructionNName     : 22
 instructionSTL       : 11
 label                : 4
 
@@ -142,37 +141,36 @@ state 4
     (6) label -> . empty
     (14) instructionDI -> . instructionDIName REG COMA REG PUNTOCOMA cuerpo
     (15) instructionDI -> . empty
-    (16) instructionI -> . instructionIName LABEL PUNTOCOMA cuerpo
-    (17) instructionI -> . instructionIName REG COMA IMM PUNTOCOMA cuerpo
-    (18) instructionI -> . empty
-    (21) instructionDT -> . instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo
-    (22) instructionDT -> . empty
-    (23) instructionN -> . instructionNName LABEL PUNTOCOMA cuerpo
-    (24) instructionN -> . empty
+    (16) instructionI -> . instructionIName REG COMA IMM PUNTOCOMA cuerpo
+    (17) instructionI -> . empty
+    (20) instructionDT -> . instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo
+    (21) instructionDT -> . empty
+    (22) instructionN -> . instructionNName LABEL PUNTOCOMA cuerpo
+    (23) instructionN -> . empty
     (12) instructionSTL -> . STL PUNTOCOMA cuerpo
     (13) instructionSTL -> . empty
-    (42) empty -> .
-    (25) instructionDIName -> . STR
-    (26) instructionDIName -> . LDR
-    (27) instructionDIName -> . MOVR
-    (28) instructionDIName -> . CMPR
-    (29) instructionDIName -> . STRV
-    (30) instructionDIName -> . LDRV
-    (31) instructionIName -> . MOVI
-    (32) instructionIName -> . CMPI
-    (33) instructionDTName -> . ADD
-    (34) instructionDTName -> . SUB
-    (35) instructionDTName -> . MUL
-    (36) instructionDTName -> . ADDVV
-    (37) instructionDTName -> . MULVE
-    (38) instructionDTName -> . DIVVE
-    (39) instructionNName -> . JMP
-    (40) instructionNName -> . JEQ
-    (41) instructionNName -> . STL
+    (41) empty -> .
+    (24) instructionDIName -> . STR
+    (25) instructionDIName -> . LDR
+    (26) instructionDIName -> . MOVR
+    (27) instructionDIName -> . CMPR
+    (28) instructionDIName -> . STRV
+    (29) instructionDIName -> . LDRV
+    (30) instructionIName -> . MOVI
+    (31) instructionIName -> . CMPI
+    (32) instructionDTName -> . ADD
+    (33) instructionDTName -> . SUB
+    (34) instructionDTName -> . MUL
+    (35) instructionDTName -> . ADDVV
+    (36) instructionDTName -> . MULVE
+    (37) instructionDTName -> . DIVVE
+    (38) instructionNName -> . JMP
+    (39) instructionNName -> . JEQ
+    (40) instructionNName -> . STL
 
     LABEL           shift and go to state 13
     STL             shift and go to state 19
-    FIN             reduce using rule 42 (empty -> .)
+    FIN             reduce using rule 41 (empty -> .)
     STR             shift and go to state 20
     LDR             shift and go to state 21
     MOVR            shift and go to state 22
@@ -271,9 +269,9 @@ state 14
 
     (6) label -> empty .
     (15) instructionDI -> empty .
-    (18) instructionI -> empty .
-    (22) instructionDT -> empty .
-    (24) instructionN -> empty .
+    (17) instructionI -> empty .
+    (21) instructionDT -> empty .
+    (23) instructionN -> empty .
     (13) instructionSTL -> empty .
 
   ! reduce/reduce conflict for FIN resolved using rule 6 (label -> empty .)
@@ -284,17 +282,17 @@ state 14
     FIN             reduce using rule 6 (label -> empty .)
 
   ! FIN             [ reduce using rule 15 (instructionDI -> empty .) ]
-  ! FIN             [ reduce using rule 18 (instructionI -> empty .) ]
-  ! FIN             [ reduce using rule 22 (instructionDT -> empty .) ]
-  ! FIN             [ reduce using rule 24 (instructionN -> empty .) ]
+  ! FIN             [ reduce using rule 17 (instructionI -> empty .) ]
+  ! FIN             [ reduce using rule 21 (instructionDT -> empty .) ]
+  ! FIN             [ reduce using rule 23 (instructionN -> empty .) ]
   ! FIN             [ reduce using rule 13 (instructionSTL -> empty .) ]
 
 
 state 15
 
     (14) instructionDI -> instructionDIName . REG COMA REG PUNTOCOMA cuerpo
-    (19) REG -> . REGESCALAR
-    (20) REG -> . REGVECTORIAL
+    (18) REG -> . REGESCALAR
+    (19) REG -> . REGVECTORIAL
 
     REGESCALAR      shift and go to state 39
     REGVECTORIAL    shift and go to state 40
@@ -303,170 +301,166 @@ state 15
 
 state 16
 
-    (16) instructionI -> instructionIName . LABEL PUNTOCOMA cuerpo
-    (17) instructionI -> instructionIName . REG COMA IMM PUNTOCOMA cuerpo
-    (19) REG -> . REGESCALAR
-    (20) REG -> . REGVECTORIAL
+    (16) instructionI -> instructionIName . REG COMA IMM PUNTOCOMA cuerpo
+    (18) REG -> . REGESCALAR
+    (19) REG -> . REGVECTORIAL
 
-    LABEL           shift and go to state 41
+    REGESCALAR      shift and go to state 39
+    REGVECTORIAL    shift and go to state 40
+
+    REG                            shift and go to state 41
+
+state 17
+
+    (20) instructionDT -> instructionDTName . REG COMA REG COMA REG PUNTOCOMA cuerpo
+    (18) REG -> . REGESCALAR
+    (19) REG -> . REGVECTORIAL
+
     REGESCALAR      shift and go to state 39
     REGVECTORIAL    shift and go to state 40
 
     REG                            shift and go to state 42
 
-state 17
-
-    (21) instructionDT -> instructionDTName . REG COMA REG COMA REG PUNTOCOMA cuerpo
-    (19) REG -> . REGESCALAR
-    (20) REG -> . REGVECTORIAL
-
-    REGESCALAR      shift and go to state 39
-    REGVECTORIAL    shift and go to state 40
-
-    REG                            shift and go to state 43
-
 state 18
 
-    (23) instructionN -> instructionNName . LABEL PUNTOCOMA cuerpo
+    (22) instructionN -> instructionNName . LABEL PUNTOCOMA cuerpo
 
-    LABEL           shift and go to state 44
+    LABEL           shift and go to state 43
 
 
 state 19
 
     (12) instructionSTL -> STL . PUNTOCOMA cuerpo
-    (41) instructionNName -> STL .
+    (40) instructionNName -> STL .
 
-    PUNTOCOMA       shift and go to state 45
-    LABEL           reduce using rule 41 (instructionNName -> STL .)
+    PUNTOCOMA       shift and go to state 44
+    LABEL           reduce using rule 40 (instructionNName -> STL .)
 
 
 state 20
 
-    (25) instructionDIName -> STR .
+    (24) instructionDIName -> STR .
 
-    REGESCALAR      reduce using rule 25 (instructionDIName -> STR .)
-    REGVECTORIAL    reduce using rule 25 (instructionDIName -> STR .)
+    REGESCALAR      reduce using rule 24 (instructionDIName -> STR .)
+    REGVECTORIAL    reduce using rule 24 (instructionDIName -> STR .)
 
 
 state 21
 
-    (26) instructionDIName -> LDR .
+    (25) instructionDIName -> LDR .
 
-    REGESCALAR      reduce using rule 26 (instructionDIName -> LDR .)
-    REGVECTORIAL    reduce using rule 26 (instructionDIName -> LDR .)
+    REGESCALAR      reduce using rule 25 (instructionDIName -> LDR .)
+    REGVECTORIAL    reduce using rule 25 (instructionDIName -> LDR .)
 
 
 state 22
 
-    (27) instructionDIName -> MOVR .
+    (26) instructionDIName -> MOVR .
 
-    REGESCALAR      reduce using rule 27 (instructionDIName -> MOVR .)
-    REGVECTORIAL    reduce using rule 27 (instructionDIName -> MOVR .)
+    REGESCALAR      reduce using rule 26 (instructionDIName -> MOVR .)
+    REGVECTORIAL    reduce using rule 26 (instructionDIName -> MOVR .)
 
 
 state 23
 
-    (28) instructionDIName -> CMPR .
+    (27) instructionDIName -> CMPR .
 
-    REGESCALAR      reduce using rule 28 (instructionDIName -> CMPR .)
-    REGVECTORIAL    reduce using rule 28 (instructionDIName -> CMPR .)
+    REGESCALAR      reduce using rule 27 (instructionDIName -> CMPR .)
+    REGVECTORIAL    reduce using rule 27 (instructionDIName -> CMPR .)
 
 
 state 24
 
-    (29) instructionDIName -> STRV .
+    (28) instructionDIName -> STRV .
 
-    REGESCALAR      reduce using rule 29 (instructionDIName -> STRV .)
-    REGVECTORIAL    reduce using rule 29 (instructionDIName -> STRV .)
+    REGESCALAR      reduce using rule 28 (instructionDIName -> STRV .)
+    REGVECTORIAL    reduce using rule 28 (instructionDIName -> STRV .)
 
 
 state 25
 
-    (30) instructionDIName -> LDRV .
+    (29) instructionDIName -> LDRV .
 
-    REGESCALAR      reduce using rule 30 (instructionDIName -> LDRV .)
-    REGVECTORIAL    reduce using rule 30 (instructionDIName -> LDRV .)
+    REGESCALAR      reduce using rule 29 (instructionDIName -> LDRV .)
+    REGVECTORIAL    reduce using rule 29 (instructionDIName -> LDRV .)
 
 
 state 26
 
-    (31) instructionIName -> MOVI .
+    (30) instructionIName -> MOVI .
 
-    LABEL           reduce using rule 31 (instructionIName -> MOVI .)
-    REGESCALAR      reduce using rule 31 (instructionIName -> MOVI .)
-    REGVECTORIAL    reduce using rule 31 (instructionIName -> MOVI .)
+    REGESCALAR      reduce using rule 30 (instructionIName -> MOVI .)
+    REGVECTORIAL    reduce using rule 30 (instructionIName -> MOVI .)
 
 
 state 27
 
-    (32) instructionIName -> CMPI .
+    (31) instructionIName -> CMPI .
 
-    LABEL           reduce using rule 32 (instructionIName -> CMPI .)
-    REGESCALAR      reduce using rule 32 (instructionIName -> CMPI .)
-    REGVECTORIAL    reduce using rule 32 (instructionIName -> CMPI .)
+    REGESCALAR      reduce using rule 31 (instructionIName -> CMPI .)
+    REGVECTORIAL    reduce using rule 31 (instructionIName -> CMPI .)
 
 
 state 28
 
-    (33) instructionDTName -> ADD .
+    (32) instructionDTName -> ADD .
 
-    REGESCALAR      reduce using rule 33 (instructionDTName -> ADD .)
-    REGVECTORIAL    reduce using rule 33 (instructionDTName -> ADD .)
+    REGESCALAR      reduce using rule 32 (instructionDTName -> ADD .)
+    REGVECTORIAL    reduce using rule 32 (instructionDTName -> ADD .)
 
 
 state 29
 
-    (34) instructionDTName -> SUB .
+    (33) instructionDTName -> SUB .
 
-    REGESCALAR      reduce using rule 34 (instructionDTName -> SUB .)
-    REGVECTORIAL    reduce using rule 34 (instructionDTName -> SUB .)
+    REGESCALAR      reduce using rule 33 (instructionDTName -> SUB .)
+    REGVECTORIAL    reduce using rule 33 (instructionDTName -> SUB .)
 
 
 state 30
 
-    (35) instructionDTName -> MUL .
+    (34) instructionDTName -> MUL .
 
-    REGESCALAR      reduce using rule 35 (instructionDTName -> MUL .)
-    REGVECTORIAL    reduce using rule 35 (instructionDTName -> MUL .)
+    REGESCALAR      reduce using rule 34 (instructionDTName -> MUL .)
+    REGVECTORIAL    reduce using rule 34 (instructionDTName -> MUL .)
 
 
 state 31
 
-    (36) instructionDTName -> ADDVV .
+    (35) instructionDTName -> ADDVV .
 
-    REGESCALAR      reduce using rule 36 (instructionDTName -> ADDVV .)
-    REGVECTORIAL    reduce using rule 36 (instructionDTName -> ADDVV .)
+    REGESCALAR      reduce using rule 35 (instructionDTName -> ADDVV .)
+    REGVECTORIAL    reduce using rule 35 (instructionDTName -> ADDVV .)
 
 
 state 32
 
-    (37) instructionDTName -> MULVE .
+    (36) instructionDTName -> MULVE .
 
-    REGESCALAR      reduce using rule 37 (instructionDTName -> MULVE .)
-    REGVECTORIAL    reduce using rule 37 (instructionDTName -> MULVE .)
+    REGESCALAR      reduce using rule 36 (instructionDTName -> MULVE .)
+    REGVECTORIAL    reduce using rule 36 (instructionDTName -> MULVE .)
 
 
 state 33
 
-    (38) instructionDTName -> DIVVE .
+    (37) instructionDTName -> DIVVE .
 
-    REGESCALAR      reduce using rule 38 (instructionDTName -> DIVVE .)
-    REGVECTORIAL    reduce using rule 38 (instructionDTName -> DIVVE .)
+    REGESCALAR      reduce using rule 37 (instructionDTName -> DIVVE .)
+    REGVECTORIAL    reduce using rule 37 (instructionDTName -> DIVVE .)
 
 
 state 34
 
-    (39) instructionNName -> JMP .
+    (38) instructionNName -> JMP .
 
-    LABEL           reduce using rule 39 (instructionNName -> JMP .)
+    LABEL           reduce using rule 38 (instructionNName -> JMP .)
 
 
 state 35
 
-    (40) instructionNName -> JEQ .
+    (39) instructionNName -> JEQ .
 
-    LABEL           reduce using rule 40 (instructionNName -> JEQ .)
+    LABEL           reduce using rule 39 (instructionNName -> JEQ .)
 
 
 state 36
@@ -490,37 +484,36 @@ state 37
     (6) label -> . empty
     (14) instructionDI -> . instructionDIName REG COMA REG PUNTOCOMA cuerpo
     (15) instructionDI -> . empty
-    (16) instructionI -> . instructionIName LABEL PUNTOCOMA cuerpo
-    (17) instructionI -> . instructionIName REG COMA IMM PUNTOCOMA cuerpo
-    (18) instructionI -> . empty
-    (21) instructionDT -> . instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo
-    (22) instructionDT -> . empty
-    (23) instructionN -> . instructionNName LABEL PUNTOCOMA cuerpo
-    (24) instructionN -> . empty
+    (16) instructionI -> . instructionIName REG COMA IMM PUNTOCOMA cuerpo
+    (17) instructionI -> . empty
+    (20) instructionDT -> . instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo
+    (21) instructionDT -> . empty
+    (22) instructionN -> . instructionNName LABEL PUNTOCOMA cuerpo
+    (23) instructionN -> . empty
     (12) instructionSTL -> . STL PUNTOCOMA cuerpo
     (13) instructionSTL -> . empty
-    (42) empty -> .
-    (25) instructionDIName -> . STR
-    (26) instructionDIName -> . LDR
-    (27) instructionDIName -> . MOVR
-    (28) instructionDIName -> . CMPR
-    (29) instructionDIName -> . STRV
-    (30) instructionDIName -> . LDRV
-    (31) instructionIName -> . MOVI
-    (32) instructionIName -> . CMPI
-    (33) instructionDTName -> . ADD
-    (34) instructionDTName -> . SUB
-    (35) instructionDTName -> . MUL
-    (36) instructionDTName -> . ADDVV
-    (37) instructionDTName -> . MULVE
-    (38) instructionDTName -> . DIVVE
-    (39) instructionNName -> . JMP
-    (40) instructionNName -> . JEQ
-    (41) instructionNName -> . STL
+    (41) empty -> .
+    (24) instructionDIName -> . STR
+    (25) instructionDIName -> . LDR
+    (26) instructionDIName -> . MOVR
+    (27) instructionDIName -> . CMPR
+    (28) instructionDIName -> . STRV
+    (29) instructionDIName -> . LDRV
+    (30) instructionIName -> . MOVI
+    (31) instructionIName -> . CMPI
+    (32) instructionDTName -> . ADD
+    (33) instructionDTName -> . SUB
+    (34) instructionDTName -> . MUL
+    (35) instructionDTName -> . ADDVV
+    (36) instructionDTName -> . MULVE
+    (37) instructionDTName -> . DIVVE
+    (38) instructionNName -> . JMP
+    (39) instructionNName -> . JEQ
+    (40) instructionNName -> . STL
 
     LABEL           shift and go to state 13
     STL             shift and go to state 19
-    FIN             reduce using rule 42 (empty -> .)
+    FIN             reduce using rule 41 (empty -> .)
     STR             shift and go to state 20
     LDR             shift and go to state 21
     MOVR            shift and go to state 22
@@ -538,7 +531,7 @@ state 37
     JMP             shift and go to state 34
     JEQ             shift and go to state 35
 
-    cuerpo                         shift and go to state 46
+    cuerpo                         shift and go to state 45
     instruccion                    shift and go to state 6
     label                          shift and go to state 7
     instructionDI                  shift and go to state 8
@@ -556,54 +549,47 @@ state 38
 
     (14) instructionDI -> instructionDIName REG . COMA REG PUNTOCOMA cuerpo
 
-    COMA            shift and go to state 47
+    COMA            shift and go to state 46
 
 
 state 39
 
-    (19) REG -> REGESCALAR .
+    (18) REG -> REGESCALAR .
 
-    COMA            reduce using rule 19 (REG -> REGESCALAR .)
-    PUNTOCOMA       reduce using rule 19 (REG -> REGESCALAR .)
+    COMA            reduce using rule 18 (REG -> REGESCALAR .)
+    PUNTOCOMA       reduce using rule 18 (REG -> REGESCALAR .)
 
 
 state 40
 
-    (20) REG -> REGVECTORIAL .
+    (19) REG -> REGVECTORIAL .
 
-    COMA            reduce using rule 20 (REG -> REGVECTORIAL .)
-    PUNTOCOMA       reduce using rule 20 (REG -> REGVECTORIAL .)
+    COMA            reduce using rule 19 (REG -> REGVECTORIAL .)
+    PUNTOCOMA       reduce using rule 19 (REG -> REGVECTORIAL .)
 
 
 state 41
 
-    (16) instructionI -> instructionIName LABEL . PUNTOCOMA cuerpo
+    (16) instructionI -> instructionIName REG . COMA IMM PUNTOCOMA cuerpo
 
-    PUNTOCOMA       shift and go to state 48
+    COMA            shift and go to state 47
 
 
 state 42
 
-    (17) instructionI -> instructionIName REG . COMA IMM PUNTOCOMA cuerpo
+    (20) instructionDT -> instructionDTName REG . COMA REG COMA REG PUNTOCOMA cuerpo
 
-    COMA            shift and go to state 49
+    COMA            shift and go to state 48
 
 
 state 43
 
-    (21) instructionDT -> instructionDTName REG . COMA REG COMA REG PUNTOCOMA cuerpo
+    (22) instructionN -> instructionNName LABEL . PUNTOCOMA cuerpo
 
-    COMA            shift and go to state 50
+    PUNTOCOMA       shift and go to state 49
 
 
 state 44
-
-    (23) instructionN -> instructionNName LABEL . PUNTOCOMA cuerpo
-
-    PUNTOCOMA       shift and go to state 51
-
-
-state 45
 
     (12) instructionSTL -> STL PUNTOCOMA . cuerpo
     (3) cuerpo -> . instruccion
@@ -617,37 +603,36 @@ state 45
     (6) label -> . empty
     (14) instructionDI -> . instructionDIName REG COMA REG PUNTOCOMA cuerpo
     (15) instructionDI -> . empty
-    (16) instructionI -> . instructionIName LABEL PUNTOCOMA cuerpo
-    (17) instructionI -> . instructionIName REG COMA IMM PUNTOCOMA cuerpo
-    (18) instructionI -> . empty
-    (21) instructionDT -> . instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo
-    (22) instructionDT -> . empty
-    (23) instructionN -> . instructionNName LABEL PUNTOCOMA cuerpo
-    (24) instructionN -> . empty
+    (16) instructionI -> . instructionIName REG COMA IMM PUNTOCOMA cuerpo
+    (17) instructionI -> . empty
+    (20) instructionDT -> . instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo
+    (21) instructionDT -> . empty
+    (22) instructionN -> . instructionNName LABEL PUNTOCOMA cuerpo
+    (23) instructionN -> . empty
     (12) instructionSTL -> . STL PUNTOCOMA cuerpo
     (13) instructionSTL -> . empty
-    (42) empty -> .
-    (25) instructionDIName -> . STR
-    (26) instructionDIName -> . LDR
-    (27) instructionDIName -> . MOVR
-    (28) instructionDIName -> . CMPR
-    (29) instructionDIName -> . STRV
-    (30) instructionDIName -> . LDRV
-    (31) instructionIName -> . MOVI
-    (32) instructionIName -> . CMPI
-    (33) instructionDTName -> . ADD
-    (34) instructionDTName -> . SUB
-    (35) instructionDTName -> . MUL
-    (36) instructionDTName -> . ADDVV
-    (37) instructionDTName -> . MULVE
-    (38) instructionDTName -> . DIVVE
-    (39) instructionNName -> . JMP
-    (40) instructionNName -> . JEQ
-    (41) instructionNName -> . STL
+    (41) empty -> .
+    (24) instructionDIName -> . STR
+    (25) instructionDIName -> . LDR
+    (26) instructionDIName -> . MOVR
+    (27) instructionDIName -> . CMPR
+    (28) instructionDIName -> . STRV
+    (29) instructionDIName -> . LDRV
+    (30) instructionIName -> . MOVI
+    (31) instructionIName -> . CMPI
+    (32) instructionDTName -> . ADD
+    (33) instructionDTName -> . SUB
+    (34) instructionDTName -> . MUL
+    (35) instructionDTName -> . ADDVV
+    (36) instructionDTName -> . MULVE
+    (37) instructionDTName -> . DIVVE
+    (38) instructionNName -> . JMP
+    (39) instructionNName -> . JEQ
+    (40) instructionNName -> . STL
 
     LABEL           shift and go to state 13
     STL             shift and go to state 19
-    FIN             reduce using rule 42 (empty -> .)
+    FIN             reduce using rule 41 (empty -> .)
     STR             shift and go to state 20
     LDR             shift and go to state 21
     MOVR            shift and go to state 22
@@ -665,7 +650,7 @@ state 45
     JMP             shift and go to state 34
     JEQ             shift and go to state 35
 
-    cuerpo                         shift and go to state 52
+    cuerpo                         shift and go to state 50
     instruccion                    shift and go to state 6
     label                          shift and go to state 7
     instructionDI                  shift and go to state 8
@@ -679,27 +664,45 @@ state 45
     instructionDTName              shift and go to state 17
     instructionNName               shift and go to state 18
 
-state 46
+state 45
 
     (5) label -> LABEL DOSPUNTOS cuerpo .
 
     FIN             reduce using rule 5 (label -> LABEL DOSPUNTOS cuerpo .)
 
 
-state 47
+state 46
 
     (14) instructionDI -> instructionDIName REG COMA . REG PUNTOCOMA cuerpo
-    (19) REG -> . REGESCALAR
-    (20) REG -> . REGVECTORIAL
+    (18) REG -> . REGESCALAR
+    (19) REG -> . REGVECTORIAL
+
+    REGESCALAR      shift and go to state 39
+    REGVECTORIAL    shift and go to state 40
+
+    REG                            shift and go to state 51
+
+state 47
+
+    (16) instructionI -> instructionIName REG COMA . IMM PUNTOCOMA cuerpo
+
+    IMM             shift and go to state 52
+
+
+state 48
+
+    (20) instructionDT -> instructionDTName REG COMA . REG COMA REG PUNTOCOMA cuerpo
+    (18) REG -> . REGESCALAR
+    (19) REG -> . REGVECTORIAL
 
     REGESCALAR      shift and go to state 39
     REGVECTORIAL    shift and go to state 40
 
     REG                            shift and go to state 53
 
-state 48
+state 49
 
-    (16) instructionI -> instructionIName LABEL PUNTOCOMA . cuerpo
+    (22) instructionN -> instructionNName LABEL PUNTOCOMA . cuerpo
     (3) cuerpo -> . instruccion
     (4) cuerpo -> . label
     (7) instruccion -> . instructionDI
@@ -711,37 +714,36 @@ state 48
     (6) label -> . empty
     (14) instructionDI -> . instructionDIName REG COMA REG PUNTOCOMA cuerpo
     (15) instructionDI -> . empty
-    (16) instructionI -> . instructionIName LABEL PUNTOCOMA cuerpo
-    (17) instructionI -> . instructionIName REG COMA IMM PUNTOCOMA cuerpo
-    (18) instructionI -> . empty
-    (21) instructionDT -> . instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo
-    (22) instructionDT -> . empty
-    (23) instructionN -> . instructionNName LABEL PUNTOCOMA cuerpo
-    (24) instructionN -> . empty
+    (16) instructionI -> . instructionIName REG COMA IMM PUNTOCOMA cuerpo
+    (17) instructionI -> . empty
+    (20) instructionDT -> . instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo
+    (21) instructionDT -> . empty
+    (22) instructionN -> . instructionNName LABEL PUNTOCOMA cuerpo
+    (23) instructionN -> . empty
     (12) instructionSTL -> . STL PUNTOCOMA cuerpo
     (13) instructionSTL -> . empty
-    (42) empty -> .
-    (25) instructionDIName -> . STR
-    (26) instructionDIName -> . LDR
-    (27) instructionDIName -> . MOVR
-    (28) instructionDIName -> . CMPR
-    (29) instructionDIName -> . STRV
-    (30) instructionDIName -> . LDRV
-    (31) instructionIName -> . MOVI
-    (32) instructionIName -> . CMPI
-    (33) instructionDTName -> . ADD
-    (34) instructionDTName -> . SUB
-    (35) instructionDTName -> . MUL
-    (36) instructionDTName -> . ADDVV
-    (37) instructionDTName -> . MULVE
-    (38) instructionDTName -> . DIVVE
-    (39) instructionNName -> . JMP
-    (40) instructionNName -> . JEQ
-    (41) instructionNName -> . STL
+    (41) empty -> .
+    (24) instructionDIName -> . STR
+    (25) instructionDIName -> . LDR
+    (26) instructionDIName -> . MOVR
+    (27) instructionDIName -> . CMPR
+    (28) instructionDIName -> . STRV
+    (29) instructionDIName -> . LDRV
+    (30) instructionIName -> . MOVI
+    (31) instructionIName -> . CMPI
+    (32) instructionDTName -> . ADD
+    (33) instructionDTName -> . SUB
+    (34) instructionDTName -> . MUL
+    (35) instructionDTName -> . ADDVV
+    (36) instructionDTName -> . MULVE
+    (37) instructionDTName -> . DIVVE
+    (38) instructionNName -> . JMP
+    (39) instructionNName -> . JEQ
+    (40) instructionNName -> . STL
 
     LABEL           shift and go to state 13
     STL             shift and go to state 19
-    FIN             reduce using rule 42 (empty -> .)
+    FIN             reduce using rule 41 (empty -> .)
     STR             shift and go to state 20
     LDR             shift and go to state 21
     MOVR            shift and go to state 22
@@ -759,7 +761,7 @@ state 48
     JMP             shift and go to state 34
     JEQ             shift and go to state 35
 
-    instructionIName               shift and go to state 16
+    instructionNName               shift and go to state 18
     cuerpo                         shift and go to state 54
     instruccion                    shift and go to state 6
     label                          shift and go to state 7
@@ -770,146 +772,45 @@ state 48
     instructionSTL                 shift and go to state 12
     empty                          shift and go to state 14
     instructionDIName              shift and go to state 15
-    instructionDTName              shift and go to state 17
-    instructionNName               shift and go to state 18
-
-state 49
-
-    (17) instructionI -> instructionIName REG COMA . IMM PUNTOCOMA cuerpo
-
-    IMM             shift and go to state 55
-
-
-state 50
-
-    (21) instructionDT -> instructionDTName REG COMA . REG COMA REG PUNTOCOMA cuerpo
-    (19) REG -> . REGESCALAR
-    (20) REG -> . REGVECTORIAL
-
-    REGESCALAR      shift and go to state 39
-    REGVECTORIAL    shift and go to state 40
-
-    REG                            shift and go to state 56
-
-state 51
-
-    (23) instructionN -> instructionNName LABEL PUNTOCOMA . cuerpo
-    (3) cuerpo -> . instruccion
-    (4) cuerpo -> . label
-    (7) instruccion -> . instructionDI
-    (8) instruccion -> . instructionI
-    (9) instruccion -> . instructionDT
-    (10) instruccion -> . instructionN
-    (11) instruccion -> . instructionSTL
-    (5) label -> . LABEL DOSPUNTOS cuerpo
-    (6) label -> . empty
-    (14) instructionDI -> . instructionDIName REG COMA REG PUNTOCOMA cuerpo
-    (15) instructionDI -> . empty
-    (16) instructionI -> . instructionIName LABEL PUNTOCOMA cuerpo
-    (17) instructionI -> . instructionIName REG COMA IMM PUNTOCOMA cuerpo
-    (18) instructionI -> . empty
-    (21) instructionDT -> . instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo
-    (22) instructionDT -> . empty
-    (23) instructionN -> . instructionNName LABEL PUNTOCOMA cuerpo
-    (24) instructionN -> . empty
-    (12) instructionSTL -> . STL PUNTOCOMA cuerpo
-    (13) instructionSTL -> . empty
-    (42) empty -> .
-    (25) instructionDIName -> . STR
-    (26) instructionDIName -> . LDR
-    (27) instructionDIName -> . MOVR
-    (28) instructionDIName -> . CMPR
-    (29) instructionDIName -> . STRV
-    (30) instructionDIName -> . LDRV
-    (31) instructionIName -> . MOVI
-    (32) instructionIName -> . CMPI
-    (33) instructionDTName -> . ADD
-    (34) instructionDTName -> . SUB
-    (35) instructionDTName -> . MUL
-    (36) instructionDTName -> . ADDVV
-    (37) instructionDTName -> . MULVE
-    (38) instructionDTName -> . DIVVE
-    (39) instructionNName -> . JMP
-    (40) instructionNName -> . JEQ
-    (41) instructionNName -> . STL
-
-    LABEL           shift and go to state 13
-    STL             shift and go to state 19
-    FIN             reduce using rule 42 (empty -> .)
-    STR             shift and go to state 20
-    LDR             shift and go to state 21
-    MOVR            shift and go to state 22
-    CMPR            shift and go to state 23
-    STRV            shift and go to state 24
-    LDRV            shift and go to state 25
-    MOVI            shift and go to state 26
-    CMPI            shift and go to state 27
-    ADD             shift and go to state 28
-    SUB             shift and go to state 29
-    MUL             shift and go to state 30
-    ADDVV           shift and go to state 31
-    MULVE           shift and go to state 32
-    DIVVE           shift and go to state 33
-    JMP             shift and go to state 34
-    JEQ             shift and go to state 35
-
-    instructionNName               shift and go to state 18
-    cuerpo                         shift and go to state 57
-    instruccion                    shift and go to state 6
-    label                          shift and go to state 7
-    instructionDI                  shift and go to state 8
-    instructionI                   shift and go to state 9
-    instructionDT                  shift and go to state 10
-    instructionN                   shift and go to state 11
-    instructionSTL                 shift and go to state 12
-    empty                          shift and go to state 14
-    instructionDIName              shift and go to state 15
     instructionIName               shift and go to state 16
     instructionDTName              shift and go to state 17
 
-state 52
+state 50
 
     (12) instructionSTL -> STL PUNTOCOMA cuerpo .
 
     FIN             reduce using rule 12 (instructionSTL -> STL PUNTOCOMA cuerpo .)
 
 
-state 53
+state 51
 
     (14) instructionDI -> instructionDIName REG COMA REG . PUNTOCOMA cuerpo
 
-    PUNTOCOMA       shift and go to state 58
+    PUNTOCOMA       shift and go to state 55
+
+
+state 52
+
+    (16) instructionI -> instructionIName REG COMA IMM . PUNTOCOMA cuerpo
+
+    PUNTOCOMA       shift and go to state 56
+
+
+state 53
+
+    (20) instructionDT -> instructionDTName REG COMA REG . COMA REG PUNTOCOMA cuerpo
+
+    COMA            shift and go to state 57
 
 
 state 54
 
-    (16) instructionI -> instructionIName LABEL PUNTOCOMA cuerpo .
+    (22) instructionN -> instructionNName LABEL PUNTOCOMA cuerpo .
 
-    FIN             reduce using rule 16 (instructionI -> instructionIName LABEL PUNTOCOMA cuerpo .)
+    FIN             reduce using rule 22 (instructionN -> instructionNName LABEL PUNTOCOMA cuerpo .)
 
 
 state 55
-
-    (17) instructionI -> instructionIName REG COMA IMM . PUNTOCOMA cuerpo
-
-    PUNTOCOMA       shift and go to state 59
-
-
-state 56
-
-    (21) instructionDT -> instructionDTName REG COMA REG . COMA REG PUNTOCOMA cuerpo
-
-    COMA            shift and go to state 60
-
-
-state 57
-
-    (23) instructionN -> instructionNName LABEL PUNTOCOMA cuerpo .
-
-    FIN             reduce using rule 23 (instructionN -> instructionNName LABEL PUNTOCOMA cuerpo .)
-
-
-state 58
 
     (14) instructionDI -> instructionDIName REG COMA REG PUNTOCOMA . cuerpo
     (3) cuerpo -> . instruccion
@@ -923,37 +824,36 @@ state 58
     (6) label -> . empty
     (14) instructionDI -> . instructionDIName REG COMA REG PUNTOCOMA cuerpo
     (15) instructionDI -> . empty
-    (16) instructionI -> . instructionIName LABEL PUNTOCOMA cuerpo
-    (17) instructionI -> . instructionIName REG COMA IMM PUNTOCOMA cuerpo
-    (18) instructionI -> . empty
-    (21) instructionDT -> . instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo
-    (22) instructionDT -> . empty
-    (23) instructionN -> . instructionNName LABEL PUNTOCOMA cuerpo
-    (24) instructionN -> . empty
+    (16) instructionI -> . instructionIName REG COMA IMM PUNTOCOMA cuerpo
+    (17) instructionI -> . empty
+    (20) instructionDT -> . instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo
+    (21) instructionDT -> . empty
+    (22) instructionN -> . instructionNName LABEL PUNTOCOMA cuerpo
+    (23) instructionN -> . empty
     (12) instructionSTL -> . STL PUNTOCOMA cuerpo
     (13) instructionSTL -> . empty
-    (42) empty -> .
-    (25) instructionDIName -> . STR
-    (26) instructionDIName -> . LDR
-    (27) instructionDIName -> . MOVR
-    (28) instructionDIName -> . CMPR
-    (29) instructionDIName -> . STRV
-    (30) instructionDIName -> . LDRV
-    (31) instructionIName -> . MOVI
-    (32) instructionIName -> . CMPI
-    (33) instructionDTName -> . ADD
-    (34) instructionDTName -> . SUB
-    (35) instructionDTName -> . MUL
-    (36) instructionDTName -> . ADDVV
-    (37) instructionDTName -> . MULVE
-    (38) instructionDTName -> . DIVVE
-    (39) instructionNName -> . JMP
-    (40) instructionNName -> . JEQ
-    (41) instructionNName -> . STL
+    (41) empty -> .
+    (24) instructionDIName -> . STR
+    (25) instructionDIName -> . LDR
+    (26) instructionDIName -> . MOVR
+    (27) instructionDIName -> . CMPR
+    (28) instructionDIName -> . STRV
+    (29) instructionDIName -> . LDRV
+    (30) instructionIName -> . MOVI
+    (31) instructionIName -> . CMPI
+    (32) instructionDTName -> . ADD
+    (33) instructionDTName -> . SUB
+    (34) instructionDTName -> . MUL
+    (35) instructionDTName -> . ADDVV
+    (36) instructionDTName -> . MULVE
+    (37) instructionDTName -> . DIVVE
+    (38) instructionNName -> . JMP
+    (39) instructionNName -> . JEQ
+    (40) instructionNName -> . STL
 
     LABEL           shift and go to state 13
     STL             shift and go to state 19
-    FIN             reduce using rule 42 (empty -> .)
+    FIN             reduce using rule 41 (empty -> .)
     STR             shift and go to state 20
     LDR             shift and go to state 21
     MOVR            shift and go to state 22
@@ -972,7 +872,7 @@ state 58
     JEQ             shift and go to state 35
 
     instructionDIName              shift and go to state 15
-    cuerpo                         shift and go to state 61
+    cuerpo                         shift and go to state 58
     instruccion                    shift and go to state 6
     label                          shift and go to state 7
     instructionDI                  shift and go to state 8
@@ -985,9 +885,9 @@ state 58
     instructionDTName              shift and go to state 17
     instructionNName               shift and go to state 18
 
-state 59
+state 56
 
-    (17) instructionI -> instructionIName REG COMA IMM PUNTOCOMA . cuerpo
+    (16) instructionI -> instructionIName REG COMA IMM PUNTOCOMA . cuerpo
     (3) cuerpo -> . instruccion
     (4) cuerpo -> . label
     (7) instruccion -> . instructionDI
@@ -999,37 +899,36 @@ state 59
     (6) label -> . empty
     (14) instructionDI -> . instructionDIName REG COMA REG PUNTOCOMA cuerpo
     (15) instructionDI -> . empty
-    (16) instructionI -> . instructionIName LABEL PUNTOCOMA cuerpo
-    (17) instructionI -> . instructionIName REG COMA IMM PUNTOCOMA cuerpo
-    (18) instructionI -> . empty
-    (21) instructionDT -> . instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo
-    (22) instructionDT -> . empty
-    (23) instructionN -> . instructionNName LABEL PUNTOCOMA cuerpo
-    (24) instructionN -> . empty
+    (16) instructionI -> . instructionIName REG COMA IMM PUNTOCOMA cuerpo
+    (17) instructionI -> . empty
+    (20) instructionDT -> . instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo
+    (21) instructionDT -> . empty
+    (22) instructionN -> . instructionNName LABEL PUNTOCOMA cuerpo
+    (23) instructionN -> . empty
     (12) instructionSTL -> . STL PUNTOCOMA cuerpo
     (13) instructionSTL -> . empty
-    (42) empty -> .
-    (25) instructionDIName -> . STR
-    (26) instructionDIName -> . LDR
-    (27) instructionDIName -> . MOVR
-    (28) instructionDIName -> . CMPR
-    (29) instructionDIName -> . STRV
-    (30) instructionDIName -> . LDRV
-    (31) instructionIName -> . MOVI
-    (32) instructionIName -> . CMPI
-    (33) instructionDTName -> . ADD
-    (34) instructionDTName -> . SUB
-    (35) instructionDTName -> . MUL
-    (36) instructionDTName -> . ADDVV
-    (37) instructionDTName -> . MULVE
-    (38) instructionDTName -> . DIVVE
-    (39) instructionNName -> . JMP
-    (40) instructionNName -> . JEQ
-    (41) instructionNName -> . STL
+    (41) empty -> .
+    (24) instructionDIName -> . STR
+    (25) instructionDIName -> . LDR
+    (26) instructionDIName -> . MOVR
+    (27) instructionDIName -> . CMPR
+    (28) instructionDIName -> . STRV
+    (29) instructionDIName -> . LDRV
+    (30) instructionIName -> . MOVI
+    (31) instructionIName -> . CMPI
+    (32) instructionDTName -> . ADD
+    (33) instructionDTName -> . SUB
+    (34) instructionDTName -> . MUL
+    (35) instructionDTName -> . ADDVV
+    (36) instructionDTName -> . MULVE
+    (37) instructionDTName -> . DIVVE
+    (38) instructionNName -> . JMP
+    (39) instructionNName -> . JEQ
+    (40) instructionNName -> . STL
 
     LABEL           shift and go to state 13
     STL             shift and go to state 19
-    FIN             reduce using rule 42 (empty -> .)
+    FIN             reduce using rule 41 (empty -> .)
     STR             shift and go to state 20
     LDR             shift and go to state 21
     MOVR            shift and go to state 22
@@ -1048,6 +947,113 @@ state 59
     JEQ             shift and go to state 35
 
     instructionIName               shift and go to state 16
+    cuerpo                         shift and go to state 59
+    instruccion                    shift and go to state 6
+    label                          shift and go to state 7
+    instructionDI                  shift and go to state 8
+    instructionI                   shift and go to state 9
+    instructionDT                  shift and go to state 10
+    instructionN                   shift and go to state 11
+    instructionSTL                 shift and go to state 12
+    empty                          shift and go to state 14
+    instructionDIName              shift and go to state 15
+    instructionDTName              shift and go to state 17
+    instructionNName               shift and go to state 18
+
+state 57
+
+    (20) instructionDT -> instructionDTName REG COMA REG COMA . REG PUNTOCOMA cuerpo
+    (18) REG -> . REGESCALAR
+    (19) REG -> . REGVECTORIAL
+
+    REGESCALAR      shift and go to state 39
+    REGVECTORIAL    shift and go to state 40
+
+    REG                            shift and go to state 60
+
+state 58
+
+    (14) instructionDI -> instructionDIName REG COMA REG PUNTOCOMA cuerpo .
+
+    FIN             reduce using rule 14 (instructionDI -> instructionDIName REG COMA REG PUNTOCOMA cuerpo .)
+
+
+state 59
+
+    (16) instructionI -> instructionIName REG COMA IMM PUNTOCOMA cuerpo .
+
+    FIN             reduce using rule 16 (instructionI -> instructionIName REG COMA IMM PUNTOCOMA cuerpo .)
+
+
+state 60
+
+    (20) instructionDT -> instructionDTName REG COMA REG COMA REG . PUNTOCOMA cuerpo
+
+    PUNTOCOMA       shift and go to state 61
+
+
+state 61
+
+    (20) instructionDT -> instructionDTName REG COMA REG COMA REG PUNTOCOMA . cuerpo
+    (3) cuerpo -> . instruccion
+    (4) cuerpo -> . label
+    (7) instruccion -> . instructionDI
+    (8) instruccion -> . instructionI
+    (9) instruccion -> . instructionDT
+    (10) instruccion -> . instructionN
+    (11) instruccion -> . instructionSTL
+    (5) label -> . LABEL DOSPUNTOS cuerpo
+    (6) label -> . empty
+    (14) instructionDI -> . instructionDIName REG COMA REG PUNTOCOMA cuerpo
+    (15) instructionDI -> . empty
+    (16) instructionI -> . instructionIName REG COMA IMM PUNTOCOMA cuerpo
+    (17) instructionI -> . empty
+    (20) instructionDT -> . instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo
+    (21) instructionDT -> . empty
+    (22) instructionN -> . instructionNName LABEL PUNTOCOMA cuerpo
+    (23) instructionN -> . empty
+    (12) instructionSTL -> . STL PUNTOCOMA cuerpo
+    (13) instructionSTL -> . empty
+    (41) empty -> .
+    (24) instructionDIName -> . STR
+    (25) instructionDIName -> . LDR
+    (26) instructionDIName -> . MOVR
+    (27) instructionDIName -> . CMPR
+    (28) instructionDIName -> . STRV
+    (29) instructionDIName -> . LDRV
+    (30) instructionIName -> . MOVI
+    (31) instructionIName -> . CMPI
+    (32) instructionDTName -> . ADD
+    (33) instructionDTName -> . SUB
+    (34) instructionDTName -> . MUL
+    (35) instructionDTName -> . ADDVV
+    (36) instructionDTName -> . MULVE
+    (37) instructionDTName -> . DIVVE
+    (38) instructionNName -> . JMP
+    (39) instructionNName -> . JEQ
+    (40) instructionNName -> . STL
+
+    LABEL           shift and go to state 13
+    STL             shift and go to state 19
+    FIN             reduce using rule 41 (empty -> .)
+    STR             shift and go to state 20
+    LDR             shift and go to state 21
+    MOVR            shift and go to state 22
+    CMPR            shift and go to state 23
+    STRV            shift and go to state 24
+    LDRV            shift and go to state 25
+    MOVI            shift and go to state 26
+    CMPI            shift and go to state 27
+    ADD             shift and go to state 28
+    SUB             shift and go to state 29
+    MUL             shift and go to state 30
+    ADDVV           shift and go to state 31
+    MULVE           shift and go to state 32
+    DIVVE           shift and go to state 33
+    JMP             shift and go to state 34
+    JEQ             shift and go to state 35
+
+    instructionDTName              shift and go to state 17
     cuerpo                         shift and go to state 62
     instruccion                    shift and go to state 6
     label                          shift and go to state 7
@@ -1058,122 +1064,14 @@ state 59
     instructionSTL                 shift and go to state 12
     empty                          shift and go to state 14
     instructionDIName              shift and go to state 15
-    instructionDTName              shift and go to state 17
-    instructionNName               shift and go to state 18
-
-state 60
-
-    (21) instructionDT -> instructionDTName REG COMA REG COMA . REG PUNTOCOMA cuerpo
-    (19) REG -> . REGESCALAR
-    (20) REG -> . REGVECTORIAL
-
-    REGESCALAR      shift and go to state 39
-    REGVECTORIAL    shift and go to state 40
-
-    REG                            shift and go to state 63
-
-state 61
-
-    (14) instructionDI -> instructionDIName REG COMA REG PUNTOCOMA cuerpo .
-
-    FIN             reduce using rule 14 (instructionDI -> instructionDIName REG COMA REG PUNTOCOMA cuerpo .)
-
-
-state 62
-
-    (17) instructionI -> instructionIName REG COMA IMM PUNTOCOMA cuerpo .
-
-    FIN             reduce using rule 17 (instructionI -> instructionIName REG COMA IMM PUNTOCOMA cuerpo .)
-
-
-state 63
-
-    (21) instructionDT -> instructionDTName REG COMA REG COMA REG . PUNTOCOMA cuerpo
-
-    PUNTOCOMA       shift and go to state 64
-
-
-state 64
-
-    (21) instructionDT -> instructionDTName REG COMA REG COMA REG PUNTOCOMA . cuerpo
-    (3) cuerpo -> . instruccion
-    (4) cuerpo -> . label
-    (7) instruccion -> . instructionDI
-    (8) instruccion -> . instructionI
-    (9) instruccion -> . instructionDT
-    (10) instruccion -> . instructionN
-    (11) instruccion -> . instructionSTL
-    (5) label -> . LABEL DOSPUNTOS cuerpo
-    (6) label -> . empty
-    (14) instructionDI -> . instructionDIName REG COMA REG PUNTOCOMA cuerpo
-    (15) instructionDI -> . empty
-    (16) instructionI -> . instructionIName LABEL PUNTOCOMA cuerpo
-    (17) instructionI -> . instructionIName REG COMA IMM PUNTOCOMA cuerpo
-    (18) instructionI -> . empty
-    (21) instructionDT -> . instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo
-    (22) instructionDT -> . empty
-    (23) instructionN -> . instructionNName LABEL PUNTOCOMA cuerpo
-    (24) instructionN -> . empty
-    (12) instructionSTL -> . STL PUNTOCOMA cuerpo
-    (13) instructionSTL -> . empty
-    (42) empty -> .
-    (25) instructionDIName -> . STR
-    (26) instructionDIName -> . LDR
-    (27) instructionDIName -> . MOVR
-    (28) instructionDIName -> . CMPR
-    (29) instructionDIName -> . STRV
-    (30) instructionDIName -> . LDRV
-    (31) instructionIName -> . MOVI
-    (32) instructionIName -> . CMPI
-    (33) instructionDTName -> . ADD
-    (34) instructionDTName -> . SUB
-    (35) instructionDTName -> . MUL
-    (36) instructionDTName -> . ADDVV
-    (37) instructionDTName -> . MULVE
-    (38) instructionDTName -> . DIVVE
-    (39) instructionNName -> . JMP
-    (40) instructionNName -> . JEQ
-    (41) instructionNName -> . STL
-
-    LABEL           shift and go to state 13
-    STL             shift and go to state 19
-    FIN             reduce using rule 42 (empty -> .)
-    STR             shift and go to state 20
-    LDR             shift and go to state 21
-    MOVR            shift and go to state 22
-    CMPR            shift and go to state 23
-    STRV            shift and go to state 24
-    LDRV            shift and go to state 25
-    MOVI            shift and go to state 26
-    CMPI            shift and go to state 27
-    ADD             shift and go to state 28
-    SUB             shift and go to state 29
-    MUL             shift and go to state 30
-    ADDVV           shift and go to state 31
-    MULVE           shift and go to state 32
-    DIVVE           shift and go to state 33
-    JMP             shift and go to state 34
-    JEQ             shift and go to state 35
-
-    instructionDTName              shift and go to state 17
-    cuerpo                         shift and go to state 65
-    instruccion                    shift and go to state 6
-    label                          shift and go to state 7
-    instructionDI                  shift and go to state 8
-    instructionI                   shift and go to state 9
-    instructionDT                  shift and go to state 10
-    instructionN                   shift and go to state 11
-    instructionSTL                 shift and go to state 12
-    empty                          shift and go to state 14
-    instructionDIName              shift and go to state 15
     instructionIName               shift and go to state 16
     instructionNName               shift and go to state 18
 
-state 65
+state 62
 
-    (21) instructionDT -> instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo .
+    (20) instructionDT -> instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo .
 
-    FIN             reduce using rule 21 (instructionDT -> instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo .)
+    FIN             reduce using rule 20 (instructionDT -> instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo .)
 
 WARNING: 
 WARNING: Conflicts:

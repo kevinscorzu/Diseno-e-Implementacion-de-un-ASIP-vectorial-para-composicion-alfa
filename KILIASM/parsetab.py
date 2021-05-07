@@ -6,9 +6,9 @@ _tabversion = '3.10'
 
 _lr_method = 'LALR'
 
-_lr_signature = 'ADD ADDVV CMPI CMPR COMA DIVVE DOSPUNTOS FIN IMM INICIO JEQ JMP LABEL LDR LDRV MOVI MOVR MUL MULVE PUNTOCOMA REGESCALAR REGVECTORIAL STL STR STRV SUB\n    Start : code\n    \n    code : INICIO DOSPUNTOS cuerpo FIN\n    \n    cuerpo : instruccion\n            | label\n    \n    label : LABEL DOSPUNTOS cuerpo\n            | empty\n    \n    instruccion : instructionDI\n                  | instructionI\n                  | instructionDT\n                  | instructionN\n                  | instructionSTL\n    \n    instructionSTL : STL PUNTOCOMA cuerpo\n                    | empty\n    \n    instructionDI : instructionDIName REG COMA REG PUNTOCOMA cuerpo\n\n                        | empty\n    \n    instructionI : instructionIName LABEL PUNTOCOMA cuerpo\n                    | instructionIName REG COMA IMM PUNTOCOMA cuerpo\n    | empty\n    \n    REG : REGESCALAR\n        | REGVECTORIAL\n    \n    instructionDT : instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo\n                        | empty\n    \n    instructionN :  instructionNName LABEL PUNTOCOMA cuerpo\n                        | empty\n    \n    instructionDIName :  STR\n            | LDR\n            | MOVR\n            | CMPR\n            | STRV\n            | LDRV\n\n    \n    instructionIName : MOVI\n            | CMPI\n    \n    instructionDTName :  ADD\n            | SUB\n            | MUL\n            | ADDVV\n            | MULVE\n            | DIVVE\n    \n    instructionNName :  JMP\n            | JEQ\n            | STL\n    \n    empty :\n    '
+_lr_signature = 'ADD ADDVV CMPI CMPR COMA DIVVE DOSPUNTOS FIN IMM INICIO JEQ JMP LABEL LDR LDRV MOVI MOVR MUL MULVE PUNTOCOMA REGESCALAR REGVECTORIAL STL STR STRV SUB\n    Start : code\n    \n    code : INICIO DOSPUNTOS cuerpo FIN\n    \n    cuerpo : instruccion\n            | label\n    \n    label : LABEL DOSPUNTOS cuerpo\n            | empty\n    \n    instruccion : instructionDI\n                  | instructionI\n                  | instructionDT\n                  | instructionN\n                  | instructionSTL\n    \n    instructionSTL : STL PUNTOCOMA cuerpo\n                    | empty\n    \n    instructionDI : instructionDIName REG COMA REG PUNTOCOMA cuerpo\n\n                        | empty\n    \n    instructionI : instructionIName REG COMA IMM PUNTOCOMA cuerpo\n    | empty\n    \n    REG : REGESCALAR\n        | REGVECTORIAL\n    \n    instructionDT : instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo\n                        | empty\n    \n    instructionN :  instructionNName LABEL PUNTOCOMA cuerpo\n                        | empty\n    \n    instructionDIName :  STR\n            | LDR\n            | MOVR\n            | CMPR\n            | STRV\n            | LDRV\n\n    \n    instructionIName : MOVI\n            | CMPI\n    \n    instructionDTName :  ADD\n            | SUB\n            | MUL\n            | ADDVV\n            | MULVE\n            | DIVVE\n    \n    instructionNName :  JMP\n            | JEQ\n            | STL\n    \n    empty :\n    '
     
-_lr_action_items = {'INICIO':([0,],[3,]),'$end':([1,2,36,],[0,-1,-2,]),'DOSPUNTOS':([3,13,],[4,37,]),'LABEL':([4,16,18,19,26,27,34,35,37,45,48,51,58,59,64,],[13,41,44,-41,-31,-32,-39,-40,13,13,13,13,13,13,13,]),'STL':([4,37,45,48,51,58,59,64,],[19,19,19,19,19,19,19,19,]),'FIN':([4,5,6,7,8,9,10,11,12,14,37,45,46,48,51,52,54,57,58,59,61,62,64,65,],[-42,36,-3,-4,-7,-8,-9,-10,-11,-6,-42,-42,-5,-42,-42,-12,-16,-23,-42,-42,-14,-17,-42,-21,]),'STR':([4,37,45,48,51,58,59,64,],[20,20,20,20,20,20,20,20,]),'LDR':([4,37,45,48,51,58,59,64,],[21,21,21,21,21,21,21,21,]),'MOVR':([4,37,45,48,51,58,59,64,],[22,22,22,22,22,22,22,22,]),'CMPR':([4,37,45,48,51,58,59,64,],[23,23,23,23,23,23,23,23,]),'STRV':([4,37,45,48,51,58,59,64,],[24,24,24,24,24,24,24,24,]),'LDRV':([4,37,45,48,51,58,59,64,],[25,25,25,25,25,25,25,25,]),'MOVI':([4,37,45,48,51,58,59,64,],[26,26,26,26,26,26,26,26,]),'CMPI':([4,37,45,48,51,58,59,64,],[27,27,27,27,27,27,27,27,]),'ADD':([4,37,45,48,51,58,59,64,],[28,28,28,28,28,28,28,28,]),'SUB':([4,37,45,48,51,58,59,64,],[29,29,29,29,29,29,29,29,]),'MUL':([4,37,45,48,51,58,59,64,],[30,30,30,30,30,30,30,30,]),'ADDVV':([4,37,45,48,51,58,59,64,],[31,31,31,31,31,31,31,31,]),'MULVE':([4,37,45,48,51,58,59,64,],[32,32,32,32,32,32,32,32,]),'DIVVE':([4,37,45,48,51,58,59,64,],[33,33,33,33,33,33,33,33,]),'JMP':([4,37,45,48,51,58,59,64,],[34,34,34,34,34,34,34,34,]),'JEQ':([4,37,45,48,51,58,59,64,],[35,35,35,35,35,35,35,35,]),'REGESCALAR':([15,16,17,20,21,22,23,24,25,26,27,28,29,30,31,32,33,47,50,60,],[39,39,39,-25,-26,-27,-28,-29,-30,-31,-32,-33,-34,-35,-36,-37,-38,39,39,39,]),'REGVECTORIAL':([15,16,17,20,21,22,23,24,25,26,27,28,29,30,31,32,33,47,50,60,],[40,40,40,-25,-26,-27,-28,-29,-30,-31,-32,-33,-34,-35,-36,-37,-38,40,40,40,]),'PUNTOCOMA':([19,39,40,41,44,53,55,63,],[45,-19,-20,48,51,58,59,64,]),'COMA':([38,39,40,42,43,56,],[47,-19,-20,49,50,60,]),'IMM':([49,],[55,]),}
+_lr_action_items = {'INICIO':([0,],[3,]),'$end':([1,2,36,],[0,-1,-2,]),'DOSPUNTOS':([3,13,],[4,37,]),'LABEL':([4,18,19,34,35,37,44,49,55,56,61,],[13,43,-40,-38,-39,13,13,13,13,13,13,]),'STL':([4,37,44,49,55,56,61,],[19,19,19,19,19,19,19,]),'FIN':([4,5,6,7,8,9,10,11,12,14,37,44,45,49,50,54,55,56,58,59,61,62,],[-41,36,-3,-4,-7,-8,-9,-10,-11,-6,-41,-41,-5,-41,-12,-22,-41,-41,-14,-16,-41,-20,]),'STR':([4,37,44,49,55,56,61,],[20,20,20,20,20,20,20,]),'LDR':([4,37,44,49,55,56,61,],[21,21,21,21,21,21,21,]),'MOVR':([4,37,44,49,55,56,61,],[22,22,22,22,22,22,22,]),'CMPR':([4,37,44,49,55,56,61,],[23,23,23,23,23,23,23,]),'STRV':([4,37,44,49,55,56,61,],[24,24,24,24,24,24,24,]),'LDRV':([4,37,44,49,55,56,61,],[25,25,25,25,25,25,25,]),'MOVI':([4,37,44,49,55,56,61,],[26,26,26,26,26,26,26,]),'CMPI':([4,37,44,49,55,56,61,],[27,27,27,27,27,27,27,]),'ADD':([4,37,44,49,55,56,61,],[28,28,28,28,28,28,28,]),'SUB':([4,37,44,49,55,56,61,],[29,29,29,29,29,29,29,]),'MUL':([4,37,44,49,55,56,61,],[30,30,30,30,30,30,30,]),'ADDVV':([4,37,44,49,55,56,61,],[31,31,31,31,31,31,31,]),'MULVE':([4,37,44,49,55,56,61,],[32,32,32,32,32,32,32,]),'DIVVE':([4,37,44,49,55,56,61,],[33,33,33,33,33,33,33,]),'JMP':([4,37,44,49,55,56,61,],[34,34,34,34,34,34,34,]),'JEQ':([4,37,44,49,55,56,61,],[35,35,35,35,35,35,35,]),'REGESCALAR':([15,16,17,20,21,22,23,24,25,26,27,28,29,30,31,32,33,46,48,57,],[39,39,39,-24,-25,-26,-27,-28,-29,-30,-31,-32,-33,-34,-35,-36,-37,39,39,39,]),'REGVECTORIAL':([15,16,17,20,21,22,23,24,25,26,27,28,29,30,31,32,33,46,48,57,],[40,40,40,-24,-25,-26,-27,-28,-29,-30,-31,-32,-33,-34,-35,-36,-37,40,40,40,]),'PUNTOCOMA':([19,39,40,43,51,52,60,],[44,-18,-19,49,55,56,61,]),'COMA':([38,39,40,41,42,53,],[46,-18,-19,47,48,57,]),'IMM':([47,],[52,]),}
 
 _lr_action = {}
 for _k, _v in _lr_action_items.items():
@@ -17,7 +17,7 @@ for _k, _v in _lr_action_items.items():
       _lr_action[_x][_k] = _y
 del _lr_action_items
 
-_lr_goto_items = {'Start':([0,],[1,]),'code':([0,],[2,]),'cuerpo':([4,37,45,48,51,58,59,64,],[5,46,52,54,57,61,62,65,]),'instruccion':([4,37,45,48,51,58,59,64,],[6,6,6,6,6,6,6,6,]),'label':([4,37,45,48,51,58,59,64,],[7,7,7,7,7,7,7,7,]),'instructionDI':([4,37,45,48,51,58,59,64,],[8,8,8,8,8,8,8,8,]),'instructionI':([4,37,45,48,51,58,59,64,],[9,9,9,9,9,9,9,9,]),'instructionDT':([4,37,45,48,51,58,59,64,],[10,10,10,10,10,10,10,10,]),'instructionN':([4,37,45,48,51,58,59,64,],[11,11,11,11,11,11,11,11,]),'instructionSTL':([4,37,45,48,51,58,59,64,],[12,12,12,12,12,12,12,12,]),'empty':([4,37,45,48,51,58,59,64,],[14,14,14,14,14,14,14,14,]),'instructionDIName':([4,37,45,48,51,58,59,64,],[15,15,15,15,15,15,15,15,]),'instructionIName':([4,37,45,48,51,58,59,64,],[16,16,16,16,16,16,16,16,]),'instructionDTName':([4,37,45,48,51,58,59,64,],[17,17,17,17,17,17,17,17,]),'instructionNName':([4,37,45,48,51,58,59,64,],[18,18,18,18,18,18,18,18,]),'REG':([15,16,17,47,50,60,],[38,42,43,53,56,63,]),}
+_lr_goto_items = {'Start':([0,],[1,]),'code':([0,],[2,]),'cuerpo':([4,37,44,49,55,56,61,],[5,45,50,54,58,59,62,]),'instruccion':([4,37,44,49,55,56,61,],[6,6,6,6,6,6,6,]),'label':([4,37,44,49,55,56,61,],[7,7,7,7,7,7,7,]),'instructionDI':([4,37,44,49,55,56,61,],[8,8,8,8,8,8,8,]),'instructionI':([4,37,44,49,55,56,61,],[9,9,9,9,9,9,9,]),'instructionDT':([4,37,44,49,55,56,61,],[10,10,10,10,10,10,10,]),'instructionN':([4,37,44,49,55,56,61,],[11,11,11,11,11,11,11,]),'instructionSTL':([4,37,44,49,55,56,61,],[12,12,12,12,12,12,12,]),'empty':([4,37,44,49,55,56,61,],[14,14,14,14,14,14,14,]),'instructionDIName':([4,37,44,49,55,56,61,],[15,15,15,15,15,15,15,]),'instructionIName':([4,37,44,49,55,56,61,],[16,16,16,16,16,16,16,]),'instructionDTName':([4,37,44,49,55,56,61,],[17,17,17,17,17,17,17,]),'instructionNName':([4,37,44,49,55,56,61,],[18,18,18,18,18,18,18,]),'REG':([15,16,17,46,48,57,],[38,41,42,51,53,60,]),}
 
 _lr_goto = {}
 for _k, _v in _lr_goto_items.items():
@@ -42,31 +42,30 @@ _lr_productions = [
   ('instructionSTL -> empty','instructionSTL',1,'p_instructionSTL','KiliASMSintax.py',53),
   ('instructionDI -> instructionDIName REG COMA REG PUNTOCOMA cuerpo','instructionDI',6,'p_instructionDI','KiliASMSintax.py',61),
   ('instructionDI -> empty','instructionDI',1,'p_instructionDI','KiliASMSintax.py',63),
-  ('instructionI -> instructionIName LABEL PUNTOCOMA cuerpo','instructionI',4,'p_instructionI','KiliASMSintax.py',70),
-  ('instructionI -> instructionIName REG COMA IMM PUNTOCOMA cuerpo','instructionI',6,'p_instructionI','KiliASMSintax.py',71),
-  ('instructionI -> empty','instructionI',1,'p_instructionI','KiliASMSintax.py',72),
-  ('REG -> REGESCALAR','REG',1,'p_REG','KiliASMSintax.py',80),
-  ('REG -> REGVECTORIAL','REG',1,'p_REG','KiliASMSintax.py',81),
-  ('instructionDT -> instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo','instructionDT',8,'p_instructionDT','KiliASMSintax.py',89),
-  ('instructionDT -> empty','instructionDT',1,'p_instructionDT','KiliASMSintax.py',90),
-  ('instructionN -> instructionNName LABEL PUNTOCOMA cuerpo','instructionN',4,'p_instructionN','KiliASMSintax.py',101),
-  ('instructionN -> empty','instructionN',1,'p_instructionN','KiliASMSintax.py',102),
-  ('instructionDIName -> STR','instructionDIName',1,'p_instructionDIName','KiliASMSintax.py',109),
-  ('instructionDIName -> LDR','instructionDIName',1,'p_instructionDIName','KiliASMSintax.py',110),
-  ('instructionDIName -> MOVR','instructionDIName',1,'p_instructionDIName','KiliASMSintax.py',111),
-  ('instructionDIName -> CMPR','instructionDIName',1,'p_instructionDIName','KiliASMSintax.py',112),
-  ('instructionDIName -> STRV','instructionDIName',1,'p_instructionDIName','KiliASMSintax.py',113),
-  ('instructionDIName -> LDRV','instructionDIName',1,'p_instructionDIName','KiliASMSintax.py',114),
-  ('instructionIName -> MOVI','instructionIName',1,'p_instructionIName','KiliASMSintax.py',123),
-  ('instructionIName -> CMPI','instructionIName',1,'p_instructionIName','KiliASMSintax.py',124),
-  ('instructionDTName -> ADD','instructionDTName',1,'p_instructionDTName','KiliASMSintax.py',132),
-  ('instructionDTName -> SUB','instructionDTName',1,'p_instructionDTName','KiliASMSintax.py',133),
-  ('instructionDTName -> MUL','instructionDTName',1,'p_instructionDTName','KiliASMSintax.py',134),
-  ('instructionDTName -> ADDVV','instructionDTName',1,'p_instructionDTName','KiliASMSintax.py',135),
-  ('instructionDTName -> MULVE','instructionDTName',1,'p_instructionDTName','KiliASMSintax.py',136),
-  ('instructionDTName -> DIVVE','instructionDTName',1,'p_instructionDTName','KiliASMSintax.py',137),
-  ('instructionNName -> JMP','instructionNName',1,'p_instructionNName','KiliASMSintax.py',144),
-  ('instructionNName -> JEQ','instructionNName',1,'p_instructionNName','KiliASMSintax.py',145),
-  ('instructionNName -> STL','instructionNName',1,'p_instructionNName','KiliASMSintax.py',146),
-  ('empty -> <empty>','empty',0,'p_empty','KiliASMSintax.py',153),
+  ('instructionI -> instructionIName REG COMA IMM PUNTOCOMA cuerpo','instructionI',6,'p_instructionI','KiliASMSintax.py',70),
+  ('instructionI -> empty','instructionI',1,'p_instructionI','KiliASMSintax.py',71),
+  ('REG -> REGESCALAR','REG',1,'p_REG','KiliASMSintax.py',79),
+  ('REG -> REGVECTORIAL','REG',1,'p_REG','KiliASMSintax.py',80),
+  ('instructionDT -> instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo','instructionDT',8,'p_instructionDT','KiliASMSintax.py',88),
+  ('instructionDT -> empty','instructionDT',1,'p_instructionDT','KiliASMSintax.py',89),
+  ('instructionN -> instructionNName LABEL PUNTOCOMA cuerpo','instructionN',4,'p_instructionN','KiliASMSintax.py',100),
+  ('instructionN -> empty','instructionN',1,'p_instructionN','KiliASMSintax.py',101),
+  ('instructionDIName -> STR','instructionDIName',1,'p_instructionDIName','KiliASMSintax.py',108),
+  ('instructionDIName -> LDR','instructionDIName',1,'p_instructionDIName','KiliASMSintax.py',109),
+  ('instructionDIName -> MOVR','instructionDIName',1,'p_instructionDIName','KiliASMSintax.py',110),
+  ('instructionDIName -> CMPR','instructionDIName',1,'p_instructionDIName','KiliASMSintax.py',111),
+  ('instructionDIName -> STRV','instructionDIName',1,'p_instructionDIName','KiliASMSintax.py',112),
+  ('instructionDIName -> LDRV','instructionDIName',1,'p_instructionDIName','KiliASMSintax.py',113),
+  ('instructionIName -> MOVI','instructionIName',1,'p_instructionIName','KiliASMSintax.py',122),
+  ('instructionIName -> CMPI','instructionIName',1,'p_instructionIName','KiliASMSintax.py',123),
+  ('instructionDTName -> ADD','instructionDTName',1,'p_instructionDTName','KiliASMSintax.py',131),
+  ('instructionDTName -> SUB','instructionDTName',1,'p_instructionDTName','KiliASMSintax.py',132),
+  ('instructionDTName -> MUL','instructionDTName',1,'p_instructionDTName','KiliASMSintax.py',133),
+  ('instructionDTName -> ADDVV','instructionDTName',1,'p_instructionDTName','KiliASMSintax.py',134),
+  ('instructionDTName -> MULVE','instructionDTName',1,'p_instructionDTName','KiliASMSintax.py',135),
+  ('instructionDTName -> DIVVE','instructionDTName',1,'p_instructionDTName','KiliASMSintax.py',136),
+  ('instructionNName -> JMP','instructionNName',1,'p_instructionNName','KiliASMSintax.py',143),
+  ('instructionNName -> JEQ','instructionNName',1,'p_instructionNName','KiliASMSintax.py',144),
+  ('instructionNName -> STL','instructionNName',1,'p_instructionNName','KiliASMSintax.py',145),
+  ('empty -> <empty>','empty',0,'p_empty','KiliASMSintax.py',152),
 ]
