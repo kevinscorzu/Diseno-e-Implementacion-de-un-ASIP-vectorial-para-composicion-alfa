@@ -114,7 +114,8 @@ def analiceInst(inst, pc):
     binCode = ''
     labelInstruccion = str(inst[0])
     if labelInstruccion in DI:
-        binCode += str(format(DI.get(inst[0]), '#010b'))[5:]
+        binCode += str(format(DI.get(inst[0]), '#010b'))[4:]
+
         operando1 = str(inst[1])
         operando2 = str(inst[2])
         if operando1 in escalarRegisterNumber and operando2 in escalarRegisterNumber:
@@ -130,9 +131,9 @@ def analiceInst(inst, pc):
             return
 
     elif labelInstruccion in I:
-        binCode += str(format(I.get(inst[0]), '#010b'))[5:]
+        binCode += str(format(I.get(inst[0]), '#010b'))[4:]
         operando1 = str(inst[1])
-        print(labelInstruccion)
+
         operando2 = inst[2]
         if operando1 in escalarRegisterNumber and isinstance(operando2, int):
             imm = shiftNumber(str(bin(operando2))[2:], 22)
@@ -145,7 +146,7 @@ def analiceInst(inst, pc):
                 print("EL inmediato: "+str(operando2)+" es invalido")
                 return
     elif labelInstruccion in DT:
-        binCode += str(format(DT.get(inst[0]), '#010b'))[5:]
+        binCode += str(format(DT.get(inst[0]), '#010b'))[4:]
         operando1 = str(inst[1])
         operando2 = str(inst[2])
         operando3 = str(inst[3])
@@ -161,7 +162,7 @@ def analiceInst(inst, pc):
             return
 
     elif labelInstruccion in N:
-        binCode += str(format(N.get(inst[0]), '#010b'))[5:]
+        binCode += str(format(N.get(inst[0]), '#010b'))[4:]
         operando1 = inst[1]
         if operando1 in jumpLabels:
             jumpDir = jumpLabels.get(inst[1])
@@ -171,7 +172,7 @@ def analiceInst(inst, pc):
 
             if (pcmenosjmpAdd < 0):
 
-                pcmenosjmpAdd = bin(abs(pcmenosjmpAdd))[2:]
+                pcmenosjmpAdd = bin(abs(pcmenosjmpAdd))[4:]
 
                 complemento = complementoADos(pcmenosjmpAdd)
                 binCode += complemento
@@ -182,19 +183,29 @@ def analiceInst(inst, pc):
 
                 pcmenosjmpAdd = bin(pcmenosjmpAdd)[2:]
                 binCode += str(shiftNumber(pcmenosjmpAdd, 27))
-
+        elif(operando1 != "SLT"):
+            print("Se va a hacer un stall")
         else:
-            print('La etiqueta a la que quiere saltar no existe')
+            print('La etiqueta a la que quiere saltar no existe' + str(operando1))
     else:
         print("La instruccion : " + labelInstruccion+" no se encuentra en los diccionarios")
         return
     binInstructions.append(binCode)
 
 
+    binCodeTemp = int(binCode, 2)
+    hexCode = hex(binCodeTemp)
+    lenHexCode = len(hexCode)
+    if lenHexCode != 10:
+            hexCode = hexCode[2:]
+            while lenHexCode < 10:
+                hexCode = '0' + hexCode
+                lenHexCode += 1
+            hexCode = '0x' + hexCode
+    hexInstructions.append(hexCode + str(inst) + ' - ' + binCode + ' - ' +str(len(binCode)))
 
 
 
-    print(binInstructions)
 
 
 

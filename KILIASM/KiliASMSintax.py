@@ -180,4 +180,4 @@ def test():
     KILIASMLexicalAnalizer(cadena)
     print(KiliASMSintacticAnalizer(cadena))
 
-test()
+
