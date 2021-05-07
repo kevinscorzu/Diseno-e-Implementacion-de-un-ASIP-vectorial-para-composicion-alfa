@@ -1,5 +1,5 @@
 Analysis & Elaboration report for ASIP-vectorial
-Thu May 06 09:31:24 2021
+Thu May 06 11:10:23 2021
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -10,7 +10,8 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
   4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  5. Port Connectivity Checks: "InstDeco:InstDecoO"
+  6. Analysis & Elaboration Messages
 
 
 
@@ -36,7 +37,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Thu May 06 09:31:24 2021       ;
+; Analysis & Elaboration Status ; Successful - Thu May 06 11:10:23 2021       ;
 ; Quartus Prime Version         ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                 ; ASIP-vectorial                              ;
 ; Top-level Entity Name         ; ControlUnit                                 ;
@@ -154,30 +155,44 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "InstDeco:InstDecoO"                                                                                                                                                              ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                                          ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; in   ; Input  ; Warning  ; Input port expression (5 bits) is wider than the input port (4 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; out  ; Output ; Warning  ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "out[2..1]" have no fanouts                                                           ;
+; out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Thu May 06 09:31:07 2021
+    Info: Processing started: Thu May 06 11:10:06 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ASIP-vectorial -c ASIP-vectorial --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file scalar/forwardingunit/forwardunitreg.sv
-    Info (12023): Found entity 1: ForwardUnitReg File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Scalar/ForwardingUnit/ForwardUnitReg.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file scalar/forwardingunit/forwardunitalu.sv
-    Info (12023): Found entity 1: ForwardUnitALU File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Scalar/ForwardingUnit/ForwardUnitALU.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file scalar/controlunit.sv
-    Info (12023): Found entity 1: ControlUnit File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Scalar/ControlUnit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/controlunit.sv
+    Info (12023): Found entity 1: ControlUnit File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/extenddeco.sv
-    Info (12023): Found entity 1: ExtendDeco File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/CtrlUnit/ExtendDeco.sv Line: 1
+    Info (12023): Found entity 1: ExtendDeco File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ExtendDeco.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/instdeco.sv
+    Info (12023): Found entity 1: InstDeco File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/InstDeco.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fordwardunit/forwardunit.sv
+    Info (12023): Found entity 1: ForwardUnit File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at ControlUnit.sv(13): created implicit net for "ALUinst" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 13
 Info (12127): Elaborating entity "ControlUnit" for the top level hierarchy
-Warning (10034): Output port "ALUins" at ControlUnit.sv(3) has no driver File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Scalar/ControlUnit.sv Line: 3
-Info (12128): Elaborating entity "ExtendDeco" for hierarchy "ExtendDeco:ExtDeco" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Scalar/ControlUnit.sv Line: 12
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4769 megabytes
-    Info: Processing ended: Thu May 06 09:31:24 2021
+Warning (10034): Output port "ALUins" at ControlUnit.sv(3) has no driver File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 3
+Info (12128): Elaborating entity "ExtendDeco" for hierarchy "ExtendDeco:ExtDeco" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 12
+Info (12128): Elaborating entity "InstDeco" for hierarchy "InstDeco:InstDecoO" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 13
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4762 megabytes
+    Info: Processing ended: Thu May 06 11:10:23 2021
     Info: Elapsed time: 00:00:17
     Info: Total CPU time (on all processors): 00:00:37
 
