@@ -1,4 +1,5 @@
 module ForwardUnit(input [31:0]R2res1,R3res1,input [3:0]R2_2,R3_2,input[1:0]ExtndSel1,
+							input VF,
 											input [3:0]DestR_3,input [31:0]Res,
 											input [3:0]DestR_4,input [31:0]Res1,
 											output logic [31:0]R2res2,R3res2);
