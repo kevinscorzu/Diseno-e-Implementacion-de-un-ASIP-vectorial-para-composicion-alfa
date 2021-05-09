@@ -1,5 +1,5 @@
 Flow report for ASIP-vectorial
-Sun May 09 15:59:46 2021
+Sun May 09 16:09:23 2021
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,19 +40,19 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sun May 09 15:59:46 2021       ;
+; Flow Status                     ; Successful - Sun May 09 16:09:23 2021       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; ASIP-vectorial                              ;
-; Top-level Entity Name           ; SelectRegisterFile                          ;
+; Top-level Entity Name           ; ALUScalar                                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 4                                           ;
+; Total pins                      ; 103                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
+; Total DSP Blocks                ; 2                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -67,32 +67,32 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/09/2021 15:59:31 ;
+; Start date & time ; 05/09/2021 16:09:01 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ASIP-vectorial      ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                    ;
-+-------------------------------------+----------------------------------------+----------------+--------------------+----------------+
-; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name        ; Section Id     ;
-+-------------------------------------+----------------------------------------+----------------+--------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 2546913940769.162059757016544          ; --             ; --                 ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --             ; --                 ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim (SystemVerilog)               ; <None>         ; --                 ; --             ;
-; EDA_TIME_SCALE                      ; 1 ps                                   ; --             ; --                 ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --             ; --                 ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --             ; --                 ; --             ;
-; NUM_PARALLEL_PROCESSORS             ; All                                    ; --             ; --                 ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; SelectRegisterFile ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --             ; SelectRegisterFile ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --             ; SelectRegisterFile ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --             ; --                 ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --             ; --                 ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --             ; --                 ; --             ;
-; TOP_LEVEL_ENTITY                    ; SelectRegisterFile                     ; ASIP-vectorial ; --                 ; --             ;
-+-------------------------------------+----------------------------------------+----------------+--------------------+----------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                             ;
++-------------------------------------+----------------------------------------+----------------+-------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name ; Section Id     ;
++-------------------------------------+----------------------------------------+----------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 2546913940769.162059814102012          ; --             ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --             ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim (SystemVerilog)               ; <None>         ; --          ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                   ; --             ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --             ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --             ; --          ; --             ;
+; NUM_PARALLEL_PROCESSORS             ; All                                    ; --             ; --          ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; ALUScalar   ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --             ; ALUScalar   ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --             ; ALUScalar   ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --             ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --             ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --             ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; ALUScalar                              ; ASIP-vectorial ; --          ; --             ;
++-------------------------------------+----------------------------------------+----------------+-------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -100,8 +100,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 4821 MB             ; 00:00:37                           ;
-; Total                ; 00:00:17     ; --                      ; --                  ; 00:00:37                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4844 MB             ; 00:00:43                           ;
+; Total                ; 00:00:22     ; --                      ; --                  ; 00:00:43                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

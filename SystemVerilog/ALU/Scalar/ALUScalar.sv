@@ -13,7 +13,7 @@ module ALUScalar #(parameter N = 32) (input logic [N-1:0] A, B,
 	Addition #(N) Ad(A, B, resultAdd, CarryOutAdd);
 	Subtraction #(N) Su(A, B, resultSubtract, CarryOutSubtract);
 	Multiplication #(N) Mu(A, B, resultMultiply, CarryOutMultiply);
-	Divition #(N) Di(A, B, resultDivide, CarryOutDivide);
+	Division #(N) Di(A, B, resultDivide, CarryOutDivide);
 	
 	Mux8 #(N) M8('b0, A, resultAdd, resultSubtract, resultMultiply, resultDivide, 'b0, 'b0, Sel, C);
 			

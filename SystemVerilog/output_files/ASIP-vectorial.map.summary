@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Sun May 09 15:59:46 2021
+Analysis & Synthesis Status : Successful - Sun May 09 16:09:23 2021
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : ASIP-vectorial
-Top-level Entity Name : SelectRegisterFile
+Top-level Entity Name : ALUScalar
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 4
+Total pins : 103
 Total virtual pins : 0
 Total block memory bits : 0
-Total DSP Blocks : 0
+Total DSP Blocks : 2
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
