@@ -1,5 +1,5 @@
-Analysis & Elaboration report for ASIP-vectorial
-Thu May 06 11:10:23 2021
+Analysis & Synthesis report for ASIP-vectorial
+Sun May 09 15:59:46 2021
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -7,11 +7,16 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "InstDeco:InstDecoO"
-  6. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -34,48 +39,38 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Thu May 06 11:10:23 2021       ;
-; Quartus Prime Version         ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
-; Revision Name                 ; ASIP-vectorial                              ;
-; Top-level Entity Name         ; ControlUnit                                 ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun May 09 15:59:46 2021       ;
+; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                   ; ASIP-vectorial                              ;
+; Top-level Entity Name           ; SelectRegisterFile                          ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 4                                           ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; ControlUnit        ; ASIP-vectorial     ;
+; Top-level entity name                                                           ; SelectRegisterFile ; ASIP-vectorial     ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
@@ -155,44 +150,183 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "InstDeco:InstDecoO"                                                                                                                                                              ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                                                          ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; in   ; Input  ; Warning  ; Input port expression (5 bits) is wider than the input port (4 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; out  ; Output ; Warning  ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "out[2..1]" have no fanouts                                                           ;
-; out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                            ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                                                                        ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; CtrlUnit/SelectRegisterFile.sv   ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/SelectRegisterFile.sv ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimate of Logic utilization (ALMs needed) ; 1          ;
+;                                             ;            ;
+; Combinational ALUT usage for logic          ; 2          ;
+;     -- 7 input functions                    ; 0          ;
+;     -- 6 input functions                    ; 0          ;
+;     -- 5 input functions                    ; 0          ;
+;     -- 4 input functions                    ; 0          ;
+;     -- <=3 input functions                  ; 2          ;
+;                                             ;            ;
+; Dedicated logic registers                   ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 4          ;
+;                                             ;            ;
+; Total DSP Blocks                            ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; wreg~input ;
+; Maximum fan-out                             ; 2          ;
+; Total fan-out                               ; 10         ;
+; Average fan-out                             ; 1.00       ;
++---------------------------------------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                           ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name        ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------------+--------------+
+; |SelectRegisterFile        ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 4    ; 0            ; |SelectRegisterFile ; SelectRegisterFile ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 2                           ;
+;     normal            ; 2                           ;
+;         2 data inputs ; 2                           ;
+; boundary_port         ; 4                           ;
+;                       ;                             ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 1.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Thu May 06 11:10:06 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ASIP-vectorial -c ASIP-vectorial --analysis_and_elaboration
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+    Info: Processing started: Sun May 09 15:59:29 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ASIP-vectorial -c ASIP-vectorial
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/controlunit.sv
-    Info (12023): Found entity 1: ControlUnit File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 1
+    Info (12023): Found entity 1: ControlUnit File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/extenddeco.sv
-    Info (12023): Found entity 1: ExtendDeco File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ExtendDeco.sv Line: 1
+    Info (12023): Found entity 1: ExtendDeco File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ExtendDeco.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/instdeco.sv
-    Info (12023): Found entity 1: InstDeco File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/InstDeco.sv Line: 1
+    Info (12023): Found entity 1: InstDeco File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/InstDeco.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fordwardunit/forwardunit.sv
-    Info (12023): Found entity 1: ForwardUnit File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at ControlUnit.sv(13): created implicit net for "ALUinst" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 13
-Info (12127): Elaborating entity "ControlUnit" for the top level hierarchy
-Warning (10034): Output port "ALUins" at ControlUnit.sv(3) has no driver File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 3
-Info (12128): Elaborating entity "ExtendDeco" for hierarchy "ExtendDeco:ExtDeco" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 12
-Info (12128): Elaborating entity "InstDeco" for hierarchy "InstDeco:InstDecoO" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 13
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4762 megabytes
-    Info: Processing ended: Thu May 06 11:10:23 2021
+    Info (12023): Found entity 1: ForwardUnit File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/aluscalar.sv
+    Info (12023): Found entity 1: ALUScalar File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux/mux8.sv
+    Info (12023): Found entity 1: Mux8 File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Mux/Mux8.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/flag/zeroflag.sv
+    Info (12023): Found entity 1: ZeroFlag File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/ZeroFlag.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/flag/overflowflag.sv
+    Info (12023): Found entity 1: OverflowFlag File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/OverflowFlag.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/flag/negativeflag.sv
+    Info (12023): Found entity 1: NegativeFlag File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/NegativeFlag.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/flag/carryflag.sv
+    Info (12023): Found entity 1: CarryFlag File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/CarryFlag.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu/vectorial/aluvectorial.sv
+    Info (12023): Found entity 1: ALUVectorial File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/operations/subtraction.sv
+    Info (12023): Found entity 1: Subtraction File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Subtraction.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/operations/multiplication.sv
+    Info (12023): Found entity 1: Multiplication File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Multiplication.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/operations/divition.sv
+    Info (12023): Found entity 1: Divition File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Divition.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/operations/addition.sv
+    Info (12023): Found entity 1: Addition File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Addition.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu/vectorial/operations/vectorialaddition.sv
+    Info (12023): Found entity 1: VectorialAddition File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialAddition.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu/vectorial/operations/vectorialsubtraction.sv
+    Info (12023): Found entity 1: VectorialSubtraction File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialSubtraction.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu/vectorial/operations/vectorialmultiplication.sv
+    Info (12023): Found entity 1: VectorialMultiplication File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialMultiplication.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu/vectorial/operations/vectorialdivition.sv
+    Info (12023): Found entity 1: VectorialDivition File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialDivition.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file extender/extender.sv
+    Info (12023): Found entity 1: Extender File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Extender/Extender.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memorias/vectorialregisterfile.sv
+    Info (12023): Found entity 1: VectorialRegisterFile File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memorias/VectorialRegisterFile.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memorias/instructionmemory.sv
+    Info (12023): Found entity 1: InstructionMemory File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memorias/InstructionMemory.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memorias/imagerom.sv
+    Info (12023): Found entity 1: ImageROM File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memorias/ImageROM.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memorias/memorycontroller.sv
+    Info (12023): Found entity 1: MemoryController File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memorias/MemoryController.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/selectregisterfile.sv
+    Info (12023): Found entity 1: SelectRegisterFile File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/SelectRegisterFile.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at ControlUnit.sv(13): created implicit net for "ALUinst" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at ForwardUnit.sv(6): created implicit net for "R2res3" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv Line: 6
+Warning (10236): Verilog HDL Implicit Net warning at ForwardUnit.sv(6): created implicit net for "immF" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv Line: 6
+Warning (10236): Verilog HDL Implicit Net warning at ForwardUnit.sv(7): created implicit net for "R2res4" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv Line: 7
+Warning (10236): Verilog HDL Implicit Net warning at ForwardUnit.sv(10): created implicit net for "R3res3" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at ForwardUnit.sv(11): created implicit net for "R3res4" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv Line: 11
+Info (12127): Elaborating entity "SelectRegisterFile" for the top level hierarchy
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 6 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 2 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4821 megabytes
+    Info: Processing ended: Sun May 09 15:59:46 2021
     Info: Elapsed time: 00:00:17
     Info: Total CPU time (on all processors): 00:00:37
 

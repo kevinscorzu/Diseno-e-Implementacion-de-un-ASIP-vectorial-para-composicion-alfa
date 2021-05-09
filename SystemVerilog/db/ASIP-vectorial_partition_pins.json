@@ -1,0 +1,25 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "enreg",
+					"strict" : false
+				},
+				{
+					"name" : "envec",
+					"strict" : false
+				},
+				{
+					"name" : "wreg",
+					"strict" : false
+				},
+				{
+					"name" : "vf",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
