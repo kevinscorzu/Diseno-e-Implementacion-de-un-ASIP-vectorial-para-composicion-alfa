@@ -1,5 +1,5 @@
-Analysis & Synthesis report for ASIP-vectorial
-Sun May 09 16:09:23 2021
+Analysis & Elaboration report for ASIP-vectorial
+Sun May 09 15:43:56 2021
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -7,27 +7,19 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis DSP Block Usage Summary
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |ALUScalar
- 12. Parameter Settings for User Entity Instance: Addition:Ad
- 13. Parameter Settings for User Entity Instance: Subtraction:Su
- 14. Parameter Settings for User Entity Instance: Multiplication:Mu
- 15. Parameter Settings for User Entity Instance: Division:Di
- 16. Parameter Settings for User Entity Instance: Mux8:M8
- 17. Parameter Settings for User Entity Instance: ZeroFlag:Ze
- 18. Parameter Settings for Inferred Entity Instance: Division:Di|lpm_divide:Div0
- 19. Port Connectivity Checks: "Mux8:M8"
- 20. Post-Synthesis Netlist Statistics for Top Partition
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: Mux2:MuxRDest
+  5. Parameter Settings for User Entity Instance: Mux2:PCmux
+  6. Parameter Settings for User Entity Instance: Mux2:ExtndMux
+  7. Parameter Settings for User Entity Instance: Mux2:V2_R2Mux
+  8. Parameter Settings for User Entity Instance: Mux2:V3_R3Mux
+  9. Analysis & Elaboration Settings
+ 10. Port Connectivity Checks: "Mux2:V3_R3Mux"
+ 11. Port Connectivity Checks: "Mux2:V2_R2Mux"
+ 12. Port Connectivity Checks: "Mux2:ExtndMux"
+ 13. Port Connectivity Checks: "Mux2:MuxRDest"
+ 14. Analysis & Elaboration Messages
 
 
 
@@ -50,27 +42,88 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun May 09 16:09:23 2021       ;
-; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
-; Revision Name                   ; ASIP-vectorial                              ;
-; Top-level Entity Name           ; ALUScalar                                   ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 103                                         ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 2                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Sun May 09 15:43:56 2021       ;
+; Quartus Prime Version         ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                 ; ASIP-vectorial                              ;
+; Top-level Entity Name         ; decode_module                               ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux2:MuxRDest ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; N              ; 32    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux2:PCmux ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; N              ; 32    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux2:ExtndMux ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; N              ; 32    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux2:V2_R2Mux ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; N              ; 128   ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux2:V3_R3Mux ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; N              ; 128   ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -79,7 +132,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; ALUScalar          ; ASIP-vectorial     ;
+; Top-level entity name                                                           ; decode_module      ; ASIP-vectorial     ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
@@ -161,279 +214,45 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-+----------------------------+-------------+
++--------------------------------------------------+
+; Port Connectivity Checks: "Mux2:V3_R3Mux"        ;
++----------------+-------+----------+--------------+
+; Port           ; Type  ; Severity ; Details      ;
++----------------+-------+----------+--------------+
+; result0[95..0] ; Input ; Info     ; Stuck at GND ;
++----------------+-------+----------+--------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                            ;
-+-----------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path        ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                                                                                 ; Library ;
-+-----------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; ALU/Scalar/ALUScalar.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv                 ;         ;
-; Mux/Mux8.sv                             ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Mux/Mux8.sv                             ;         ;
-; ALU/Scalar/Flag/ZeroFlag.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/ZeroFlag.sv             ;         ;
-; ALU/Scalar/Flag/OverflowFlag.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/OverflowFlag.sv         ;         ;
-; ALU/Scalar/Flag/NegativeFlag.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/NegativeFlag.sv         ;         ;
-; ALU/Scalar/Flag/CarryFlag.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/CarryFlag.sv            ;         ;
-; ALU/Scalar/Operations/Subtraction.sv    ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Subtraction.sv    ;         ;
-; ALU/Scalar/Operations/Multiplication.sv ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Multiplication.sv ;         ;
-; ALU/Scalar/Operations/Addition.sv       ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Addition.sv       ;         ;
-; ALU/Scalar/Operations/Division.sv       ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Division.sv       ;         ;
-; lpm_divide.tdf                          ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_divide.tdf                                                                                                                        ;         ;
-; abs_divider.inc                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/abs_divider.inc                                                                                                                       ;         ;
-; sign_div_unsign.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/sign_div_unsign.inc                                                                                                                   ;         ;
-; aglobal180.inc                          ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/aglobal180.inc                                                                                                                        ;         ;
-; db/lpm_divide_3dm.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/db/lpm_divide_3dm.tdf                   ;         ;
-; db/sign_div_unsign_9nh.tdf              ; yes             ; Auto-Generated Megafunction  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/db/sign_div_unsign_9nh.tdf              ;         ;
-; db/alt_u_div_o2f.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/db/alt_u_div_o2f.tdf                    ;         ;
-+-----------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------+
+; Port Connectivity Checks: "Mux2:V2_R2Mux"        ;
++----------------+-------+----------+--------------+
+; Port           ; Type  ; Severity ; Details      ;
++----------------+-------+----------+--------------+
+; result0[95..0] ; Input ; Info     ; Stuck at GND ;
++----------------+-------+----------+--------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                                                        ;
-+---------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                                                                ;
-+---------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 660                                                                                                                  ;
-;                                             ;                                                                                                                      ;
-; Combinational ALUT usage for logic          ; 1277                                                                                                                 ;
-;     -- 7 input functions                    ; 32                                                                                                                   ;
-;     -- 6 input functions                    ; 10                                                                                                                   ;
-;     -- 5 input functions                    ; 529                                                                                                                  ;
-;     -- 4 input functions                    ; 460                                                                                                                  ;
-;     -- <=3 input functions                  ; 246                                                                                                                  ;
-;                                             ;                                                                                                                      ;
-; Dedicated logic registers                   ; 0                                                                                                                    ;
-;                                             ;                                                                                                                      ;
-; I/O pins                                    ; 103                                                                                                                  ;
-;                                             ;                                                                                                                      ;
-; Total DSP Blocks                            ; 2                                                                                                                    ;
-;                                             ;                                                                                                                      ;
-; Maximum fan-out node                        ; Division:Di|lpm_divide:Div0|lpm_divide_3dm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_o2f:divider|sel[957] ;
-; Maximum fan-out                             ; 63                                                                                                                   ;
-; Total fan-out                               ; 6043                                                                                                                 ;
-; Average fan-out                             ; 4.07                                                                                                                 ;
-+---------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Mux2:ExtndMux"                                                                                                                                                                     ;
++---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                          ;
++---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; result1 ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "result1[31..1]" will be connected to GND.                                ;
+; Sel     ; Input ; Warning  ; Input port expression (2 bits) is wider than the input port (1 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                              ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                    ; Entity Name         ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |ALUScalar                                ; 1277 (0)            ; 0 (0)                     ; 0                 ; 2          ; 103  ; 0            ; |ALUScalar                                                                                                             ; ALUScalar           ; work         ;
-;    |Addition:Ad|                          ; 33 (33)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALUScalar|Addition:Ad                                                                                                 ; Addition            ; work         ;
-;    |CarryFlag:Ca|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALUScalar|CarryFlag:Ca                                                                                                ; CarryFlag           ; work         ;
-;    |Division:Di|                          ; 1115 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALUScalar|Division:Di                                                                                                 ; Division            ; work         ;
-;       |lpm_divide:Div0|                   ; 1115 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALUScalar|Division:Di|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_3dm:auto_generated|  ; 1115 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALUScalar|Division:Di|lpm_divide:Div0|lpm_divide_3dm:auto_generated                                                   ; lpm_divide_3dm      ; work         ;
-;             |sign_div_unsign_9nh:divider| ; 1115 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALUScalar|Division:Di|lpm_divide:Div0|lpm_divide_3dm:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
-;                |alt_u_div_o2f:divider|    ; 1115 (1115)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALUScalar|Division:Di|lpm_divide:Div0|lpm_divide_3dm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_o2f:divider ; alt_u_div_o2f       ; work         ;
-;    |Multiplication:Mu|                    ; 15 (15)             ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |ALUScalar|Multiplication:Mu                                                                                           ; Multiplication      ; work         ;
-;    |Mux8:M8|                              ; 68 (68)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALUScalar|Mux8:M8                                                                                                     ; Mux8                ; work         ;
-;    |OverflowFlag:oV|                      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALUScalar|OverflowFlag:oV                                                                                             ; OverflowFlag        ; work         ;
-;    |Subtraction:Su|                       ; 33 (33)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALUScalar|Subtraction:Su                                                                                              ; Subtraction         ; work         ;
-;    |ZeroFlag:Ze|                          ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALUScalar|ZeroFlag:Ze                                                                                                 ; ZeroFlag            ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-----------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary  ;
-+---------------------------------+-------------+
-; Statistic                       ; Number Used ;
-+---------------------------------+-------------+
-; Two Independent 18x18           ; 1           ;
-; Sum of two 18x18                ; 1           ;
-; Total number of DSP blocks      ; 2           ;
-;                                 ;             ;
-; Fixed Point Unsigned Multiplier ; 3           ;
-+---------------------------------+-------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 8:1                ; 32 bits   ; 160 LEs       ; 128 LEs              ; 32 LEs                 ; No         ; |ALUScalar|Mux8:M8|Mux31   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |ALUScalar ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; N              ; 32    ; Signed Integer                                   ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Addition:Ad ;
-+----------------+-------+---------------------------------+
-; Parameter Name ; Value ; Type                            ;
-+----------------+-------+---------------------------------+
-; N              ; 32    ; Signed Integer                  ;
-+----------------+-------+---------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Subtraction:Su ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; N              ; 32    ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Multiplication:Mu ;
-+----------------+-------+---------------------------------------+
-; Parameter Name ; Value ; Type                                  ;
-+----------------+-------+---------------------------------------+
-; N              ; 32    ; Signed Integer                        ;
-+----------------+-------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Division:Di ;
-+----------------+-------+---------------------------------+
-; Parameter Name ; Value ; Type                            ;
-+----------------+-------+---------------------------------+
-; N              ; 32    ; Signed Integer                  ;
-+----------------+-------+---------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Mux8:M8 ;
-+----------------+-------+-----------------------------+
-; Parameter Name ; Value ; Type                        ;
-+----------------+-------+-----------------------------+
-; N              ; 32    ; Signed Integer              ;
-+----------------+-------+-----------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ZeroFlag:Ze ;
-+----------------+-------+---------------------------------+
-; Parameter Name ; Value ; Type                            ;
-+----------------+-------+---------------------------------+
-; N              ; 32    ; Signed Integer                  ;
-+----------------+-------+---------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: Division:Di|lpm_divide:Div0 ;
-+------------------------+----------------+------------------------------------+
-; Parameter Name         ; Value          ; Type                               ;
-+------------------------+----------------+------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                            ;
-; LPM_WIDTHD             ; 32             ; Untyped                            ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
-; LPM_PIPELINE           ; 0              ; Untyped                            ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
-; CBXI_PARAMETER         ; lpm_divide_3dm ; Untyped                            ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
-+------------------------+----------------+------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------+
-; Port Connectivity Checks: "Mux8:M8"      ;
-+--------+-------+----------+--------------+
-; Port   ; Type  ; Severity ; Details      ;
-+--------+-------+----------+--------------+
-; Input0 ; Input ; Info     ; Stuck at GND ;
-; Input6 ; Input ; Info     ; Stuck at GND ;
-; Input7 ; Input ; Info     ; Stuck at GND ;
-+--------+-------+----------+--------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1277                        ;
-;     arith             ; 628                         ;
-;         0 data inputs ; 59                          ;
-;         2 data inputs ; 76                          ;
-;         5 data inputs ; 493                         ;
-;     extend            ; 32                          ;
-;         7 data inputs ; 32                          ;
-;     normal            ; 575                         ;
-;         2 data inputs ; 38                          ;
-;         3 data inputs ; 34                          ;
-;         4 data inputs ; 457                         ;
-;         5 data inputs ; 36                          ;
-;         6 data inputs ; 10                          ;
-;     shared            ; 42                          ;
-;         0 data inputs ; 4                           ;
-;         2 data inputs ; 35                          ;
-;         4 data inputs ; 3                           ;
-; arriav_mac            ; 2                           ;
-; boundary_port         ; 103                         ;
-;                       ;                             ;
-; Max LUT depth         ; 90.60                       ;
-; Average LUT depth     ; 74.58                       ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:04     ;
-+----------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Mux2:MuxRDest"                                                                                                                                                                      ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                                                          ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; result0 ; Input  ; Warning  ; Input port expression (4 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "result0[31..4]" will be connected to GND.                                ;
+; result1 ; Input  ; Warning  ; Input port expression (4 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "result1[31..4]" will be connected to GND.                                ;
+; result1 ; Input  ; Info     ; Stuck at GND                                                                                                                                                                     ;
+; Sel     ; Input  ; Warning  ; Input port expression (2 bits) is wider than the input port (1 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; Out     ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (4 bits) it drives; bit(s) "Out[31..4]" have no fanouts                                                         ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -442,9 +261,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sun May 09 16:09:00 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ASIP-vectorial -c ASIP-vectorial
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+    Info: Processing started: Sun May 09 15:43:31 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ASIP-vectorial -c ASIP-vectorial --analysis_and_elaboration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelinewb.sv
+    Info (12023): Found entity 1: PipelineWB File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineWB.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelinemem.sv
+    Info (12023): Found entity 1: PipelineMem File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineMem.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelinefetch.sv
+    Info (12023): Found entity 1: PipelineFetch File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineFetch.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelineex.sv
+    Info (12023): Found entity 1: PipelineEx File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineEx.sv Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file pipeline/pipelinedecode.sv
 Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/controlunit.sv
     Info (12023): Found entity 1: ControlUnit File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/extenddeco.sv
@@ -452,91 +281,28 @@ Info (12021): Found 1 design units, including 1 entities, in source file ctrluni
 Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/instdeco.sv
     Info (12023): Found entity 1: InstDeco File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/InstDeco.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fordwardunit/forwardunit.sv
-    Info (12023): Found entity 1: ForwardUnit File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/aluscalar.sv
-    Info (12023): Found entity 1: ALUScalar File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file mux/mux8.sv
-    Info (12023): Found entity 1: Mux8 File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Mux/Mux8.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/flag/zeroflag.sv
-    Info (12023): Found entity 1: ZeroFlag File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/ZeroFlag.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/flag/overflowflag.sv
-    Info (12023): Found entity 1: OverflowFlag File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/OverflowFlag.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/flag/negativeflag.sv
-    Info (12023): Found entity 1: NegativeFlag File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/NegativeFlag.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/flag/carryflag.sv
-    Info (12023): Found entity 1: CarryFlag File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/CarryFlag.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file alu/vectorial/aluvectorial.sv
-    Info (12023): Found entity 1: ALUVectorial File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/operations/subtraction.sv
-    Info (12023): Found entity 1: Subtraction File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Subtraction.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/operations/multiplication.sv
-    Info (12023): Found entity 1: Multiplication File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Multiplication.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/operations/addition.sv
-    Info (12023): Found entity 1: Addition File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Addition.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file alu/vectorial/operations/vectorialaddition.sv
-    Info (12023): Found entity 1: VectorialAddition File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialAddition.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file alu/vectorial/operations/vectorialsubtraction.sv
-    Info (12023): Found entity 1: VectorialSubtraction File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialSubtraction.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file alu/vectorial/operations/vectorialmultiplication.sv
-    Info (12023): Found entity 1: VectorialMultiplication File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialMultiplication.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file extender/extender.sv
-    Info (12023): Found entity 1: Extender File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Extender/Extender.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file memorias/vectorialregisterfile.sv
-    Info (12023): Found entity 1: VectorialRegisterFile File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memorias/VectorialRegisterFile.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file memorias/instructionmemory.sv
-    Info (12023): Found entity 1: InstructionMemory File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memorias/InstructionMemory.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file memorias/imagerom.sv
-    Info (12023): Found entity 1: ImageROM File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memorias/ImageROM.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file memorias/memorycontroller.sv
-    Info (12023): Found entity 1: MemoryController File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memorias/MemoryController.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/selectregisterfile.sv
-    Info (12023): Found entity 1: SelectRegisterFile File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/SelectRegisterFile.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file alu/vectorial/operations/vectorialdivision.sv
-    Info (12023): Found entity 1: VectorialDivision File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialDivision.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/operations/division.sv
-    Info (12023): Found entity 1: Division File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Division.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at ControlUnit.sv(13): created implicit net for "ALUinst" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 13
-Warning (10236): Verilog HDL Implicit Net warning at ForwardUnit.sv(6): created implicit net for "R2res3" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv Line: 6
-Warning (10236): Verilog HDL Implicit Net warning at ForwardUnit.sv(6): created implicit net for "immF" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv Line: 6
-Warning (10236): Verilog HDL Implicit Net warning at ForwardUnit.sv(7): created implicit net for "R2res4" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv Line: 7
-Warning (10236): Verilog HDL Implicit Net warning at ForwardUnit.sv(10): created implicit net for "R3res3" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv Line: 10
-Warning (10236): Verilog HDL Implicit Net warning at ForwardUnit.sv(11): created implicit net for "R3res4" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv Line: 11
-Info (12127): Elaborating entity "ALUScalar" for the top level hierarchy
-Info (12128): Elaborating entity "Addition" for hierarchy "Addition:Ad" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 13
-Info (12128): Elaborating entity "Subtraction" for hierarchy "Subtraction:Su" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 14
-Info (12128): Elaborating entity "Multiplication" for hierarchy "Multiplication:Mu" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 15
-Info (12128): Elaborating entity "Division" for hierarchy "Division:Di" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 16
-Info (12128): Elaborating entity "Mux8" for hierarchy "Mux8:M8" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 18
-Info (12128): Elaborating entity "NegativeFlag" for hierarchy "NegativeFlag:Ne" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 20
-Info (12128): Elaborating entity "ZeroFlag" for hierarchy "ZeroFlag:Ze" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 21
-Info (12128): Elaborating entity "OverflowFlag" for hierarchy "OverflowFlag:oV" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 22
-Info (12128): Elaborating entity "CarryFlag" for hierarchy "CarryFlag:Ca" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 23
-Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Division:Di|Div0" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Division.sv Line: 5
-Info (12130): Elaborated megafunction instantiation "Division:Di|lpm_divide:Div0" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Division.sv Line: 5
-Info (12133): Instantiated megafunction "Division:Di|lpm_divide:Div0" with the following parameter: File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Division.sv Line: 5
-    Info (12134): Parameter "LPM_WIDTHN" = "32"
-    Info (12134): Parameter "LPM_WIDTHD" = "32"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_3dm.tdf
-    Info (12023): Found entity 1: lpm_divide_3dm File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/db/lpm_divide_3dm.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_9nh File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/db/sign_div_unsign_9nh.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_o2f.tdf
-    Info (12023): Found entity 1: alt_u_div_o2f File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/db/alt_u_div_o2f.tdf Line: 22
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1382 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 67 input pins
-    Info (21059): Implemented 36 output pins
-    Info (21061): Implemented 1277 logic cells
-    Info (21062): Implemented 2 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4844 megabytes
-    Info: Processing ended: Sun May 09 16:09:23 2021
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:44
+    Info (12023): Found entity 1: ForwardUnit File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file muxes/mux2.sv
+    Info (12023): Found entity 1: Mux2 File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file modules/decode_module.sv
+    Info (12023): Found entity 1: decode_module File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memories/registerfile.sv
+    Info (12023): Found entity 1: RegisterFile File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/RegisterFile.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at ControlUnit.sv(4): created implicit net for "wmem" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 4
+Info (12127): Elaborating entity "decode_module" for the top level hierarchy
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:ctrlUnit" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 8
+Warning (10036): Verilog HDL or VHDL warning at ControlUnit.sv(4): object "wmem" assigned a value but never read File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 4
+Warning (10034): Output port "wmemE" at ControlUnit.sv(2) has no driver File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 2
+Info (12128): Elaborating entity "ExtendDeco" for hierarchy "ControlUnit:ctrlUnit|ExtendDeco:ExtDeco" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 12
+Info (12128): Elaborating entity "InstDeco" for hierarchy "ControlUnit:ctrlUnit|InstDeco:InstDecoO" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 13
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:regfile" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 10
+Info (12128): Elaborating entity "Mux2" for hierarchy "Mux2:MuxRDest" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 19
+Info (12128): Elaborating entity "Mux2" for hierarchy "Mux2:V2_R2Mux" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 24
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4768 megabytes
+    Info: Processing ended: Sun May 09 15:43:56 2021
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:56
 
 
