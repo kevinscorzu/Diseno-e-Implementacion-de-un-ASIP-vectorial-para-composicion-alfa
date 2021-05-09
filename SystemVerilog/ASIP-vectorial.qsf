@@ -65,12 +65,10 @@ set_global_assignment -name SYSTEMVERILOG_FILE ALU/Scalar/Flag/CarryFlag.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ALU/Vectorial/ALUVectorial.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ALU/Scalar/Operations/Subtraction.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ALU/Scalar/Operations/Multiplication.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ALU/Scalar/Operations/Divition.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ALU/Scalar/Operations/Addition.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ALU/Vectorial/Operations/VectorialAddition.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ALU/Vectorial/Operations/VectorialSubtraction.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ALU/Vectorial/Operations/VectorialMultiplication.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ALU/Vectorial/Operations/VectorialDivition.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Extender/Extender.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Memorias/VectorialRegisterFile.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Memorias/InstructionMemory.sv

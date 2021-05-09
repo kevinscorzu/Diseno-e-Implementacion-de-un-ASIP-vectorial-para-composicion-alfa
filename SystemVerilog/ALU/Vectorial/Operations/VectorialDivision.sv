@@ -1,4 +1,4 @@
-module VectorialDivition #(parameter N = 32) (input logic [N-1:0] A, B,
+module VectorialDivision #(parameter N = 32) (input logic [N-1:0] A, B,
 															 output logic [N-1:0] C);
 										 
 	assign C[31:0] = A[31:0] / B[31:0];
