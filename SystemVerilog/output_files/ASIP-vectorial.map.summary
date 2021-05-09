@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Thu May 06 11:10:23 2021
+Analysis & Elaboration Status : Successful - Sun May 09 15:43:56 2021
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : ASIP-vectorial
-Top-level Entity Name : ControlUnit
+Top-level Entity Name : decode_module
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge
