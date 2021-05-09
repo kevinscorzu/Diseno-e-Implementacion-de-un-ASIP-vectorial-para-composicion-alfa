@@ -1,5 +1,5 @@
 Flow report for ASIP-vectorial
-Sun May 09 16:09:23 2021
+Sun May 09 17:04:58 2021
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,10 +40,10 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Sun May 09 15:43:56 2021       ;
+; Flow Status                 ; Successful - Sun May 09 17:04:58 2021       ;
 ; Quartus Prime Version       ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name               ; ASIP-vectorial                              ;
-; Top-level Entity Name       ; decode_module                               ;
+; Top-level Entity Name       ; ALUScalar                                   ;
 ; Family                      ; Cyclone V                                   ;
 ; Device                      ; 5CSEMA5F31C6                                ;
 ; Timing Models               ; Final                                       ;
@@ -62,31 +62,32 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/09/2021 15:43:32 ;
+; Start date & time ; 05/09/2021 17:04:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ASIP-vectorial      ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                               ;
-+-------------------------------------+----------------------------------------+----------------+---------------+----------------+
-; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name   ; Section Id     ;
-+-------------------------------------+----------------------------------------+----------------+---------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 93180993733489.162059661201220         ; --             ; --            ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --             ; --            ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim (SystemVerilog)               ; <None>         ; --            ; --             ;
-; EDA_TIME_SCALE                      ; 1 ps                                   ; --             ; --            ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --             ; --            ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --             ; --            ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; decode_module ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --             ; decode_module ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --             ; decode_module ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --             ; --            ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --             ; --            ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --             ; --            ; --             ;
-; TOP_LEVEL_ENTITY                    ; decode_module                          ; ASIP-vectorial ; --            ; --             ;
-+-------------------------------------+----------------------------------------+----------------+---------------+----------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                             ;
++-------------------------------------+----------------------------------------+----------------+-------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name ; Section Id     ;
++-------------------------------------+----------------------------------------+----------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 93180993733489.162060148217332         ; --             ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --             ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim (SystemVerilog)               ; <None>         ; --          ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                   ; --             ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --             ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --             ; --          ; --             ;
+; NUM_PARALLEL_PROCESSORS             ; All                                    ; --             ; --          ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; ALUScalar   ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --             ; ALUScalar   ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --             ; ALUScalar   ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --             ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --             ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --             ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; ALUScalar                              ; ASIP-vectorial ; --          ; --             ;
++-------------------------------------+----------------------------------------+----------------+-------------+----------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------+
@@ -94,24 +95,24 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:25     ; 1.0                     ; 4768 MB             ; 00:00:55                           ;
-; Total                  ; 00:00:25     ; --                      ; --                  ; 00:00:55                           ;
+; Analysis & Elaboration ; 00:00:17     ; 1.0                     ; 4767 MB             ; 00:00:38                           ;
+; Total                  ; 00:00:17     ; --                      ; --                  ; 00:00:38                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-VRFLMRQ  ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++--------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                      ;
++------------------------+------------------+------------+------------+----------------+
+; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++------------------------+------------------+------------+------------+----------------+
+; Analysis & Elaboration ; DESKTOP-PKG39T9  ; Windows 10 ; 10.0       ; x86_64         ;
++------------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off ASIP-vectorial -c ASIP-vectorial
+quartus_map --read_settings_files=on --write_settings_files=off ASIP-vectorial -c ASIP-vectorial --analysis_and_elaboration
 
 
 
