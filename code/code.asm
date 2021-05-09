@@ -60,7 +60,7 @@ horizontal_for_x:
 	JMP horizontal_for_x	;
 angular_for_y:
 	ADD R12, R12, R1	; // Aumenta el contador de las filas
-	MOVI R11, 0		; // Vuelve 0 el contador de columnas
+	MOVI R11, 0x0		; // Vuelve 0 el contador de columnas
 	CMPI R12, 0xC8		;
 	JEQ degraded 		; // Salta a hacer la degradacion
 angular_for_x:
@@ -142,7 +142,7 @@ blue:
 	LDR R13, R13		; // Intensidad Verde
 	CMPI R13, 0x1		;
 	JEQ degraded_aux	;
-	movi R13, 0x19		; // contador
+	MOVI R13, 0x19		; // contador
 	MOVI R13, 0x3AD72	;
 	LDR R13, R13		; // Intensidad Verde
 	CMPI R13, 0x1		;
@@ -224,7 +224,7 @@ alpha_aux:
 	DIV R7, R7, R6		; // (100 - transparencia degradado) / 100
 	DIV R6, R5, R6		; // transparencia degradado / 100
 alpha_composition_for:
-	CMP R14, 0x9C40		;
+	CMPI R14, 0x9C40		;
 	JEQ END			; // contador == 40000 -> termina
 	LDRV V6, R2		; // vector RAM rojo
 	LDRV V1, R3		; // vector RAM verde
@@ -253,4 +253,4 @@ alpha_composition_for:
 	ADD R14, R14, R1	; // suma 4 al contador
 	JMP alpha_composition_for ;		
 END:
-	MOVI R1, 45		;
+	MOVI R1, 0x45		;
