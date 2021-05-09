@@ -21,8 +21,17 @@ def p_cuerpo(p):
     '''
     cuerpo : instruccion
             | label
+            | comment
     '''
     p[0] = (p[1])
+    #sintaxResult.append(p[0])
+def p_Comment(p):
+    '''
+    comment : COMMENT  cuerpo
+            | COMMENT empty
+
+    '''
+
     #sintaxResult.append(p[0])
 
 def p_label(p):
@@ -52,7 +61,7 @@ def p_instructionSTL(p):
     instructionSTL : STL PUNTOCOMA cuerpo
                     | empty
     '''
-    p[0] = (p[1],'-')
+    p[0] = (p[1], 0)
     #print(p[0])
     sintaxResult.append(p[0])
 
@@ -67,11 +76,10 @@ def p_instructionDI(p):
     #print(p[0])
 def p_instructionI(p):
     '''
-    instructionI : instructionIName LABEL PUNTOCOMA cuerpo
-                    | instructionIName REG COMA IMM PUNTOCOMA cuerpo
+    instructionI : instructionIName REG COMA IMM PUNTOCOMA cuerpo
     | empty
     '''
-    p[0] = (p[1], p[2])
+    p[0] = (p[1], p[2], p[4])
     sintaxResult.append(p[0])
     #print(p[0])
 
@@ -81,7 +89,7 @@ def p_REG(p):
         | REGVECTORIAL
     '''
     p[0] = p[1]
-    
+
     #print(p[0])
 
 def p_instructionDT(p):
@@ -89,7 +97,7 @@ def p_instructionDT(p):
     instructionDT : instructionDTName REG COMA REG COMA REG PUNTOCOMA cuerpo
                         | empty
     '''
-    p[0] = (p[1], p[2], p[4])
+    p[0] = (p[1], p[2], p[4], p[6])
     sintaxResult.append(p[0])
     #print(p[0])
 
@@ -132,7 +140,9 @@ def p_instructionDTName(p):
     instructionDTName :  ADD
             | SUB
             | MUL
+            | DIV
             | ADDVV
+            | SUBVV
             | MULVE
             | DIVVE
     '''
@@ -181,4 +191,4 @@ def test():
     KILIASMLexicalAnalizer(cadena)
     print(KiliASMSintacticAnalizer(cadena))
 
-test()
+

@@ -2,9 +2,9 @@ from KiliASMSintax import KiliASMSintacticAnalizer
 from KiliASMLexer import KILIASMLexicalAnalizer
 import codecs
 
-registerNumber = {
-    'R1': '0001',
+escalarRegisterNumber = {
     'R2': '0010',
+    'R1': '0001',
     'R3': '0011',
     'R4': '0100',
     'R5': '0101',
@@ -21,27 +21,50 @@ registerNumber = {
 
 }
 
-memoryInst = {'GDR': int('10000', 2),
-              'CAR': int('10010', 2),
-              'MOVR': int('10100', 2),
-              'MOVI': int('10101', 2)}
+vectorialRegisterNumber = {
+    'V0': '0000',
+    'V1': '0001',
+    'V2': '0010',
+    'V3': '0011',
+    'V4': '0100',
+    'V5': '0101',
+    'V6': '0110',
+    'V7': '0111',
 
-arithmeticInst = {'SUM': int('11000', 2),
-                  'RES': int('11010', 2),
-                  'MOD': int('11100', 2),
-                  'MUL': int('11110', 2),
-                  'DDR': int('11001', 2)}
 
-compInst = {'CMPR': int('10110', 2),
-            'CMPI': int('10111', 2)}
+}
 
-jumpInst = {'SAL': int('00001', 2),
-            'SIG': int('00111', 2),
-            'SMY': int('00011', 2)}
+DI = {'STR': int('11'+'00'+'0', 2),
+      'LDR': int('11'+'01'+'0', 2),
+      'MOVR': int('11'+'10'+'0', 2),
+      'CMPR': int('11'+'11'+'0', 2),
+      'STRV': int('11'+'00'+'1', 2),
+      'LDRV': int('11'+'01'+'1', 2),
+      }
+
+DT = {'ADD': int('10'+'00'+'0', 2),
+      'SUB': int('10'+'01'+'0', 2),
+      'MUL': int('10'+'10'+'0', 2),
+      'DIV': int('10'+'11'+'0', 2),
+      'ADDVV': int('10'+'00'+'1', 2),
+      'SUBVV': int('10'+'01'+'1', 2),
+      'MULVE': int('10'+'10'+'1', 2),
+      'DIVVE': int('10'+'11'+'1', 2),
+      }
+
+I = {'MOVI': int('01'+'00'+'0', 2),
+      'CMPI': int('01'+'01'+'0', 2)}
+
+
+N = {'JMP': int('00'+'00'+'0', 2),
+     'JEQ': int('00'+'01'+'0', 2),
+     'STL': int('00'+'10'+'0', 2)}
+
+
 
 stallInst = {'ESP': int('01000', 2)}
-bitsBasura19 = '0000000000000000000'
-bitsBasura15 = '000000000000000'
+bitsBasura18 = '000000000000000000'
+bitsBasura14 = '00000000000000'
 bitsBasura4 = '0000'
 
 jumpLabels = {}
@@ -66,11 +89,10 @@ def compile(codigo):
     hexDirection = []
     instruction = []
 
-    print(jumpLabels)
-    return
+
     dir = 0
     for statement in sintaxResult:
-        if type(statement) == type(tuple()):  # Si es una tupla significa que es una instruccion norma
+        if type(statement) == type(tuple()):  # Si es una tupla significa que es una instruccion normal
             hexDirection.append(hex(dir))
 
             instruction.append(statement)
@@ -81,7 +103,6 @@ def compile(codigo):
         else:
 
             pass
-
     print(hexInstructions)
     print(binInstructions)
     with open('./OutputFiles/outputFile.txt', 'w') as f:
@@ -91,65 +112,67 @@ def compile(codigo):
 
 def analiceInst(inst, pc):
     binCode = ''
+    labelInstruccion = str(inst[0])
+    if labelInstruccion in DI:
+        binCode += str(format(DI.get(inst[0]), '#010b'))[4:]
 
-    if str(inst[0]) in memoryInst:
-        binCode += str(format(memoryInst.get(inst[0]), '#010b'))[5:]
+        operando1 = str(inst[1])
+        operando2 = str(inst[2])
+        if operando1 in escalarRegisterNumber and operando2 in escalarRegisterNumber:
+            binCode += bitsBasura18
+            binCode +=  escalarRegisterNumber.get(operando2) + escalarRegisterNumber.get(operando1)
 
-        if inst[1] not in registerNumber:
-            # print('El registro ' + str(inst[1]) + ' no existe')
-            return
-        elif inst[2] not in registerNumber and not isinstance(inst[2], int):
-            print('El registro ' + str(inst[2]) + ' no existe')
-            return
-        elif isinstance(inst[2], int):
-            # print(str(bin(inst[2])))
-            binCode += shiftNumber(str(bin(inst[2]))[2:], 23) + registerNumber.get(str(inst[1]))
 
+        elif operando1 in vectorialRegisterNumber and operando2 in vectorialRegisterNumber:
+            binCode += bitsBasura18
+            binCode += vectorialRegisterNumber.get(operando2) + vectorialRegisterNumber.get(operando1)
         else:
-            if str(inst[0]) == 'GDR':
-                binCode += bitsBasura15
-                binCode += registerNumber.get(str(inst[2])) + registerNumber.get(str(inst[1])) + bitsBasura4
+            print('El registro ' + operando1 + " o " + operando2 +' no existe')
+            return
 
+    elif labelInstruccion in I:
+        binCode += str(format(I.get(inst[0]), '#010b'))[4:]
+        operando1 = str(inst[1])
+
+        operando2 = inst[2]
+        if operando1 in escalarRegisterNumber and isinstance(operando2, int):
+            imm = shiftNumber(str(bin(operando2))[2:], 22)
+            binCode += imm + escalarRegisterNumber.get(operando1)
+        else:
+            if not operando1 in escalarRegisterNumber:
+                print("El registro "+operando1+" no existe")
+                return
             else:
-                binCode += bitsBasura19
-                binCode += registerNumber.get(str(inst[2])) + registerNumber.get(str(inst[1]))
-
-
-    elif str(inst[0]) in arithmeticInst:
-        binCode += str(format(arithmeticInst.get(inst[0]), '#010b'))[5:]
-
-
-        print('La operación es: ' + str(inst[3]))
-        if not isinstance(inst[3], int):
-            print('La operación es artimetica normal')
-            binCode += bitsBasura15
-            binCode += registerNumber.get(str(inst[3])) + registerNumber.get(str(inst[2])) + registerNumber.get(str(inst[1]))
+                print("EL inmediato: "+str(operando2)+" es invalido")
+                return
+    elif labelInstruccion in DT:
+        binCode += str(format(DT.get(inst[0]), '#010b'))[4:]
+        operando1 = str(inst[1])
+        operando2 = str(inst[2])
+        operando3 = str(inst[3])
+        if operando1 in escalarRegisterNumber and operando2 in escalarRegisterNumber and operando3 in escalarRegisterNumber:
+            binCode += bitsBasura14
+            binCode += escalarRegisterNumber.get(operando3) + escalarRegisterNumber.get(operando2)+  escalarRegisterNumber.get(operando1)
+        elif operando1 in vectorialRegisterNumber and operando2 in vectorialRegisterNumber and operando3 in vectorialRegisterNumber:
+            binCode += bitsBasura14
+            binCode += vectorialRegisterNumber.get(operando3) + vectorialRegisterNumber.get(
+                operando2) + vectorialRegisterNumber.get(operando1)
         else:
-            print('La operación es un DDR')
-            imm = shiftNumber(str(format(inst[3], '#00010b'))[2:], 19)
-            binCode = binCode + imm + registerNumber.get(str(inst[2])) + registerNumber.get(str(inst[1]))
-            print(imm)
-    elif str(inst[0]) in compInst:
-        if not isinstance(inst[2], int):  # Si es una operacion de comparacion R-R
-            binCode += str(format(compInst.get(inst[0]), '#010b'))[5:]
-            binCode += bitsBasura15
-            binCode += registerNumber.get(str(inst[2])) + registerNumber.get(str(inst[1])) + bitsBasura4
-        else:
-            binCode += str(format(compInst.get(inst[0]), '#010b'))[5:]
-            binCode += shiftNumber(str(bin(inst[2]))[2:], 19) + registerNumber.get(str(inst[1])) + bitsBasura4
-    elif str(inst[0]) in jumpInst:
+            print('Los registros ingresados son invalidos')
+            return
 
-        if str(inst[1]) in jumpLabels:
+    elif labelInstruccion in N:
+        binCode += str(format(N.get(inst[0]), '#010b'))[5:]
+        print(binCode +"--"+ str(len(binCode)))
+
+        operando1 = inst[1]
+        if operando1 in jumpLabels:
             jumpDir = jumpLabels.get(inst[1])
-            binCode += str(format(jumpInst.get(inst[0]), '#010b'))[5:]
             pcmenosjmpAdd = int(jumpDir, 16) - int(pc, 16)
-            #pcmenosjmpAdd = int(pc, 16) - int(jumpDir, 16)
-            print(pcmenosjmpAdd)
 
             if (pcmenosjmpAdd < 0):
 
                 pcmenosjmpAdd = bin(abs(pcmenosjmpAdd))[2:]
-
                 complemento = complementoADos(pcmenosjmpAdd)
                 binCode += complemento
 
@@ -158,47 +181,30 @@ def analiceInst(inst, pc):
             else:
 
                 pcmenosjmpAdd = bin(pcmenosjmpAdd)[2:]
-                binCode += str(shiftNumber(pcmenosjmpAdd,27))
-
+                binCode += str(shiftNumber(pcmenosjmpAdd, 27))
+        elif(operando1 != "SLT"):
+            print("Se va a hacer un stall")
         else:
-            print('La etiqueta a la que quiere saltar no existe')
-
-    elif str(inst[0]) in stallInst:
-        binCode += str(format(stallInst.get(inst[0]), '#010b'))[5:]
-
-    binInstructions.append(binCode)
-    #print('El codigo de la operacion es:')
-
-    instrCode = int(binCode[0:5],2)
-    if instrCode == memoryInst.get('GDR') or instrCode == memoryInst.get('CAR'):
-        binCode = int(binCode, 2)
-        hexCode = hex(binCode)
-        lenHexCode = len(hexCode)
-        if lenHexCode != 10:
-            hexCode = hexCode[2:]
-            while lenHexCode < 10:
-                 hexCode= '0' + hexCode
-                 lenHexCode += 1
-            hexCode = '0x' + hexCode
-
-
-        hexInstructions.append(hexCode+ str(inst) + ' - ' + str(bin(binCode)))
-
-
-
-
+            print('La etiqueta a la que quiere saltar no existe' + str(operando1))
     else:
+        print("La instruccion : " + labelInstruccion+" no se encuentra en los diccionarios")
+        return
+    binInstructions.append(binCode)
 
-        binCode = int(binCode, 2)
-        hexCode = hex(binCode)
-        lenHexCode = len(hexCode)
-        if lenHexCode != 10:
+
+    binCodeTemp = int(binCode, 2)
+    hexCode = hex(binCodeTemp)
+    lenHexCode = len(hexCode)
+    if lenHexCode != 10:
             hexCode = hexCode[2:]
             while lenHexCode < 10:
                 hexCode = '0' + hexCode
                 lenHexCode += 1
             hexCode = '0x' + hexCode
-        hexInstructions.append(hexCode + str(inst)  + ' - ' + str(bin(binCode)))
+    hexInstructions.append(hexCode + str(inst) + ' - ' + binCode + ' - ' +str(len(binCode)))
+
+
+
 
 
 
