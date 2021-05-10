@@ -62,7 +62,7 @@ def t_REGVECTORIAL(t):
 
 
 def t_LABEL(t):
-    r'[a-zA-Z_][a-zA-Z0-9_#@]*'
+    r'[a-zA-Z_][a-zA-Z_#@]*'
     if t.value.upper() in reservadas:
         t.value = t.value.upper()
         t.type = t.value
@@ -76,13 +76,14 @@ def t_newLine(t):
 
 
 def t_IMM(t):
-    r'\d+'
-    t.value = int(t.value)
+    r'0[xX][0-9a-fA-F]+'
+    t.value = int(t.value, 16)
+    print( t.value)
 
     return t
 
 def t_error(t):
-    print("Caracter ilegal '%s'" % t.value[0])
+    print("Caracter ilegal '%s'" % t.value[0] + " en linea: " + str(t.lexer.lineno))
     t.lexer.skip(1)
 
 

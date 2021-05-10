@@ -1,10 +1,24 @@
 INICIO:
 
 
-oscar:
-MOVI R2,4; //hola
-LDR R2,R3; //como
-//estas
-JEQ oscar;
+start:
+	MOVI R10, 0x3AD6D		;
+	LDR R10, R10		; // Obtiene la orientacion
+	MOVI R2, 0x1D4C0		; // Direccion Rojos
+	MOVI R3,0x27100		; // Direccion Verdes
+	MOVI R4, 0x30D40		; // Direccion Blue
+select_orientation:
+	MOVI R11, 0x0		; // Contador de las columnas
+	MOVI R12, 0x0		; // Contador de las filas
+	MOVI R1, 0x1		; // 1 de la suma
+	CMPI R10, 0x0		;
+	JEQ vertical_for_x	; // Salta a inicializar el degradado vertical
+	CMPI R10, 0x1		;
+	JEQ horizontal_for_x	; // Salta a inicializar el degradado horizontal
+	CMPI R10, 0x2		;
+	JEQ angular_for_x	; // Salta a inicializar el degradado angular
+	CMPI R10, 0x3		;
+	JEQ proposed_for_x 	; // Salta a inicilizar el degradado propuesto
+
 
 FIN
