@@ -1,4 +1,4 @@
-module PipelineEx( input clk, rst,
+module PipelineEx( input clk, rst,//rst is jmpenable
 						input wmemi,rmemi,wregi,input[31:0]ALUResi,R3i,input[3:0]destRegi,
 						output logic wrego,rmemo,wmemo,output logic[31:0]ALUReso,R3o,
 						output logic[3:0] destRego);

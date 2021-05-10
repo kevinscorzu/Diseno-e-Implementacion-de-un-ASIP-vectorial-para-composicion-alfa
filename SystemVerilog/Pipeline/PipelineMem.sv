@@ -1,4 +1,4 @@
-module PipelineMem(input clk, rst,
+module PipelineMem(input clk, rst,//rst is jmpenable
 						input wmemi,rmemi,wregi,wpci,CondEni,immFi,input[1:0] jmpi,input [2:0]ALUInsi,input [31:0]R2ri,R3ri,input [3:0] R2i,R3i,DestRi,input[1:0]ExtndSeli,
 						output logic wmemo,rmemo,wrego,wpco,CondEno,immFo,output logic[1:0] jmpo,output logic[2:0]ALUInso,output logic[31:0]R2ro,R3ro,output logic[3:0] R2o,R3o,DestRo ,output logic [1:0]ExtndSelo);
 		always_ff@(posedge clk or posedge rst)

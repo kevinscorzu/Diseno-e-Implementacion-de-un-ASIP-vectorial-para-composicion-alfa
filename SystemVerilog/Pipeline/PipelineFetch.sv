@@ -1,4 +1,4 @@
-module PipelineFetch(input clk, rst,
+module PipelineFetch(input clk, rst, //rst is jmpenable
 						input logic[31:0] insti, curr_pci,
 						output logic[31:0] insto, curr_pco);
 		always_ff@(posedge clk or posedge rst)
