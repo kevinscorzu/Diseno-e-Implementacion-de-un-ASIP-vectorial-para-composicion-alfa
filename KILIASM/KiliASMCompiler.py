@@ -3,8 +3,8 @@ from KiliASMLexer import KILIASMLexicalAnalizer
 import codecs
 
 escalarRegisterNumber = {
-    'R1': '0001',
     'R2': '0010',
+    'R1': '0001',
     'R3': '0011',
     'R4': '0100',
     'R5': '0101',
@@ -34,31 +34,31 @@ vectorialRegisterNumber = {
 
 }
 
-DI = {'STR': int('11'+'00'+'01', 2),
-      'LDR': int('11'+'01'+'00', 2),
-      'MOVR': int('11'+'10'+'00', 2),
-      'CMPR': int('11'+'11'+'00', 2),
-      'STRV': int('11'+'00'+'11', 2),
-      'LDRV': int('11'+'01'+'10', 2),
+DI = {'STR': int('11'+'00'+'0', 2),
+      'LDR': int('11'+'01'+'0', 2),
+      'MOVR': int('11'+'10'+'0', 2),
+      'CMPR': int('11'+'11'+'0', 2),
+      'STRV': int('11'+'00'+'1', 2),
+      'LDRV': int('11'+'01'+'1', 2),
       }
 
-DT = {'ADD': int('10'+'00'+'00', 2),
-      'SUB': int('10'+'01'+'00', 2),
-      'MUL': int('10'+'10'+'00', 2),
-      'DIV': int('10'+'11'+'00', 2),
-      'ADDVV': int('10'+'00'+'10', 2),
-      'SUBVV': int('10'+'01'+'10', 2),
-      'MULVE': int('10'+'10'+'10', 2),
-      'DIVVE': int('10'+'11'+'10', 2),
+DT = {'ADD': int('10'+'00'+'0', 2),
+      'SUB': int('10'+'01'+'0', 2),
+      'MUL': int('10'+'10'+'0', 2),
+      'DIV': int('10'+'11'+'0', 2),
+      'ADDVV': int('10'+'00'+'1', 2),
+      'SUBVV': int('10'+'01'+'1', 2),
+      'MULVE': int('10'+'10'+'1', 2),
+      'DIVVE': int('10'+'11'+'1', 2),
       }
 
-I = {'MOVI': int('01'+'00'+'00', 2),
-      'CMPI': int('01'+'01'+'00', 2)}
+I = {'MOVI': int('01'+'00'+'0', 2),
+      'CMPI': int('01'+'01'+'0', 2)}
 
 
-N = {'JMP': int('00'+'00'+'00', 2),
-     'JEQ': int('00'+'01'+'00', 2),
-     'STL': int('00'+'10'+'00', 2)}
+N = {'JMP': int('00'+'00'+'0', 2),
+     'JEQ': int('00'+'01'+'0', 2),
+     'STL': int('00'+'10'+'0', 2)}
 
 
 
@@ -120,12 +120,12 @@ def analiceInst(inst, pc):
         operando2 = str(inst[2])
         if operando1 in escalarRegisterNumber and operando2 in escalarRegisterNumber:
             binCode += bitsBasura18
-            binCode += escalarRegisterNumber.get(operando1) + escalarRegisterNumber.get(operando2)
+            binCode +=  escalarRegisterNumber.get(operando2) + escalarRegisterNumber.get(operando1)
 
 
         elif operando1 in vectorialRegisterNumber and operando2 in vectorialRegisterNumber:
             binCode += bitsBasura18
-            binCode += vectorialRegisterNumber.get(operando1) + vectorialRegisterNumber.get(operando2)
+            binCode += vectorialRegisterNumber.get(operando2) + vectorialRegisterNumber.get(operando1)
         else:
             print('El registro ' + operando1 + " o " + operando2 +' no existe')
             return
@@ -152,29 +152,27 @@ def analiceInst(inst, pc):
         operando3 = str(inst[3])
         if operando1 in escalarRegisterNumber and operando2 in escalarRegisterNumber and operando3 in escalarRegisterNumber:
             binCode += bitsBasura14
-            binCode += escalarRegisterNumber.get(operando1) + escalarRegisterNumber.get(operando2) + escalarRegisterNumber.get(operando3)
+            binCode += escalarRegisterNumber.get(operando3) + escalarRegisterNumber.get(operando2)+  escalarRegisterNumber.get(operando1)
         elif operando1 in vectorialRegisterNumber and operando2 in vectorialRegisterNumber and operando3 in vectorialRegisterNumber:
             binCode += bitsBasura14
-            binCode += vectorialRegisterNumber.get(operando1) + vectorialRegisterNumber.get(
-                operando2) + vectorialRegisterNumber.get(operando3)
+            binCode += vectorialRegisterNumber.get(operando3) + vectorialRegisterNumber.get(
+                operando2) + vectorialRegisterNumber.get(operando1)
         else:
             print('Los registros ingresados son invalidos')
             return
 
     elif labelInstruccion in N:
-        binCode += str(format(N.get(inst[0]), '#010b'))[4:]
+        binCode += str(format(N.get(inst[0]), '#010b'))[5:]
+        print(binCode +"--"+ str(len(binCode)))
+
         operando1 = inst[1]
         if operando1 in jumpLabels:
             jumpDir = jumpLabels.get(inst[1])
             pcmenosjmpAdd = int(jumpDir, 16) - int(pc, 16)
 
-
-
             if (pcmenosjmpAdd < 0):
 
                 pcmenosjmpAdd = bin(abs(pcmenosjmpAdd))[2:]
-
-
                 complemento = complementoADos(pcmenosjmpAdd)
                 binCode += complemento
 

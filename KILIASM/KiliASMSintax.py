@@ -140,7 +140,9 @@ def p_instructionDTName(p):
     instructionDTName :  ADD
             | SUB
             | MUL
+            | DIV
             | ADDVV
+            | SUBVV
             | MULVE
             | DIVVE
     '''

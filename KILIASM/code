@@ -5,6 +5,6 @@ oscar:
 MOVI R2,4; //hola
 LDR R2,R3; //como
 //estas
-JMP oscar;
+JEQ oscar;
 
 FIN

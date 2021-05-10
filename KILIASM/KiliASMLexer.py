@@ -19,6 +19,7 @@ reservadas = {
     'ADD': 'ADD',
     'SUB': 'SUB',
     'MUL': 'MUL',
+    'DIV': 'DIV',
     'CMPR': 'CMPR',
     'CMPI': 'CMPI',
     'JMP': 'JMP',
@@ -28,6 +29,7 @@ reservadas = {
     'STRV': 'STRV',
     'LDRV': 'LDRV',
     'ADDVV': 'ADDVV',
+    'SUBVV': 'SUBVV',
     'MULVE': 'MULVE',
     'DIVVE': 'DIVVE'
 }
