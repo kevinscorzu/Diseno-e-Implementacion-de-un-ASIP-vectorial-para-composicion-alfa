@@ -63,8 +63,8 @@ N = {'JMP': int('00'+'00'+'0', 2),
 
 
 stallInst = {'ESP': int('01000', 2)}
-bitsBasura19 = '0000000000000000000'
-bitsBasura15 = '000000000000000'
+bitsBasura18 = '000000000000000000'
+bitsBasura14 = '00000000000000'
 bitsBasura4 = '0000'
 
 jumpLabels = {}

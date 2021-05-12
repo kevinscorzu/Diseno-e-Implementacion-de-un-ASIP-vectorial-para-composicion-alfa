@@ -1,6 +1,11 @@
 Flow report for ASIP-vectorial
+<<<<<<< HEAD
+Tue May 11 22:42:03 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+=======
 Tue May 11 21:00:52 2021
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+>>>>>>> main
 
 
 ---------------------
@@ -21,9 +26,9 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -33,17 +38,29 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
+<<<<<<< HEAD
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+=======
 refer to the applicable agreement for further details.
+>>>>>>> main
 
 
 
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
+<<<<<<< HEAD
+; Flow Status                 ; Flow Failed - Tue May 11 22:42:03 2021      ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name               ; ASIP-vectorial                              ;
+; Top-level Entity Name       ; DataMemory_tb                               ;
+=======
 ; Flow Status                 ; Successful - Tue May 11 21:00:52 2021       ;
 ; Quartus Prime Version       ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name               ; ASIP-vectorial                              ;
 ; Top-level Entity Name       ; ControlUnit_tb                              ;
+>>>>>>> main
 ; Family                      ; Cyclone V                                   ;
 ; Device                      ; 5CSEMA5F31C6                                ;
 ; Timing Models               ; Final                                       ;
@@ -62,12 +79,40 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
+<<<<<<< HEAD
+; Start date & time ; 05/11/2021 22:41:51 ;
+=======
 ; Start date & time ; 05/11/2021 21:00:36 ;
+>>>>>>> main
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ASIP-vectorial      ;
 +-------------------+---------------------+
 
 
+<<<<<<< HEAD
++--------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                               ;
++-------------------------------------+----------------------------------------+----------------+---------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name   ; Section Id     ;
++-------------------------------------+----------------------------------------+----------------+---------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 2546913940769.162079451117632          ; --             ; --            ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --             ; --            ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>         ; --            ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                   ; --             ; --            ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --             ; --            ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --             ; --            ; --             ;
+; NUM_PARALLEL_PROCESSORS             ; All                                    ; --             ; --            ; --             ;
+; OPTIMIZATION_TECHNIQUE              ; Speed                                  ; Balanced       ; --            ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; DataMemory_tb ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --             ; DataMemory_tb ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --             ; DataMemory_tb ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --             ; --            ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --             ; --            ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --             ; --            ; --             ;
+; SYNTHESIS_EFFORT                    ; Fast                                   ; Auto           ; --            ; --             ;
+; TOP_LEVEL_ENTITY                    ; DataMemory_tb                          ; ASIP-vectorial ; --            ; --             ;
++-------------------------------------+----------------------------------------+----------------+---------------+----------------+
+=======
 +---------------------------------------------------------------------------------------------------------------------------------+
 ; Flow Non-Default Global Settings                                                                                                ;
 +-------------------------------------+----------------------------------------+----------------+----------------+----------------+
@@ -88,6 +133,7 @@ refer to the applicable agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --             ; --             ; --             ;
 ; TOP_LEVEL_ENTITY                    ; ControlUnit_tb                         ; ASIP-vectorial ; --             ; --             ;
 +-------------------------------------+----------------------------------------+----------------+----------------+----------------+
+>>>>>>> main
 
 
 +----------------------------------------------------------------------------------------------------------------------------+
@@ -95,8 +141,13 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
+<<<<<<< HEAD
+; Analysis & Elaboration ; 00:00:12     ; 1.0                     ; 4762 MB             ; 00:00:32                           ;
+; Total                  ; 00:00:12     ; --                      ; --                  ; 00:00:32                           ;
+=======
 ; Analysis & Elaboration ; 00:00:18     ; 1.0                     ; 4766 MB             ; 00:00:38                           ;
 ; Total                  ; 00:00:18     ; --                      ; --                  ; 00:00:38                           ;
+>>>>>>> main
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -105,7 +156,11 @@ refer to the applicable agreement for further details.
 +------------------------+------------------+------------+------------+----------------+
 ; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +------------------------+------------------+------------+------------+----------------+
+<<<<<<< HEAD
+; Analysis & Elaboration ; DESKTOP-VRFLMRQ  ; Windows 10 ; 10.0       ; x86_64         ;
+=======
 ; Analysis & Elaboration ; DESKTOP-PKG39T9  ; Windows 10 ; 10.0       ; x86_64         ;
+>>>>>>> main
 +------------------------+------------------+------------+------------+----------------+
 
 

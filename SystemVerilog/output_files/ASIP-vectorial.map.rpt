@@ -1,6 +1,11 @@
 Analysis & Elaboration report for ASIP-vectorial
+<<<<<<< HEAD
+Tue May 11 22:42:03 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+=======
 Tue May 11 21:00:52 2021
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+>>>>>>> main
 
 
 ---------------------
@@ -10,17 +15,21 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
   4. Analysis & Elaboration Settings
+<<<<<<< HEAD
+  5. Analysis & Elaboration Messages
+=======
   5. Port Connectivity Checks: "ControlUnit:CUnit"
   6. Analysis & Elaboration Messages
+>>>>>>> main
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -30,17 +39,25 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
+<<<<<<< HEAD
+; Analysis & Elaboration Status ; Failed - Tue May 11 22:42:03 2021           ;
+; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                 ; ASIP-vectorial                              ;
+; Top-level Entity Name         ; DataMemory_tb                               ;
+=======
 ; Analysis & Elaboration Status ; Successful - Tue May 11 21:00:52 2021       ;
 ; Quartus Prime Version         ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                 ; ASIP-vectorial                              ;
 ; Top-level Entity Name         ; ControlUnit_tb                              ;
+>>>>>>> main
 ; Family                        ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
 ; Total registers               ; N/A until Partition Merge                   ;
@@ -57,8 +74,13 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
+<<<<<<< HEAD
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+=======
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 8           ;
+>>>>>>> main
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -74,9 +96,15 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+<<<<<<< HEAD
+; Top-level entity name                                                           ; DataMemory_tb      ; ASIP-vectorial     ;
+=======
 ; Top-level entity name                                                           ; ControlUnit_tb     ; ASIP-vectorial     ;
+>>>>>>> main
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
+; Optimization Technique                                                          ; Speed              ; Balanced           ;
+; Synthesis Effort                                                                ; Fast               ; Auto               ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
@@ -109,7 +137,6 @@ refer to the applicable agreement for further details.
 ; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
 ; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
 ; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
-; Optimization Technique                                                          ; Balanced           ; Balanced           ;
 ; Carry Chain Length                                                              ; 70                 ; 70                 ;
 ; Auto Carry Chains                                                               ; On                 ; On                 ;
 ; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
@@ -145,7 +172,6 @@ refer to the applicable agreement for further details.
 ; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
 ; Block Design Naming                                                             ; Auto               ; Auto               ;
 ; SDC constraint protection                                                       ; Off                ; Off                ;
-; Synthesis Effort                                                                ; Auto               ; Auto               ;
 ; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
 ; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
 ; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
@@ -156,6 +182,8 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
+<<<<<<< HEAD
+=======
 +--------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "ControlUnit:CUnit"                                                                      ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -173,11 +201,42 @@ refer to the applicable agreement for further details.
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
+>>>>>>> main
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
+<<<<<<< HEAD
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue May 11 22:41:51 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ASIP-vectorial -c ASIP-vectorial --analysis_and_elaboration
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file muxes/mux8.sv
+    Info (12023): Found entity 1: Mux8 File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux8.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file muxes/mux2.sv
+    Info (12023): Found entity 1: Mux2 File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file modules/decode_module.sv
+    Info (12023): Found entity 1: decode_module File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memories/vectorialregisterfile.sv
+    Info (12023): Found entity 1: VectorialRegisterFile File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/VectorialRegisterFile.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memories/registerfile.sv
+    Info (12023): Found entity 1: RegisterFile File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/RegisterFile.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memories/memorycontroller.sv
+    Info (12023): Found entity 1: MemoryController File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/MemoryController.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memories/instructionmemory.sv
+    Info (12023): Found entity 1: InstructionMemory File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memories/imagerom.sv
+    Info (12023): Found entity 1: ImageROM File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/ImageROM.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelinewb.sv
+    Info (12023): Found entity 1: PipelineWB File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineWB.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelinemem.sv
+    Info (12023): Found entity 1: PipelineMem File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineMem.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelinefetch.sv
+    Info (12023): Found entity 1: PipelineFetch File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineFetch.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelineex.sv
+    Info (12023): Found entity 1: PipelineEx File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineEx.sv Line: 1
+=======
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
     Info: Processing started: Tue May 11 21:00:34 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ASIP-vectorial -c ASIP-vectorial --analysis_and_elaboration
@@ -206,6 +265,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file pipelin
     Info (12023): Found entity 1: PipelineFetch File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineFetch.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelineex.sv
     Info (12023): Found entity 1: PipelineEx File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineEx.sv Line: 1
+>>>>>>> main
 Info (12021): Found 0 design units, including 0 entities, in source file pipeline/pipelinedecode.sv
 Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/controlunit.sv
     Info (12023): Found entity 1: ControlUnit File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 1
@@ -216,7 +276,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file ctrluni
 Info (12021): Found 1 design units, including 1 entities, in source file fordwardunit/forwardunit.sv
     Info (12023): Found entity 1: ForwardUnit File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/aluscalar.sv
+<<<<<<< HEAD
+    Info (12023): Found entity 1: ALUScalar File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 1
+=======
     Info (12023): Found entity 1: ALUScalar File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 1
+>>>>>>> main
 Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/flag/zeroflag.sv
     Info (12023): Found entity 1: ZeroFlag File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/ZeroFlag.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/flag/overflowflag.sv
@@ -240,12 +304,41 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu/vec
 Info (12021): Found 1 design units, including 1 entities, in source file alu/vectorial/operations/vectorialmultiplication.sv
     Info (12023): Found entity 1: VectorialMultiplication File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialMultiplication.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file extender/extender.sv
+<<<<<<< HEAD
+    Info (12023): Found entity 1: Extender File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Extender/Extender.sv Line: 1
+=======
     Info (12023): Found entity 1: Extender File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Extender/Extender.sv Line: 1
+>>>>>>> main
 Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/selectregisterfile.sv
     Info (12023): Found entity 1: SelectRegisterFile File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/SelectRegisterFile.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/vectorial/operations/vectorialdivision.sv
     Info (12023): Found entity 1: VectorialDivision File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialDivision.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/operations/division.sv
+<<<<<<< HEAD
+    Info (12023): Found entity 1: Division File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Division.sv Line: 1
+Error (10170): Verilog HDL syntax error at DataMemory.sv(35) near text: "else";  expecting "end". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv Line: 35
+Error (10170): Verilog HDL syntax error at DataMemory.sv(47) near text: "else";  expecting "end". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv Line: 47
+Error (10170): Verilog HDL syntax error at DataMemory.sv(59) near text: "else";  expecting "end". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv Line: 59
+Error (10170): Verilog HDL syntax error at DataMemory.sv(71) near text: "else";  expecting "end". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv Line: 71
+Error (10170): Verilog HDL syntax error at DataMemory.sv(83) near text: "else";  expecting "end". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv Line: 83
+Error (10170): Verilog HDL syntax error at DataMemory.sv(95) near text: "else";  expecting "end". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv Line: 95
+Error (10170): Verilog HDL syntax error at DataMemory.sv(107) near text: "else";  expecting "end". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv Line: 107
+Error (10170): Verilog HDL syntax error at DataMemory.sv(119) near text: "else";  expecting "end". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv Line: 119
+Error (10170): Verilog HDL syntax error at DataMemory.sv(131) near text: "else";  expecting "end". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv Line: 131
+Error (10170): Verilog HDL syntax error at DataMemory.sv(143) near text: "else";  expecting "end". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv Line: 143
+Error (10170): Verilog HDL syntax error at DataMemory.sv(155) near text: "else";  expecting "end". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv Line: 155
+Error (10170): Verilog HDL syntax error at DataMemory.sv(167) near text: "else";  expecting "end". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv Line: 167
+Error (10170): Verilog HDL syntax error at DataMemory.sv(179) near text: "else";  expecting "end". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv Line: 179
+Error (10112): Ignored design unit "DataMemory" at DataMemory.sv(1) due to previous errors File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file memories/datamemory.sv
+Info (12021): Found 1 design units, including 1 entities, in source file tests/datamemory_tb.sv
+    Info (12023): Found entity 1: DataMemory_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/DataMemory_tb.sv Line: 1
+Error: Quartus Prime Analysis & Elaboration was unsuccessful. 14 errors, 0 warnings
+    Error: Peak virtual memory: 4762 megabytes
+    Error: Processing ended: Tue May 11 22:42:03 2021
+    Error: Elapsed time: 00:00:12
+    Error: Total CPU time (on all processors): 00:00:32
+=======
     Info (12023): Found entity 1: Division File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Division.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modules/fetch_module.sv
     Info (12023): Found entity 1: fetch_module File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 1
@@ -274,5 +367,6 @@ Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 0 warnings
     Info: Processing ended: Tue May 11 21:00:52 2021
     Info: Elapsed time: 00:00:18
     Info: Total CPU time (on all processors): 00:00:38
+>>>>>>> main
 
 
