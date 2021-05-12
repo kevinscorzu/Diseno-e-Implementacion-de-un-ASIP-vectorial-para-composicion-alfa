@@ -114,29 +114,34 @@ def analiceInst(inst, pc):
     binCode = ''
     labelInstruccion = str(inst[0])
     if labelInstruccion in DI:
-        binCode += str(format(DI.get(inst[0]), '#010b'))[4:]
+        binCode += str(format(DI.get(inst[0]), '#010b'))[5:]
 
         operando1 = str(inst[1])
         operando2 = str(inst[2])
         if operando1 in escalarRegisterNumber and operando2 in escalarRegisterNumber:
-            binCode += bitsBasura18
-            binCode +=  escalarRegisterNumber.get(operando2) + escalarRegisterNumber.get(operando1)
+            binCode += bitsBasura19
+            binCode += escalarRegisterNumber.get(operando2) + escalarRegisterNumber.get(operando1)
 
 
-        elif operando1 in vectorialRegisterNumber and operando2 in vectorialRegisterNumber:
-            binCode += bitsBasura18
-            binCode += vectorialRegisterNumber.get(operando2) + vectorialRegisterNumber.get(operando1)
+        elif operando1 in escalarRegisterNumber and operando2 in vectorialRegisterNumber:
+            binCode += bitsBasura19
+            binCode +=  vectorialRegisterNumber.get(operando2) + escalarRegisterNumber.get(operando1)
+
+
+        elif operando1 in vectorialRegisterNumber and operando2 in escalarRegisterNumber:
+            binCode += bitsBasura19
+            binCode += escalarRegisterNumber.get(operando2) + vectorialRegisterNumber.get(operando1)
         else:
             print('El registro ' + operando1 + " o " + operando2 +' no existe')
             return
 
     elif labelInstruccion in I:
-        binCode += str(format(I.get(inst[0]), '#010b'))[4:]
+        binCode += str(format(I.get(inst[0]), '#010b'))[5:]
         operando1 = str(inst[1])
 
         operando2 = inst[2]
         if operando1 in escalarRegisterNumber and isinstance(operando2, int):
-            imm = shiftNumber(str(bin(operando2))[2:], 22)
+            imm = shiftNumber(str(bin(operando2))[2:], 23)
             binCode += imm + escalarRegisterNumber.get(operando1)
         else:
             if not operando1 in escalarRegisterNumber:
@@ -146,24 +151,29 @@ def analiceInst(inst, pc):
                 print("EL inmediato: "+str(operando2)+" es invalido")
                 return
     elif labelInstruccion in DT:
-        binCode += str(format(DT.get(inst[0]), '#010b'))[4:]
+        binCode += str(format(DT.get(inst[0]), '#010b'))[5:]
         operando1 = str(inst[1])
         operando2 = str(inst[2])
         operando3 = str(inst[3])
         if operando1 in escalarRegisterNumber and operando2 in escalarRegisterNumber and operando3 in escalarRegisterNumber:
-            binCode += bitsBasura14
+            binCode += bitsBasura15
             binCode += escalarRegisterNumber.get(operando3) + escalarRegisterNumber.get(operando2)+  escalarRegisterNumber.get(operando1)
-        elif operando1 in vectorialRegisterNumber and operando2 in vectorialRegisterNumber and operando3 in vectorialRegisterNumber:
-            binCode += bitsBasura14
-            binCode += vectorialRegisterNumber.get(operando3) + vectorialRegisterNumber.get(
-                operando2) + vectorialRegisterNumber.get(operando1)
+        elif operando1 in vectorialRegisterNumber and operando2 in vectorialRegisterNumber and (operando3 in vectorialRegisterNumber or operando3 in escalarRegisterNumber ):
+            binCode += bitsBasura15
+
+            if operando3 in vectorialRegisterNumber:
+                binCode += vectorialRegisterNumber.get(operando3) + vectorialRegisterNumber.get(
+                    operando2) + vectorialRegisterNumber.get(operando1)
+            elif operando3 in escalarRegisterNumber:
+                binCode += escalarRegisterNumber.get(operando3) + vectorialRegisterNumber.get(
+                    operando2) + vectorialRegisterNumber.get(operando1)
+
         else:
-            print('Los registros ingresados son invalidos')
+            print('Los registros '+operando1 +', '+operando2+', '+operando3+' son invalidos')
             return
 
     elif labelInstruccion in N:
         binCode += str(format(N.get(inst[0]), '#010b'))[5:]
-        print(binCode +"--"+ str(len(binCode)))
 
         operando1 = inst[1]
         if operando1 in jumpLabels:

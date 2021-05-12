@@ -78,7 +78,6 @@ def t_newLine(t):
 def t_IMM(t):
     r'0[xX][0-9a-fA-F]+'
     t.value = int(t.value, 16)
-    print( t.value)
 
     return t
 

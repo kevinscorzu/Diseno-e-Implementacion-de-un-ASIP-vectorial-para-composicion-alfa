@@ -1,0 +1,45 @@
+|ControlUnit_tb
+
+
+|ControlUnit_tb|ControlUnit:CUnit
+op[0] => op[0].IN2
+op[1] => op[1].IN2
+inst[0] => inst[0].IN1
+inst[1] => inst[1].IN1
+flagV => VF.DATAIN
+wmem <= wmem.DB_MAX_OUTPUT_PORT_TYPE
+rmem <= rmem.DB_MAX_OUTPUT_PORT_TYPE
+wreg <= wreg.DB_MAX_OUTPUT_PORT_TYPE
+CondEn <= CondEn.DB_MAX_OUTPUT_PORT_TYPE
+jmpSel <= jmpSel.DB_MAX_OUTPUT_PORT_TYPE
+VF <= flagV.DB_MAX_OUTPUT_PORT_TYPE
+jmpF[0] <= jmpF.DB_MAX_OUTPUT_PORT_TYPE
+jmpF[1] <= jmpF.DB_MAX_OUTPUT_PORT_TYPE
+ALUins[0] <= InstDeco:InstDecoO.port1
+ALUins[1] <= InstDeco:InstDecoO.port1
+ALUins[2] <= InstDeco:InstDecoO.port1
+ExtndSel[0] <= ExtendDeco:ExtDeco.port1
+ExtndSel[1] <= ExtendDeco:ExtDeco.port1
+
+
+|ControlUnit_tb|ControlUnit:CUnit|ExtendDeco:ExtDeco
+in[0] => Decoder0.IN1
+in[0] => out[1].DATAIN
+in[1] => Decoder0.IN0
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ControlUnit_tb|ControlUnit:CUnit|InstDeco:InstDecoO
+in[0] => Decoder1.IN3
+in[1] => Decoder0.IN2
+in[1] => Decoder1.IN2
+in[2] => Decoder0.IN1
+in[2] => Decoder1.IN1
+in[3] => Decoder0.IN0
+in[3] => Decoder1.IN0
+out[0] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
