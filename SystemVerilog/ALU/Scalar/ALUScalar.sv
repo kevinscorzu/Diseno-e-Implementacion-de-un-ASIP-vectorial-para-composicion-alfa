@@ -1,14 +1,11 @@
 module ALUScalar #(parameter N = 32) (input logic [N-1:0] A, B,
 												  input logic [2:0] Sel,
 												  output logic [N-1:0] C,
-												  output logic NFlag,
-												  output logic ZFlag,
-												  output logic VFlag,
-												  output logic CFlag);
-
+												  output logic [3:0] Flags);
 			
 	logic [N-1:0] resultAdd, resultSubtract, resultMultiply, resultDivide;
 	logic CarryOutAdd, CarryOutSubtract, CarryOutMultiply, CarryOutDivide;
+	logic NFlag, ZFlag, VFlag, CFlag;
 			
 	Addition #(N) Ad(A, B, resultAdd, CarryOutAdd);
 	Subtraction #(N) Su(A, B, resultSubtract, CarryOutSubtract);
@@ -21,5 +18,7 @@ module ALUScalar #(parameter N = 32) (input logic [N-1:0] A, B,
 	ZeroFlag #(N) Ze(C, ZFlag);
 	OverflowFlag oV(A[N-1], B[N-1], C[N-1], Sel, VFlag);
 	CarryFlag Ca(CarryOutAdd, CarryOutSubtract, CarryOutMultiply, CarryOutDivide, Sel, CFlag);
+	
+	assign Flags = {NFlag, ZFlag, VFlag, CFlag};
 					
 endmodule 

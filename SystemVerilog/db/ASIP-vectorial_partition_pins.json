@@ -4,415 +4,683 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "C[0]",
+					"name" : "rd[0]",
 					"strict" : false
 				},
 				{
-					"name" : "C[1]",
+					"name" : "rd[1]",
 					"strict" : false
 				},
 				{
-					"name" : "C[2]",
+					"name" : "rd[2]",
 					"strict" : false
 				},
 				{
-					"name" : "C[3]",
+					"name" : "rd[3]",
 					"strict" : false
 				},
 				{
-					"name" : "C[4]",
+					"name" : "rd[4]",
 					"strict" : false
 				},
 				{
-					"name" : "C[5]",
+					"name" : "rd[5]",
 					"strict" : false
 				},
 				{
-					"name" : "C[6]",
+					"name" : "rd[6]",
 					"strict" : false
 				},
 				{
-					"name" : "C[7]",
+					"name" : "rd[7]",
 					"strict" : false
 				},
 				{
-					"name" : "C[8]",
+					"name" : "rd[32]",
 					"strict" : false
 				},
 				{
-					"name" : "C[9]",
+					"name" : "rd[33]",
 					"strict" : false
 				},
 				{
-					"name" : "C[10]",
+					"name" : "rd[34]",
 					"strict" : false
 				},
 				{
-					"name" : "C[11]",
+					"name" : "rd[35]",
 					"strict" : false
 				},
 				{
-					"name" : "C[12]",
+					"name" : "rd[36]",
 					"strict" : false
 				},
 				{
-					"name" : "C[13]",
+					"name" : "rd[37]",
 					"strict" : false
 				},
 				{
-					"name" : "C[14]",
+					"name" : "rd[38]",
 					"strict" : false
 				},
 				{
-					"name" : "C[15]",
+					"name" : "rd[39]",
 					"strict" : false
 				},
 				{
-					"name" : "C[16]",
+					"name" : "rd[64]",
 					"strict" : false
 				},
 				{
-					"name" : "C[17]",
+					"name" : "rd[65]",
 					"strict" : false
 				},
 				{
-					"name" : "C[18]",
+					"name" : "rd[66]",
 					"strict" : false
 				},
 				{
-					"name" : "C[19]",
+					"name" : "rd[67]",
 					"strict" : false
 				},
 				{
-					"name" : "C[20]",
+					"name" : "rd[68]",
 					"strict" : false
 				},
 				{
-					"name" : "C[21]",
+					"name" : "rd[69]",
 					"strict" : false
 				},
 				{
-					"name" : "C[22]",
+					"name" : "rd[70]",
 					"strict" : false
 				},
 				{
-					"name" : "C[23]",
+					"name" : "rd[71]",
 					"strict" : false
 				},
 				{
-					"name" : "C[24]",
+					"name" : "rd[96]",
 					"strict" : false
 				},
 				{
-					"name" : "C[25]",
+					"name" : "rd[97]",
 					"strict" : false
 				},
 				{
-					"name" : "C[26]",
+					"name" : "rd[98]",
 					"strict" : false
 				},
 				{
-					"name" : "C[27]",
+					"name" : "rd[99]",
 					"strict" : false
 				},
 				{
-					"name" : "C[28]",
+					"name" : "rd[100]",
 					"strict" : false
 				},
 				{
-					"name" : "C[29]",
+					"name" : "rd[101]",
 					"strict" : false
 				},
 				{
-					"name" : "C[30]",
+					"name" : "rd[102]",
 					"strict" : false
 				},
 				{
-					"name" : "C[31]",
+					"name" : "rd[103]",
 					"strict" : false
 				},
 				{
-					"name" : "NFlag",
+					"name" : "addr[11]",
 					"strict" : false
 				},
 				{
-					"name" : "ZFlag",
+					"name" : "addr[12]",
 					"strict" : false
 				},
 				{
-					"name" : "VFlag",
+					"name" : "addr[13]",
 					"strict" : false
 				},
 				{
-					"name" : "CFlag",
+					"name" : "addr[8]",
 					"strict" : false
 				},
 				{
-					"name" : "Sel[2]",
+					"name" : "addr[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Sel[0]",
+					"name" : "addr[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Sel[1]",
+					"name" : "addr[2]",
 					"strict" : false
 				},
 				{
-					"name" : "A[0]",
+					"name" : "addr[3]",
 					"strict" : false
 				},
 				{
-					"name" : "B[31]",
+					"name" : "addr[4]",
 					"strict" : false
 				},
 				{
-					"name" : "A[1]",
+					"name" : "addr[5]",
 					"strict" : false
 				},
 				{
-					"name" : "B[30]",
+					"name" : "addr[7]",
 					"strict" : false
 				},
 				{
-					"name" : "A[2]",
+					"name" : "addr[6]",
 					"strict" : false
 				},
 				{
-					"name" : "B[29]",
+					"name" : "addr[9]",
 					"strict" : false
 				},
 				{
-					"name" : "A[3]",
+					"name" : "addr[10]",
 					"strict" : false
 				},
 				{
-					"name" : "B[28]",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "A[4]",
+					"name" : "wd[0]",
 					"strict" : false
 				},
 				{
-					"name" : "B[27]",
+					"name" : "addr[109]",
 					"strict" : false
 				},
 				{
-					"name" : "A[5]",
+					"name" : "addr[96]",
 					"strict" : false
 				},
 				{
-					"name" : "B[26]",
+					"name" : "addr[97]",
 					"strict" : false
 				},
 				{
-					"name" : "A[6]",
+					"name" : "addr[98]",
 					"strict" : false
 				},
 				{
-					"name" : "B[25]",
+					"name" : "addr[99]",
 					"strict" : false
 				},
 				{
-					"name" : "A[7]",
+					"name" : "addr[23]",
 					"strict" : false
 				},
 				{
-					"name" : "B[24]",
+					"name" : "addr[35]",
 					"strict" : false
 				},
 				{
-					"name" : "A[8]",
+					"name" : "addr[54]",
 					"strict" : false
 				},
 				{
-					"name" : "B[23]",
+					"name" : "addr[55]",
 					"strict" : false
 				},
 				{
-					"name" : "A[9]",
+					"name" : "addr[57]",
 					"strict" : false
 				},
 				{
-					"name" : "B[22]",
+					"name" : "addr[94]",
 					"strict" : false
 				},
 				{
-					"name" : "A[10]",
+					"name" : "addr[22]",
 					"strict" : false
 				},
 				{
-					"name" : "B[21]",
+					"name" : "addr[38]",
 					"strict" : false
 				},
 				{
-					"name" : "A[11]",
+					"name" : "addr[50]",
 					"strict" : false
 				},
 				{
-					"name" : "B[20]",
+					"name" : "addr[64]",
 					"strict" : false
 				},
 				{
-					"name" : "A[12]",
+					"name" : "addr[86]",
 					"strict" : false
 				},
 				{
-					"name" : "B[19]",
+					"name" : "addr[90]",
 					"strict" : false
 				},
 				{
-					"name" : "A[13]",
+					"name" : "addr[25]",
 					"strict" : false
 				},
 				{
-					"name" : "B[18]",
+					"name" : "addr[26]",
 					"strict" : false
 				},
 				{
-					"name" : "A[14]",
+					"name" : "addr[39]",
 					"strict" : false
 				},
 				{
-					"name" : "B[17]",
+					"name" : "addr[40]",
 					"strict" : false
 				},
 				{
-					"name" : "A[15]",
+					"name" : "addr[65]",
 					"strict" : false
 				},
 				{
-					"name" : "B[16]",
+					"name" : "addr[68]",
 					"strict" : false
 				},
 				{
-					"name" : "A[16]",
+					"name" : "addr[32]",
 					"strict" : false
 				},
 				{
-					"name" : "B[15]",
+					"name" : "addr[52]",
 					"strict" : false
 				},
 				{
-					"name" : "A[17]",
+					"name" : "addr[84]",
 					"strict" : false
 				},
 				{
-					"name" : "B[14]",
+					"name" : "addr[88]",
 					"strict" : false
 				},
 				{
-					"name" : "A[18]",
+					"name" : "addr[92]",
 					"strict" : false
 				},
 				{
-					"name" : "B[13]",
+					"name" : "addr[95]",
 					"strict" : false
 				},
 				{
-					"name" : "A[19]",
+					"name" : "addr[21]",
 					"strict" : false
 				},
 				{
-					"name" : "B[12]",
+					"name" : "addr[31]",
 					"strict" : false
 				},
 				{
-					"name" : "A[20]",
+					"name" : "addr[49]",
 					"strict" : false
 				},
 				{
-					"name" : "B[11]",
+					"name" : "addr[74]",
 					"strict" : false
 				},
 				{
-					"name" : "A[21]",
+					"name" : "addr[85]",
 					"strict" : false
 				},
 				{
-					"name" : "B[10]",
+					"name" : "addr[87]",
 					"strict" : false
 				},
 				{
-					"name" : "A[22]",
+					"name" : "addr[19]",
 					"strict" : false
 				},
 				{
-					"name" : "B[9]",
+					"name" : "addr[41]",
 					"strict" : false
 				},
 				{
-					"name" : "A[23]",
+					"name" : "addr[67]",
 					"strict" : false
 				},
 				{
-					"name" : "B[8]",
+					"name" : "addr[69]",
 					"strict" : false
 				},
 				{
-					"name" : "A[24]",
+					"name" : "addr[70]",
 					"strict" : false
 				},
 				{
-					"name" : "B[7]",
+					"name" : "addr[71]",
 					"strict" : false
 				},
 				{
-					"name" : "A[25]",
+					"name" : "addr[79]",
 					"strict" : false
 				},
 				{
-					"name" : "B[6]",
+					"name" : "addr[81]",
 					"strict" : false
 				},
 				{
-					"name" : "A[26]",
+					"name" : "addr[17]",
 					"strict" : false
 				},
 				{
-					"name" : "B[5]",
+					"name" : "addr[51]",
 					"strict" : false
 				},
 				{
-					"name" : "A[27]",
+					"name" : "addr[75]",
 					"strict" : false
 				},
 				{
-					"name" : "B[4]",
+					"name" : "addr[89]",
 					"strict" : false
 				},
 				{
-					"name" : "A[28]",
+					"name" : "addr[91]",
 					"strict" : false
 				},
 				{
-					"name" : "B[3]",
+					"name" : "addr[93]",
 					"strict" : false
 				},
 				{
-					"name" : "A[29]",
+					"name" : "addr[44]",
 					"strict" : false
 				},
 				{
-					"name" : "B[2]",
+					"name" : "addr[48]",
 					"strict" : false
 				},
 				{
-					"name" : "A[30]",
+					"name" : "addr[76]",
 					"strict" : false
 				},
 				{
-					"name" : "B[1]",
+					"name" : "addr[80]",
 					"strict" : false
 				},
 				{
-					"name" : "A[31]",
+					"name" : "addr[14]",
 					"strict" : false
 				},
 				{
-					"name" : "B[0]",
+					"name" : "addr[16]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[20]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[28]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[33]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[53]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[29]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[43]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[47]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[83]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[36]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[56]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[27]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[42]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[45]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[72]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[73]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[77]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[30]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[46]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[60]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[62]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[78]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[82]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[15]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[37]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[59]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[61]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[63]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[66]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[18]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[24]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[34]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[58]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[100]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[101]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[102]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[103]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[104]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[105]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[106]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[107]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[108]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[125]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[127]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[110]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[113]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[117]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[118]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[119]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[120]",
+					"strict" : false
+				},
+				{
+					"name" : "we",
+					"strict" : false
+				},
+				{
+					"name" : "addr[111]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[115]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[122]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[123]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[112]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[114]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[116]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[121]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[124]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[126]",
+					"strict" : false
+				},
+				{
+					"name" : "wd[1]",
+					"strict" : false
+				},
+				{
+					"name" : "wd[2]",
+					"strict" : false
+				},
+				{
+					"name" : "wd[3]",
+					"strict" : false
+				},
+				{
+					"name" : "wd[4]",
+					"strict" : false
+				},
+				{
+					"name" : "wd[5]",
+					"strict" : false
+				},
+				{
+					"name" : "wd[6]",
+					"strict" : false
+				},
+				{
+					"name" : "wd[7]",
 					"strict" : false
 				}
 			]
