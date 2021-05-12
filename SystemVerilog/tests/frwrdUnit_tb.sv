@@ -12,7 +12,7 @@ logic [127:0]Res1;
 logic [127:0]R2res2,R3res2;
 
 
-ForwardUnit(R2res1,R3res1,R2_2,R3_2,ExtndSel1,
+ForwardUnit frun(R2res1,R3res1,R2_2,R3_2,ExtndSel1,
 							VF1,
 							VF2,DestR_3,Res,
 							VF3,DestR_4,Res1,
