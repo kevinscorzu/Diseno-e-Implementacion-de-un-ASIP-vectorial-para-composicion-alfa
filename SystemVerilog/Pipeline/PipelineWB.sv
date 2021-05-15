@@ -1,15 +1,23 @@
 module PipelineWB(input clk, rst,
-						input wregi,input[31:0]Resi,input [3:0]DestRi,
-						output logic wrego,output logic[31:0]Reso,output logic[3:0]DestRo);
+						input wreg2,
+						input[127:0]ResRV,
+						input[3:0]R_V_dest2,
+						input VF2,
+						output logic wreg3,
+						output logic[127:0]ResRV2,
+						output logic[3:0]R_V_dest3,
+						output logic VF3);
 	always_ff@(posedge clk or posedge rst)
 		if(rst) begin
-		Reso = 32'h00;
-		DestRo = 4'h0;
-		wrego = 1'b0;
+		wreg3 = 1'h0;
+		ResRV2 = 128'h0;
+		R_V_dest3 = 4'h0;
+		VF3 = 1'h0;
 		end
 		else begin
-		Reso = Resi;
-		DestRo =DestRi;
-		wrego = wregi;
+		wreg3 = wreg2;
+		ResRV2 = ResRV;
+		R_V_dest3 = R_V_dest2;
+		VF3 = VF2;
 		end
 endmodule 

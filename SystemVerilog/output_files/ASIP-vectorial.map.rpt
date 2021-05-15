@@ -1,5 +1,5 @@
 Analysis & Elaboration report for ASIP-vectorial
-Tue May 11 23:05:55 2021
+Sat May 15 12:00:25 2021
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -9,17 +9,55 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: ForwardUnit:comb_3|Mux2:WbR2
-  5. Parameter Settings for User Entity Instance: ForwardUnit:comb_3|Mux2:ExR2
-  6. Parameter Settings for User Entity Instance: ForwardUnit:comb_3|Mux2:WbR3
-  7. Parameter Settings for User Entity Instance: ForwardUnit:comb_3|Mux2:ExR3
-  8. Analysis & Elaboration Settings
-  9. Port Connectivity Checks: "ForwardUnit:comb_3|Mux2:ExR3"
- 10. Port Connectivity Checks: "ForwardUnit:comb_3|Mux2:WbR3"
- 11. Port Connectivity Checks: "ForwardUnit:comb_3|Mux2:ExR2"
- 12. Port Connectivity Checks: "ForwardUnit:comb_3|Mux2:WbR2"
- 13. Port Connectivity Checks: "ForwardUnit:comb_3"
- 14. Analysis & Elaboration Messages
+  4. Parameter Settings for User Entity Instance: fetch_module:fetch|FlipFlop:PC
+  5. Parameter Settings for User Entity Instance: fetch_module:fetch|Mux2:PCmux
+  6. Parameter Settings for User Entity Instance: fetch_module:fetch|Addition:PC_1
+  7. Parameter Settings for User Entity Instance: decode_module:decode|Mux2:PCR2
+  8. Parameter Settings for User Entity Instance: decode_module:decode|Mux2:ExtndMux
+  9. Parameter Settings for User Entity Instance: decode_module:decode|Mux2:V2_R2Mux
+ 10. Parameter Settings for User Entity Instance: decode_module:decode|Mux2:V3_R3Mux
+ 11. Parameter Settings for User Entity Instance: decode_module:decode|Mux2:MuxAddrR2
+ 12. Parameter Settings for User Entity Instance: decode_module:decode|Mux2:MuxAddrR3
+ 13. Parameter Settings for User Entity Instance: execute_module:execute|ForwardUnit:frwunit|Mux2:WbR2
+ 14. Parameter Settings for User Entity Instance: execute_module:execute|ForwardUnit:frwunit|Mux2:ExR2
+ 15. Parameter Settings for User Entity Instance: execute_module:execute|ForwardUnit:frwunit|Mux2:WbR3
+ 16. Parameter Settings for User Entity Instance: execute_module:execute|ForwardUnit:frwunit|Mux2:ExR3
+ 17. Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS
+ 18. Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|Addition:Ad
+ 19. Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|Subtraction:Su
+ 20. Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|Multiplication:Mu
+ 21. Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|Division:Di
+ 22. Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|Mux8:M8
+ 23. Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|ZeroFlag:Ze
+ 24. Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV
+ 25. Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV|VectorialAddition:VAd
+ 26. Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV|VectorialSubtraction:VSu
+ 27. Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV|VectorialMultiplication:VMu
+ 28. Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV|VectorialDivision:VDi
+ 29. Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV|Mux8:VM8
+ 30. Parameter Settings for User Entity Instance: execute_module:execute|Mux2:ALUMux
+ 31. Parameter Settings for User Entity Instance: execute_module:execute|CondUnit:cond_Unit|FlipFlop:flipiflopi
+ 32. Parameter Settings for User Entity Instance: memory_module:memory|Mux2:Memmux
+ 33. Analysis & Elaboration Settings
+ 34. Port Connectivity Checks: "memory_module:memory"
+ 35. Port Connectivity Checks: "PipelineEx:pipeEx"
+ 36. Port Connectivity Checks: "execute_module:execute|CondUnit:cond_Unit|FlipFlop:flipiflopi"
+ 37. Port Connectivity Checks: "execute_module:execute|Mux2:ALUMux"
+ 38. Port Connectivity Checks: "execute_module:execute|ALUVectorial:ALUV|Mux8:VM8"
+ 39. Port Connectivity Checks: "execute_module:execute|ALUVectorial:ALUV"
+ 40. Port Connectivity Checks: "execute_module:execute|ALUScalar:ALUS|Mux8:M8"
+ 41. Port Connectivity Checks: "execute_module:execute|ForwardUnit:frwunit|Mux2:ExR3"
+ 42. Port Connectivity Checks: "execute_module:execute|ForwardUnit:frwunit|Mux2:WbR3"
+ 43. Port Connectivity Checks: "execute_module:execute|ForwardUnit:frwunit|Mux2:ExR2"
+ 44. Port Connectivity Checks: "execute_module:execute|ForwardUnit:frwunit|Mux2:WbR2"
+ 45. Port Connectivity Checks: "execute_module:execute|ForwardUnit:frwunit"
+ 46. Port Connectivity Checks: "PipelineMem:pipeMem"
+ 47. Port Connectivity Checks: "decode_module:decode|Mux2:MuxAddrR3"
+ 48. Port Connectivity Checks: "decode_module:decode|Mux2:MuxAddrR2"
+ 49. Port Connectivity Checks: "decode_module:decode|Mux2:V3_R3Mux"
+ 50. Port Connectivity Checks: "decode_module:decode|Mux2:V2_R2Mux"
+ 51. Port Connectivity Checks: "fetch_module:fetch|Addition:PC_1"
+ 52. Analysis & Elaboration Messages
 
 
 
@@ -45,10 +83,10 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Tue May 11 23:05:55 2021       ;
+; Analysis & Elaboration Status ; Successful - Sat May 15 12:00:25 2021       ;
 ; Quartus Prime Version         ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                 ; ASIP-vectorial                              ;
-; Top-level Entity Name         ; frwrdUnit_tb                                ;
+; Top-level Entity Name         ; processors                                  ;
 ; Family                        ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
 ; Total registers               ; N/A until Partition Merge                   ;
@@ -76,43 +114,293 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ForwardUnit:comb_3|Mux2:WbR2 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; N              ; 32    ; Signed Integer                                   ;
-+----------------+-------+--------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fetch_module:fetch|FlipFlop:PC ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; N              ; 32    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ForwardUnit:comb_3|Mux2:ExR2 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; N              ; 32    ; Signed Integer                                   ;
-+----------------+-------+--------------------------------------------------+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fetch_module:fetch|Mux2:PCmux ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; N              ; 32    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ForwardUnit:comb_3|Mux2:WbR3 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; N              ; 32    ; Signed Integer                                   ;
-+----------------+-------+--------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fetch_module:fetch|Addition:PC_1 ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ForwardUnit:comb_3|Mux2:ExR3 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; N              ; 32    ; Signed Integer                                   ;
-+----------------+-------+--------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: decode_module:decode|Mux2:PCR2 ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; N              ; 32    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: decode_module:decode|Mux2:ExtndMux ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: decode_module:decode|Mux2:V2_R2Mux ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: decode_module:decode|Mux2:V3_R3Mux ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: decode_module:decode|Mux2:MuxAddrR2 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: decode_module:decode|Mux2:MuxAddrR3 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ForwardUnit:frwunit|Mux2:WbR2 ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ForwardUnit:frwunit|Mux2:ExR2 ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ForwardUnit:frwunit|Mux2:WbR3 ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ForwardUnit:frwunit|Mux2:ExR3 ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|Addition:Ad ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|Subtraction:Su ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|Multiplication:Mu ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|Division:Di ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|Mux8:M8 ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|ZeroFlag:Ze ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV|VectorialAddition:VAd ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV|VectorialSubtraction:VSu ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV|VectorialMultiplication:VMu ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV|VectorialDivision:VDi ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV|Mux8:VM8 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|Mux2:ALUMux ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|CondUnit:cond_Unit|FlipFlop:flipiflopi ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memory_module:memory|Mux2:Memmux ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -122,7 +410,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; frwrdUnit_tb       ; ASIP-vectorial     ;
+; Top-level entity name                                                           ; processors         ; ASIP-vectorial     ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
@@ -204,8 +492,80 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "memory_module:memory"                                                               ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; GPO  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PipelineEx:pipeEx"                                                                                                                                                                   ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                          ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; R_V_dest1 ; Input ; Warning  ; Input port expression (4 bits) is wider than the input port (1 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "execute_module:execute|CondUnit:cond_Unit|FlipFlop:flipiflopi"                         ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; q[1..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; q[3]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "execute_module:execute|Mux2:ALUMux" ;
++------------------+-------+----------+--------------------------+
+; Port             ; Type  ; Severity ; Details                  ;
++------------------+-------+----------+--------------------------+
+; result0[127..32] ; Input ; Info     ; Stuck at GND             ;
++------------------+-------+----------+--------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "execute_module:execute|ALUVectorial:ALUV|Mux8:VM8"                                                                                                    ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                              ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input0 ; Input ; Warning  ; Input port expression (32 bits) is smaller than the input port (128 bits) it drives.  Extra input bit(s) "Input0[127..32]" will be connected to GND. ;
+; Input0 ; Input ; Info     ; Stuck at GND                                                                                                                                         ;
+; Input6 ; Input ; Warning  ; Input port expression (32 bits) is smaller than the input port (128 bits) it drives.  Extra input bit(s) "Input6[127..32]" will be connected to GND. ;
+; Input6 ; Input ; Info     ; Stuck at GND                                                                                                                                         ;
+; Input7 ; Input ; Warning  ; Input port expression (32 bits) is smaller than the input port (128 bits) it drives.  Extra input bit(s) "Input7[127..32]" will be connected to GND. ;
+; Input7 ; Input ; Info     ; Stuck at GND                                                                                                                                         ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "execute_module:execute|ALUVectorial:ALUV"                                                                                                      ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                         ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; A    ; Input ; Warning  ; Input port expression (32 bits) is smaller than the input port (128 bits) it drives.  Extra input bit(s) "A[127..32]" will be connected to GND. ;
+; B    ; Input ; Warning  ; Input port expression (32 bits) is smaller than the input port (128 bits) it drives.  Extra input bit(s) "B[127..32]" will be connected to GND. ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "execute_module:execute|ALUScalar:ALUS|Mux8:M8" ;
++--------+-------+----------+-----------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                       ;
++--------+-------+----------+-----------------------------------------------+
+; Input0 ; Input ; Info     ; Stuck at GND                                  ;
+; Input6 ; Input ; Info     ; Stuck at GND                                  ;
+; Input7 ; Input ; Info     ; Stuck at GND                                  ;
++--------+-------+----------+-----------------------------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ForwardUnit:comb_3|Mux2:ExR3"                                                                                                                                                           ;
+; Port Connectivity Checks: "execute_module:execute|ForwardUnit:frwunit|Mux2:ExR3"                                                                                                                                   ;
 +---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port    ; Type   ; Severity ; Details                                                                                                                                                                              ;
 +---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -215,7 +575,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ForwardUnit:comb_3|Mux2:WbR3"                                                                                                                                                          ;
+; Port Connectivity Checks: "execute_module:execute|ForwardUnit:frwunit|Mux2:WbR3"                                                                                                                                  ;
 +---------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port    ; Type  ; Severity ; Details                                                                                                                                                                              ;
 +---------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -225,7 +585,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ForwardUnit:comb_3|Mux2:ExR2"                                                                                                                                                           ;
+; Port Connectivity Checks: "execute_module:execute|ForwardUnit:frwunit|Mux2:ExR2"                                                                                                                                   ;
 +---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port    ; Type   ; Severity ; Details                                                                                                                                                                              ;
 +---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -235,7 +595,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ForwardUnit:comb_3|Mux2:WbR2"                                                                                                                                                          ;
+; Port Connectivity Checks: "execute_module:execute|ForwardUnit:frwunit|Mux2:WbR2"                                                                                                                                  ;
 +---------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port    ; Type  ; Severity ; Details                                                                                                                                                                              ;
 +---------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -244,14 +604,69 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ForwardUnit:comb_3"                                                                   ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; R2res2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; R3res2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "execute_module:execute|ForwardUnit:frwunit"                                                    ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; R2res2[127..32] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PipelineMem:pipeMem"                                                                           ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; R_V_dest1[3..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "decode_module:decode|Mux2:MuxAddrR3" ;
++---------+-------+----------+------------------------------------+
+; Port    ; Type  ; Severity ; Details                            ;
++---------+-------+----------+------------------------------------+
+; result1 ; Input ; Info     ; Stuck at GND                       ;
++---------+-------+----------+------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "decode_module:decode|Mux2:MuxAddrR2" ;
++---------+-------+----------+------------------------------------+
+; Port    ; Type  ; Severity ; Details                            ;
++---------+-------+----------+------------------------------------+
+; result1 ; Input ; Info     ; Stuck at GND                       ;
++---------+-------+----------+------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "decode_module:decode|Mux2:V3_R3Mux" ;
++----------------+-------+----------+----------------------------+
+; Port           ; Type  ; Severity ; Details                    ;
++----------------+-------+----------+----------------------------+
+; result0[95..0] ; Input ; Info     ; Stuck at GND               ;
++----------------+-------+----------+----------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "decode_module:decode|Mux2:V2_R2Mux" ;
++----------------+-------+----------+----------------------------+
+; Port           ; Type  ; Severity ; Details                    ;
++----------------+-------+----------+----------------------------+
+; result0[95..0] ; Input ; Info     ; Stuck at GND               ;
++----------------+-------+----------+----------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fetch_module:fetch|Addition:PC_1"                                                       ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; B[31..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; B[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; Cout     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +---------------------------------+
@@ -260,7 +675,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Tue May 11 23:05:28 2021
+    Info: Processing started: Sat May 15 12:00:07 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ASIP-vectorial -c ASIP-vectorial --analysis_and_elaboration
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file muxes/mux8.sv
@@ -346,15 +761,62 @@ Info (12021): Found 1 design units, including 1 entities, in source file tests/f
     Info (12023): Found entity 1: frwrdUnit_tb File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/frwrdUnit_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/controlunit_tb.sv
     Info (12023): Found entity 1: ControlUnit_tb File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/ControlUnit_tb.sv Line: 1
-Critical Warning (10846): Verilog HDL Instantiation warning at frwrdUnit_tb.sv(19): instance has no name File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/frwrdUnit_tb.sv Line: 19
-Info (12127): Elaborating entity "frwrdUnit_tb" for the top level hierarchy
-Info (12128): Elaborating entity "ForwardUnit" for hierarchy "ForwardUnit:comb_3" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/frwrdUnit_tb.sv Line: 19
-Info (12128): Elaborating entity "Mux2" for hierarchy "ForwardUnit:comb_3|Mux2:WbR2" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv Line: 7
-Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4767 megabytes
-    Info: Processing ended: Tue May 11 23:05:55 2021
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:59
+Info (12021): Found 1 design units, including 1 entities, in source file processor/processors.sv
+    Info (12023): Found entity 1: processors File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at processors.sv(68): created implicit net for "GPI" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 68
+Info (12127): Elaborating entity "processors" for the top level hierarchy
+Info (12128): Elaborating entity "fetch_module" for hierarchy "fetch_module:fetch" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 4
+Info (12128): Elaborating entity "FlipFlop" for hierarchy "fetch_module:fetch|FlipFlop:PC" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 4
+Info (12128): Elaborating entity "Mux2" for hierarchy "fetch_module:fetch|Mux2:PCmux" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 6
+Info (12128): Elaborating entity "Addition" for hierarchy "fetch_module:fetch|Addition:PC_1" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 8
+Info (12128): Elaborating entity "InstructionMemory" for hierarchy "fetch_module:fetch|InstructionMemory:instMem" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 9
+Warning (10850): Verilog HDL warning at InstructionMemory.sv(7): number of words (0) in memory file does not match the number of elements in the address range [0:255] File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 7
+Warning (10030): Net "ROM.data_a" at InstructionMemory.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 4
+Warning (10030): Net "ROM.waddr_a" at InstructionMemory.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 4
+Warning (10030): Net "ROM.we_a" at InstructionMemory.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 4
+Info (12128): Elaborating entity "PipelineFetch" for hierarchy "PipelineFetch:pipeFetch" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 14
+Info (12128): Elaborating entity "decode_module" for hierarchy "decode_module:decode" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 24
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "decode_module:decode|ControlUnit:ctrlUnit" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 8
+Info (12128): Elaborating entity "ExtendDeco" for hierarchy "decode_module:decode|ControlUnit:ctrlUnit|ExtendDeco:ExtDeco" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 12
+Info (12128): Elaborating entity "InstDeco" for hierarchy "decode_module:decode|ControlUnit:ctrlUnit|InstDeco:InstDecoO" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 13
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "decode_module:decode|RegisterFile:regfile" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 10
+Info (12128): Elaborating entity "VectorialRegisterFile" for hierarchy "decode_module:decode|VectorialRegisterFile:VRegFile" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 12
+Info (12128): Elaborating entity "SelectRegisterFile" for hierarchy "decode_module:decode|SelectRegisterFile:selRegFile" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 14
+Info (12128): Elaborating entity "Extender" for hierarchy "decode_module:decode|Extender:extnd" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 16
+Info (12128): Elaborating entity "Mux2" for hierarchy "decode_module:decode|Mux2:V2_R2Mux" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 23
+Info (12128): Elaborating entity "Mux2" for hierarchy "decode_module:decode|Mux2:MuxAddrR2" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 25
+Info (12128): Elaborating entity "PipelineMem" for hierarchy "PipelineMem:pipeMem" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 41
+Warning (10240): Verilog HDL Always Construct warning at PipelineMem.sv(11): inferring latch(es) for variable "ExtenSel1", which holds its previous value in one or more paths through the always construct File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineMem.sv Line: 11
+Info (10041): Inferred latch for "ExtenSel1[0]" at PipelineMem.sv(28) File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineMem.sv Line: 28
+Info (10041): Inferred latch for "ExtenSel1[1]" at PipelineMem.sv(28) File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineMem.sv Line: 28
+Info (12128): Elaborating entity "execute_module" for hierarchy "execute_module:execute" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 52
+Info (12128): Elaborating entity "ForwardUnit" for hierarchy "execute_module:execute|ForwardUnit:frwunit" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 13
+Info (12128): Elaborating entity "ALUScalar" for hierarchy "execute_module:execute|ALUScalar:ALUS" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 15
+Info (12128): Elaborating entity "Subtraction" for hierarchy "execute_module:execute|ALUScalar:ALUS|Subtraction:Su" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 11
+Info (12128): Elaborating entity "Multiplication" for hierarchy "execute_module:execute|ALUScalar:ALUS|Multiplication:Mu" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 12
+Info (12128): Elaborating entity "Division" for hierarchy "execute_module:execute|ALUScalar:ALUS|Division:Di" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 13
+Info (12128): Elaborating entity "Mux8" for hierarchy "execute_module:execute|ALUScalar:ALUS|Mux8:M8" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 15
+Info (12128): Elaborating entity "NegativeFlag" for hierarchy "execute_module:execute|ALUScalar:ALUS|NegativeFlag:Ne" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 17
+Info (12128): Elaborating entity "ZeroFlag" for hierarchy "execute_module:execute|ALUScalar:ALUS|ZeroFlag:Ze" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 18
+Info (12128): Elaborating entity "OverflowFlag" for hierarchy "execute_module:execute|ALUScalar:ALUS|OverflowFlag:oV" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 19
+Info (12128): Elaborating entity "CarryFlag" for hierarchy "execute_module:execute|ALUScalar:ALUS|CarryFlag:Ca" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 20
+Info (12128): Elaborating entity "ALUVectorial" for hierarchy "execute_module:execute|ALUVectorial:ALUV" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 17
+Info (12128): Elaborating entity "VectorialAddition" for hierarchy "execute_module:execute|ALUVectorial:ALUV|VectorialAddition:VAd" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 8
+Info (12128): Elaborating entity "VectorialSubtraction" for hierarchy "execute_module:execute|ALUVectorial:ALUV|VectorialSubtraction:VSu" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 9
+Info (12128): Elaborating entity "VectorialMultiplication" for hierarchy "execute_module:execute|ALUVectorial:ALUV|VectorialMultiplication:VMu" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 10
+Info (12128): Elaborating entity "VectorialDivision" for hierarchy "execute_module:execute|ALUVectorial:ALUV|VectorialDivision:VDi" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 11
+Info (12128): Elaborating entity "Mux8" for hierarchy "execute_module:execute|ALUVectorial:ALUV|Mux8:VM8" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 13
+Info (12128): Elaborating entity "CondUnit" for hierarchy "execute_module:execute|CondUnit:cond_Unit" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 19
+Info (12128): Elaborating entity "FlipFlop" for hierarchy "execute_module:execute|CondUnit:cond_Unit|FlipFlop:flipiflopi" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CondUnit/CondUnit.sv Line: 12
+Info (12128): Elaborating entity "PipelineEx" for hierarchy "PipelineEx:pipeEx" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 65
+Info (12128): Elaborating entity "memory_module" for hierarchy "memory_module:memory" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 69
+Warning (10034): Output port "GPO" at memory_module.sv(2) has no driver File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/memory_module.sv Line: 2
+Info (12128): Elaborating entity "PipelineWB" for hierarchy "PipelineWB:pipewb" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 82
+Warning (12241): 7 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4785 megabytes
+    Info: Processing ended: Sat May 15 12:00:25 2021
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:41
 
 
