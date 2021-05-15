@@ -69,6 +69,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
+<<<<<<< HEAD
 +----------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Settings                                                                                            ;
 +---------------------------------------------------------------------------------+---------------------+--------------------+
@@ -168,6 +169,401 @@ https://fpgasoftware.intel.com/eula.
 ; GPIOEnG ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; GPIOEnB ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
+=======
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fetch_module:fetch|FlipFlop:PC ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; N              ; 32    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fetch_module:fetch|Mux2:PCmux ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; N              ; 32    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fetch_module:fetch|Addition:PC_1 ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: decode_module:decode|Mux2:PCR2 ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; N              ; 32    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: decode_module:decode|Mux2:ExtndMux ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: decode_module:decode|Mux2:V2_R2Mux ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: decode_module:decode|Mux2:V3_R3Mux ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: decode_module:decode|Mux2:MuxAddrR2 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: decode_module:decode|Mux2:MuxAddrR3 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ForwardUnit:frwunit|Mux2:WbR2 ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ForwardUnit:frwunit|Mux2:ExR2 ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ForwardUnit:frwunit|Mux2:WbR3 ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ForwardUnit:frwunit|Mux2:ExR3 ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|Addition:Ad ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|Subtraction:Su ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|Multiplication:Mu ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|Division:Di ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|Mux8:M8 ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|ZeroFlag:Ze ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV|VectorialAddition:VAd ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV|VectorialSubtraction:VSu ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV|VectorialMultiplication:VMu ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV|VectorialDivision:VDi ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV|Mux8:VM8 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|Mux2:ALUMux ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: execute_module:execute|CondUnit:cond_Unit|FlipFlop:flipiflopi ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memory_module:memory|Mux2:Memmux ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                           ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+<<<<<<< HEAD
+; Top-level entity name                                                           ; DataMemory_tb      ; ASIP-vectorial     ;
+=======
+; Top-level entity name                                                           ; ControlUnit_tb     ; ASIP-vectorial     ;
+>>>>>>> main
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
+; Optimization Technique                                                          ; Speed              ; Balanced           ;
+; Synthesis Effort                                                                ; Fast               ; Auto               ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
+<<<<<<< HEAD
+=======
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fetch_module:fetch|Addition:PC_1"                                                       ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; B[31..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; B[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; Cout     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+>>>>>>> main
 
 
 +---------------------------------+
@@ -209,6 +605,39 @@ Info (12021): Found 1 design units, including 1 entities, in source file pipelin
     Info (12023): Found entity 1: PipelineFetch File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineFetch.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelineex.sv
     Info (12023): Found entity 1: PipelineEx File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineEx.sv Line: 1
+<<<<<<< HEAD
+=======
+=======
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Sat May 15 12:00:07 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ASIP-vectorial -c ASIP-vectorial --analysis_and_elaboration
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file muxes/mux8.sv
+    Info (12023): Found entity 1: Mux8 File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux8.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file muxes/mux2.sv
+    Info (12023): Found entity 1: Mux2 File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file modules/decode_module.sv
+    Info (12023): Found entity 1: decode_module File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memories/vectorialregisterfile.sv
+    Info (12023): Found entity 1: VectorialRegisterFile File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/VectorialRegisterFile.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memories/registerfile.sv
+    Info (12023): Found entity 1: RegisterFile File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/RegisterFile.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memories/memorycontroller.sv
+    Info (12023): Found entity 1: MemoryController File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/MemoryController.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memories/instructionmemory.sv
+    Info (12023): Found entity 1: InstructionMemory File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memories/imagerom.sv
+    Info (12023): Found entity 1: ImageROM File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/ImageROM.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelinewb.sv
+    Info (12023): Found entity 1: PipelineWB File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineWB.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelinemem.sv
+    Info (12023): Found entity 1: PipelineMem File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineMem.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelinefetch.sv
+    Info (12023): Found entity 1: PipelineFetch File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineFetch.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelineex.sv
+    Info (12023): Found entity 1: PipelineEx File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineEx.sv Line: 1
+>>>>>>> main
+>>>>>>> main
 Info (12021): Found 0 design units, including 0 entities, in source file pipeline/pipelinedecode.sv
 Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/controlunit.sv
     Info (12023): Found entity 1: ControlUnit File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 1
@@ -267,6 +696,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file tests/c
 Info (12021): Found 1 design units, including 1 entities, in source file tests/frwrdunit_tb.sv
     Info (12023): Found entity 1: frwrdUnit_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/frwrdUnit_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/controlunit_tb.sv
+<<<<<<< HEAD
     Info (12023): Found entity 1: ControlUnit_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/ControlUnit_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/memorycontroller_tb.sv
     Info (12023): Found entity 1: MemoryController_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/MemoryController_tb.sv Line: 1
@@ -281,5 +711,66 @@ Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
     Info: Processing ended: Sat May 15 12:12:15 2021
     Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:28
+=======
+    Info (12023): Found entity 1: ControlUnit_tb File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/ControlUnit_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file processor/processors.sv
+    Info (12023): Found entity 1: processors File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at processors.sv(68): created implicit net for "GPI" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 68
+Info (12127): Elaborating entity "processors" for the top level hierarchy
+Info (12128): Elaborating entity "fetch_module" for hierarchy "fetch_module:fetch" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 4
+Info (12128): Elaborating entity "FlipFlop" for hierarchy "fetch_module:fetch|FlipFlop:PC" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 4
+Info (12128): Elaborating entity "Mux2" for hierarchy "fetch_module:fetch|Mux2:PCmux" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 6
+Info (12128): Elaborating entity "Addition" for hierarchy "fetch_module:fetch|Addition:PC_1" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 8
+Info (12128): Elaborating entity "InstructionMemory" for hierarchy "fetch_module:fetch|InstructionMemory:instMem" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 9
+Warning (10850): Verilog HDL warning at InstructionMemory.sv(7): number of words (0) in memory file does not match the number of elements in the address range [0:255] File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 7
+Warning (10030): Net "ROM.data_a" at InstructionMemory.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 4
+Warning (10030): Net "ROM.waddr_a" at InstructionMemory.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 4
+Warning (10030): Net "ROM.we_a" at InstructionMemory.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 4
+Info (12128): Elaborating entity "PipelineFetch" for hierarchy "PipelineFetch:pipeFetch" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 14
+Info (12128): Elaborating entity "decode_module" for hierarchy "decode_module:decode" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 24
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "decode_module:decode|ControlUnit:ctrlUnit" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 8
+Info (12128): Elaborating entity "ExtendDeco" for hierarchy "decode_module:decode|ControlUnit:ctrlUnit|ExtendDeco:ExtDeco" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 12
+Info (12128): Elaborating entity "InstDeco" for hierarchy "decode_module:decode|ControlUnit:ctrlUnit|InstDeco:InstDecoO" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 13
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "decode_module:decode|RegisterFile:regfile" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 10
+Info (12128): Elaborating entity "VectorialRegisterFile" for hierarchy "decode_module:decode|VectorialRegisterFile:VRegFile" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 12
+Info (12128): Elaborating entity "SelectRegisterFile" for hierarchy "decode_module:decode|SelectRegisterFile:selRegFile" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 14
+Info (12128): Elaborating entity "Extender" for hierarchy "decode_module:decode|Extender:extnd" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 16
+Info (12128): Elaborating entity "Mux2" for hierarchy "decode_module:decode|Mux2:V2_R2Mux" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 23
+Info (12128): Elaborating entity "Mux2" for hierarchy "decode_module:decode|Mux2:MuxAddrR2" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 25
+Info (12128): Elaborating entity "PipelineMem" for hierarchy "PipelineMem:pipeMem" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 41
+Warning (10240): Verilog HDL Always Construct warning at PipelineMem.sv(11): inferring latch(es) for variable "ExtenSel1", which holds its previous value in one or more paths through the always construct File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineMem.sv Line: 11
+Info (10041): Inferred latch for "ExtenSel1[0]" at PipelineMem.sv(28) File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineMem.sv Line: 28
+Info (10041): Inferred latch for "ExtenSel1[1]" at PipelineMem.sv(28) File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineMem.sv Line: 28
+Info (12128): Elaborating entity "execute_module" for hierarchy "execute_module:execute" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 52
+Info (12128): Elaborating entity "ForwardUnit" for hierarchy "execute_module:execute|ForwardUnit:frwunit" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 13
+Info (12128): Elaborating entity "ALUScalar" for hierarchy "execute_module:execute|ALUScalar:ALUS" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 15
+Info (12128): Elaborating entity "Subtraction" for hierarchy "execute_module:execute|ALUScalar:ALUS|Subtraction:Su" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 11
+Info (12128): Elaborating entity "Multiplication" for hierarchy "execute_module:execute|ALUScalar:ALUS|Multiplication:Mu" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 12
+Info (12128): Elaborating entity "Division" for hierarchy "execute_module:execute|ALUScalar:ALUS|Division:Di" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 13
+Info (12128): Elaborating entity "Mux8" for hierarchy "execute_module:execute|ALUScalar:ALUS|Mux8:M8" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 15
+Info (12128): Elaborating entity "NegativeFlag" for hierarchy "execute_module:execute|ALUScalar:ALUS|NegativeFlag:Ne" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 17
+Info (12128): Elaborating entity "ZeroFlag" for hierarchy "execute_module:execute|ALUScalar:ALUS|ZeroFlag:Ze" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 18
+Info (12128): Elaborating entity "OverflowFlag" for hierarchy "execute_module:execute|ALUScalar:ALUS|OverflowFlag:oV" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 19
+Info (12128): Elaborating entity "CarryFlag" for hierarchy "execute_module:execute|ALUScalar:ALUS|CarryFlag:Ca" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 20
+Info (12128): Elaborating entity "ALUVectorial" for hierarchy "execute_module:execute|ALUVectorial:ALUV" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 17
+Info (12128): Elaborating entity "VectorialAddition" for hierarchy "execute_module:execute|ALUVectorial:ALUV|VectorialAddition:VAd" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 8
+Info (12128): Elaborating entity "VectorialSubtraction" for hierarchy "execute_module:execute|ALUVectorial:ALUV|VectorialSubtraction:VSu" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 9
+Info (12128): Elaborating entity "VectorialMultiplication" for hierarchy "execute_module:execute|ALUVectorial:ALUV|VectorialMultiplication:VMu" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 10
+Info (12128): Elaborating entity "VectorialDivision" for hierarchy "execute_module:execute|ALUVectorial:ALUV|VectorialDivision:VDi" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 11
+Info (12128): Elaborating entity "Mux8" for hierarchy "execute_module:execute|ALUVectorial:ALUV|Mux8:VM8" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 13
+Info (12128): Elaborating entity "CondUnit" for hierarchy "execute_module:execute|CondUnit:cond_Unit" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 19
+Info (12128): Elaborating entity "FlipFlop" for hierarchy "execute_module:execute|CondUnit:cond_Unit|FlipFlop:flipiflopi" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CondUnit/CondUnit.sv Line: 12
+Info (12128): Elaborating entity "PipelineEx" for hierarchy "PipelineEx:pipeEx" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 65
+Info (12128): Elaborating entity "memory_module" for hierarchy "memory_module:memory" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 69
+Warning (10034): Output port "GPO" at memory_module.sv(2) has no driver File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/memory_module.sv Line: 2
+Info (12128): Elaborating entity "PipelineWB" for hierarchy "PipelineWB:pipewb" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 82
+Warning (12241): 7 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4785 megabytes
+    Info: Processing ended: Sat May 15 12:00:25 2021
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:38
+>>>>>>> main
+>>>>>>> main
 
 
