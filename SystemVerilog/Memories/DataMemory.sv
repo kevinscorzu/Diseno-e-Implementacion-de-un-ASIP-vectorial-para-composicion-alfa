@@ -1,8 +1,10 @@
 module DataMemory (input logic clk, we, vf,
 						 input logic [127:0] addr, wd,
 						 output logic [127:0] rd,
-						 output logic [32:0] GPIO,
+						 output logic [31:0] GPIO,
 						 output logic GPIOEnR, GPIOEnG, GPIOEnB);
+	
+	// synthesis translate_off
 				
 	logic [7:0] RAM1R[9999:0];
 	logic [7:0] RAM2R[9999:0];
@@ -17,7 +19,7 @@ module DataMemory (input logic clk, we, vf,
 	logic [7:0] RAM3B[9999:0];
 	logic [7:0] RAM4B[9999:0];
 	logic [31:0] RAMD[999:0];	
-
+	
 	always_ff @(negedge clk)
 		begin
 			if (addr >= 'd0 && addr <= 'd9999)
@@ -206,59 +208,60 @@ module DataMemory (input logic clk, we, vf,
 				rd <= 128'b0;			
 		end
 			
+	// synthesis translate_on
 		
-//	always_comb
-//		begin
-//			if (addr >= 'd0 && addr <= 'd39999 && we == 1'b1 && vf == 1'b0)
-//				begin
-//					GPIO = {24'b0, wd[7:0]};
-//					GPIOEnR = we;
-//					GPIOEnG = 1'b0;
-//					GPIOEnB = 1'b0;
-//				end
-//			else if (addr >= 'd40000 && addr <= 'd79999 && we == 1'b1 && vf == 1'b0)
-//				begin
-//					GPIO = {24'b0, wd[7:0]};
-//					GPIOEnR = 1'b0;
-//					GPIOEnG = we;
-//					GPIOEnB = 1'b0;
-//				end
-//			else if (addr >= 'd80000 && addr <= 'd119999 && we == 1'b1 && vf == 1'b0)
-//				begin
-//					GPIO = {24'b0, wd[7:0]};
-//					GPIOEnR = 1'b0;
-//					GPIOEnG = 1'b0;
-//					GPIOEnB = we;
-//				end
-//			else if (addr >= 'd0 && addr <= 'd39999 && we == 1'b1 && vf == 1'b1)
-//				begin
-//					GPIO = {wd[31:24], wd[23:16], wd[15:8], wd[7:0]};
-//					GPIOEnR = we;
-//					GPIOEnG = 1'b0;
-//					GPIOEnB = 1'b0;
-//				end
-//			else if (addr >= 'd40000 && addr <= 'd79999 && we == 1'b1 && vf == 1'b1)
-//				begin
-//					GPIO = {wd[31:24], wd[23:16], wd[15:8], wd[7:0]};
-//					GPIOEnR = 1'b0;
-//					GPIOEnG = we;
-//					GPIOEnB = 1'b0;
-//				end
-//			else if (addr >= 'd80000 && addr <= 'd119999 && we == 1'b1 && vf == 1'b1)
-//				begin
-//					GPIO = {wd[31:24], wd[23:16], wd[15:8], wd[7:0]};
-//					GPIOEnR = 1'b0;
-//					GPIOEnG = 1'b0;
-//					GPIOEnB = we;
-//				end
-//			else
-//				begin
-//					GPIO = 32'b0;
-//					GPIOEnR = 1'b0;
-//					GPIOEnG = 1'b0;
-//					GPIOEnB = 1'b0;
-//				end
-//		end
+	always_comb
+		begin
+			if (addr >= 'd0 && addr <= 'd39999 && we == 1'b1 && vf == 1'b0)
+				begin
+					GPIO = {24'b0, wd[7:0]};
+					GPIOEnR = we;
+					GPIOEnG = 1'b0;
+					GPIOEnB = 1'b0;
+				end
+			else if (addr >= 'd40000 && addr <= 'd79999 && we == 1'b1 && vf == 1'b0)
+				begin
+					GPIO = {24'b0, wd[7:0]};
+					GPIOEnR = 1'b0;
+					GPIOEnG = we;
+					GPIOEnB = 1'b0;
+				end
+			else if (addr >= 'd80000 && addr <= 'd119999 && we == 1'b1 && vf == 1'b0)
+				begin
+					GPIO = {24'b0, wd[7:0]};
+					GPIOEnR = 1'b0;
+					GPIOEnG = 1'b0;
+					GPIOEnB = we;
+				end
+			else if (addr >= 'd0 && addr <= 'd39999 && we == 1'b1 && vf == 1'b1)
+				begin
+					GPIO = {wd[103:96], wd[71:64], wd[39:32], wd[7:0]};
+					GPIOEnR = we;
+					GPIOEnG = 1'b0;
+					GPIOEnB = 1'b0;
+				end
+			else if (addr >= 'd40000 && addr <= 'd79999 && we == 1'b1 && vf == 1'b1)
+				begin
+					GPIO = {wd[103:96], wd[71:64], wd[39:32], wd[7:0]};
+					GPIOEnR = 1'b0;
+					GPIOEnG = we;
+					GPIOEnB = 1'b0;
+				end
+			else if (addr >= 'd80000 && addr <= 'd119999 && we == 1'b1 && vf == 1'b1)
+				begin
+					GPIO = {wd[103:96], wd[71:64], wd[39:32], wd[7:0]};
+					GPIOEnR = 1'b0;
+					GPIOEnG = 1'b0;
+					GPIOEnB = we;
+				end
+			else
+				begin
+					GPIO = 32'b0;
+					GPIOEnR = 1'b0;
+					GPIOEnG = 1'b0;
+					GPIOEnB = 1'b0;
+				end
+		end
 		
 		
 endmodule 

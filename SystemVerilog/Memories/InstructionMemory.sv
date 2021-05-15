@@ -5,7 +5,7 @@ module InstructionMemory (input clk,
 	logic [31:0] ROM[255:0];
 	
 	initial
-		$readmemh("instructions.txt", ROM);
+		$readmemh("C:/MemData/instructions.txt", ROM);
 	
 	always_ff @(negedge clk)
 		rd <= ROM[addr[31:0]];

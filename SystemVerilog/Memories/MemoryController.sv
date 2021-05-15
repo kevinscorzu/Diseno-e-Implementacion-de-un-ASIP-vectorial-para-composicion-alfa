@@ -7,7 +7,7 @@ module MemoryController (input logic clk, we, vf, swInicio, swInR0, swInR25, swI
 	logic [127:0] trueAddr, ROMRd, RAMRd;
 						 
 	DataMemory RAM(clk, we, vf, trueAddr, wd, RAMRd, GPIO, GPIOEnR, GPIOEnG, GPIOEnB);
-	ImageROM ROM(trueAddr, ROMRd);
+	ImageROM ROM(clk, trueAddr, ROMRd);
 	
 	always_comb
 		begin
