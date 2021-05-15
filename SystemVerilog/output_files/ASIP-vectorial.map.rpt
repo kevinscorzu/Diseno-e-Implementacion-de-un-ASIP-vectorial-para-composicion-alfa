@@ -1,5 +1,5 @@
-Analysis & Elaboration report for ASIP-vectorial
-Sat May 15 12:12:15 2021
+Analysis & Synthesis report for ASIP-vectorial
+Sat May 15 14:40:58 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,11 +7,65 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "MemoryController:DUT"
-  6. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: fetch_module:fetch|FlipFlop:PC
+ 12. Parameter Settings for User Entity Instance: fetch_module:fetch|Mux2:PCmux
+ 13. Parameter Settings for User Entity Instance: fetch_module:fetch|Addition:PC_1
+ 14. Parameter Settings for User Entity Instance: decode_module:decode|Mux2:PCR2
+ 15. Parameter Settings for User Entity Instance: decode_module:decode|Mux2:ExtndMux
+ 16. Parameter Settings for User Entity Instance: decode_module:decode|Mux2:V2_R2Mux
+ 17. Parameter Settings for User Entity Instance: decode_module:decode|Mux2:V3_R3Mux
+ 18. Parameter Settings for User Entity Instance: decode_module:decode|Mux2:MuxAddrR2
+ 19. Parameter Settings for User Entity Instance: decode_module:decode|Mux2:MuxAddrR3
+ 20. Parameter Settings for User Entity Instance: execute_module:execute|ForwardUnit:frwunit|Mux2:WbR2
+ 21. Parameter Settings for User Entity Instance: execute_module:execute|ForwardUnit:frwunit|Mux2:ExR2
+ 22. Parameter Settings for User Entity Instance: execute_module:execute|ForwardUnit:frwunit|Mux2:WbR3
+ 23. Parameter Settings for User Entity Instance: execute_module:execute|ForwardUnit:frwunit|Mux2:ExR3
+ 24. Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS
+ 25. Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|Addition:Ad
+ 26. Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|Subtraction:Su
+ 27. Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|Multiplication:Mu
+ 28. Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|Division:Di
+ 29. Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|Mux8:M8
+ 30. Parameter Settings for User Entity Instance: execute_module:execute|ALUScalar:ALUS|ZeroFlag:Ze
+ 31. Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV
+ 32. Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV|VectorialAddition:VAd
+ 33. Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV|VectorialSubtraction:VSu
+ 34. Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV|VectorialMultiplication:VMu
+ 35. Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV|VectorialDivision:VDi
+ 36. Parameter Settings for User Entity Instance: execute_module:execute|ALUVectorial:ALUV|Mux8:VM8
+ 37. Parameter Settings for User Entity Instance: execute_module:execute|Mux2:ALUMux
+ 38. Parameter Settings for User Entity Instance: execute_module:execute|CondUnit:cond_Unit|FlipFlop:flipiflopi
+ 39. Parameter Settings for User Entity Instance: memory_module:memory|Mux2:Memmux
+ 40. Port Connectivity Checks: "PipelineEx:pipeEx"
+ 41. Port Connectivity Checks: "execute_module:execute|CondUnit:cond_Unit|FlipFlop:flipiflopi"
+ 42. Port Connectivity Checks: "execute_module:execute|Mux2:ALUMux"
+ 43. Port Connectivity Checks: "execute_module:execute|ALUVectorial:ALUV|Mux8:VM8"
+ 44. Port Connectivity Checks: "execute_module:execute|ALUVectorial:ALUV"
+ 45. Port Connectivity Checks: "execute_module:execute|ALUScalar:ALUS|Mux8:M8"
+ 46. Port Connectivity Checks: "execute_module:execute|ForwardUnit:frwunit|Mux2:ExR3"
+ 47. Port Connectivity Checks: "execute_module:execute|ForwardUnit:frwunit|Mux2:WbR3"
+ 48. Port Connectivity Checks: "execute_module:execute|ForwardUnit:frwunit|Mux2:ExR2"
+ 49. Port Connectivity Checks: "execute_module:execute|ForwardUnit:frwunit|Mux2:WbR2"
+ 50. Port Connectivity Checks: "execute_module:execute|ForwardUnit:frwunit"
+ 51. Port Connectivity Checks: "PipelineMem:pipeMem"
+ 52. Port Connectivity Checks: "decode_module:decode|Mux2:MuxAddrR3"
+ 53. Port Connectivity Checks: "decode_module:decode|Mux2:MuxAddrR2"
+ 54. Port Connectivity Checks: "decode_module:decode|Mux2:V3_R3Mux"
+ 55. Port Connectivity Checks: "decode_module:decode|Mux2:V2_R2Mux"
+ 56. Port Connectivity Checks: "fetch_module:fetch|InstructionMemory:instMem"
+ 57. Port Connectivity Checks: "fetch_module:fetch|Addition:PC_1"
+ 58. Post-Synthesis Netlist Statistics for Top Partition
+ 59. Elapsed Time Per Partition
+ 60. Analysis & Synthesis Messages
 
 
 
@@ -35,22 +89,115 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sat May 15 12:12:15 2021       ;
-; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                 ; ASIP-vectorial                              ;
-; Top-level Entity Name         ; MemoryController_tb                         ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat May 15 14:40:58 2021       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; ASIP-vectorial                              ;
+; Top-level Entity Name           ; processors                                  ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 58                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; processors         ; ASIP-vectorial     ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
+; Allow Any RAM Size For Recognition                                              ; On                 ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; On                 ; Off                ;
+; Synthesis Effort                                                                ; Fast               ; Auto               ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -69,107 +216,313 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-<<<<<<< HEAD
-+----------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                            ;
-+---------------------------------------------------------------------------------+---------------------+--------------------+
-; Option                                                                          ; Setting             ; Default Value      ;
-+---------------------------------------------------------------------------------+---------------------+--------------------+
-; Device                                                                          ; 5CSEMA5F31C6        ;                    ;
-; Top-level entity name                                                           ; MemoryController_tb ; ASIP-vectorial     ;
-; Family name                                                                     ; Cyclone V           ; Cyclone V          ;
-; Maximum processors allowed for parallel compilation                             ; All                 ;                    ;
-; Allow Any RAM Size For Recognition                                              ; On                  ; Off                ;
-; Allow Any ROM Size For Recognition                                              ; On                  ; Off                ;
-; Synthesis Effort                                                                ; Fast                ; Auto               ;
-; Use smart compilation                                                           ; Off                 ; Off                ;
-; Enable parallel Assembler and Timing Analyzer during compilation                ; On                  ; On                 ;
-; Enable compact report table                                                     ; Off                 ; Off                ;
-; Restructure Multiplexers                                                        ; Auto                ; Auto               ;
-; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                 ; Off                ;
-; Create Debugging Nodes for IP Cores                                             ; Off                 ; Off                ;
-; Preserve fewer node names                                                       ; On                  ; On                 ;
-; Intel FPGA IP Evaluation Mode                                                   ; Enable              ; Enable             ;
-; Verilog Version                                                                 ; Verilog_2001        ; Verilog_2001       ;
-; VHDL Version                                                                    ; VHDL_1993           ; VHDL_1993          ;
-; State Machine Processing                                                        ; Auto                ; Auto               ;
-; Safe State Machine                                                              ; Off                 ; Off                ;
-; Extract Verilog State Machines                                                  ; On                  ; On                 ;
-; Extract VHDL State Machines                                                     ; On                  ; On                 ;
-; Ignore Verilog initial constructs                                               ; Off                 ; Off                ;
-; Iteration limit for constant Verilog loops                                      ; 5000                ; 5000               ;
-; Iteration limit for non-constant Verilog loops                                  ; 250                 ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                         ; On                  ; On                 ;
-; Infer RAMs from Raw Logic                                                       ; On                  ; On                 ;
-; Parallel Synthesis                                                              ; On                  ; On                 ;
-; DSP Block Balancing                                                             ; Auto                ; Auto               ;
-; NOT Gate Push-Back                                                              ; On                  ; On                 ;
-; Power-Up Don't Care                                                             ; On                  ; On                 ;
-; Remove Redundant Logic Cells                                                    ; Off                 ; Off                ;
-; Remove Duplicate Registers                                                      ; On                  ; On                 ;
-; Ignore CARRY Buffers                                                            ; Off                 ; Off                ;
-; Ignore CASCADE Buffers                                                          ; Off                 ; Off                ;
-; Ignore GLOBAL Buffers                                                           ; Off                 ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                       ; Off                 ; Off                ;
-; Ignore LCELL Buffers                                                            ; Off                 ; Off                ;
-; Ignore SOFT Buffers                                                             ; On                  ; On                 ;
-; Limit AHDL Integers to 32 Bits                                                  ; Off                 ; Off                ;
-; Optimization Technique                                                          ; Balanced            ; Balanced           ;
-; Carry Chain Length                                                              ; 70                  ; 70                 ;
-; Auto Carry Chains                                                               ; On                  ; On                 ;
-; Auto Open-Drain Pins                                                            ; On                  ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                           ; Off                 ; Off                ;
-; Auto ROM Replacement                                                            ; On                  ; On                 ;
-; Auto RAM Replacement                                                            ; On                  ; On                 ;
-; Auto DSP Block Replacement                                                      ; On                  ; On                 ;
-; Auto Shift Register Replacement                                                 ; Auto                ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                                 ; Auto                ; Auto               ;
-; Auto Clock Enable Replacement                                                   ; On                  ; On                 ;
-; Strict RAM Replacement                                                          ; Off                 ; Off                ;
-; Allow Synchronous Control Signals                                               ; On                  ; On                 ;
-; Force Use of Synchronous Clear Signals                                          ; Off                 ; Off                ;
-; Auto Resource Sharing                                                           ; Off                 ; Off                ;
-; Allow Any Shift Register Size For Recognition                                   ; Off                 ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                             ; On                  ; On                 ;
-; Ignore translate_off and synthesis_off directives                               ; Off                 ; Off                ;
-; Timing-Driven Synthesis                                                         ; On                  ; On                 ;
-; Report Parameter Settings                                                       ; On                  ; On                 ;
-; Report Source Assignments                                                       ; On                  ; On                 ;
-; Report Connectivity Checks                                                      ; On                  ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                              ; Off                 ; Off                ;
-; Synchronization Register Chain Length                                           ; 3                   ; 3                  ;
-; Power Optimization During Synthesis                                             ; Normal compilation  ; Normal compilation ;
-; HDL message level                                                               ; Level2              ; Level2             ;
-; Suppress Register Optimization Related Messages                                 ; Off                 ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                        ; 5000                ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                              ; 5000                ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                       ; 100                 ; 100                ;
-; Clock MUX Protection                                                            ; On                  ; On                 ;
-; Auto Gated Clock Conversion                                                     ; Off                 ; Off                ;
-; Block Design Naming                                                             ; Auto                ; Auto               ;
-; SDC constraint protection                                                       ; Off                 ; Off                ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                  ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                            ; Off                 ; Off                ;
-; Analysis & Synthesis Message Level                                              ; Medium              ; Medium             ;
-; Disable Register Merging Across Hierarchies                                     ; Auto                ; Auto               ;
-; Resource Aware Inference For Block RAM                                          ; On                  ; On                 ;
-; Automatic Parallel Synthesis                                                    ; On                  ; On                 ;
-; Partial Reconfiguration Bitstream ID                                            ; Off                 ; Off                ;
-+---------------------------------------------------------------------------------+---------------------+--------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                                                    ;
++-----------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                    ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                                                                                             ; Library ;
++-----------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; processor/processors.sv                             ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv                             ;         ;
+; Memories/DataMemory.sv                              ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv                              ;         ;
+; Muxes/Mux8.sv                                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux8.sv                                       ;         ;
+; Muxes/Mux2.sv                                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv                                       ;         ;
+; modules/decode_module.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv                            ;         ;
+; Memories/VectorialRegisterFile.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/VectorialRegisterFile.sv                   ;         ;
+; Memories/RegisterFile.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/RegisterFile.sv                            ;         ;
+; Memories/MemoryController.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/MemoryController.sv                        ;         ;
+; Memories/InstructionMemory.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv                       ;         ;
+; Memories/ImageROM.sv                                ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/ImageROM.sv                                ;         ;
+; Pipeline/PipelineWB.sv                              ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineWB.sv                              ;         ;
+; Pipeline/PipelineMem.sv                             ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineMem.sv                             ;         ;
+; Pipeline/PipelineFetch.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineFetch.sv                           ;         ;
+; Pipeline/PipelineEx.sv                              ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineEx.sv                              ;         ;
+; CtrlUnit/ControlUnit.sv                             ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv                             ;         ;
+; CtrlUnit/ExtendDeco.sv                              ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ExtendDeco.sv                              ;         ;
+; CtrlUnit/InstDeco.sv                                ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/InstDeco.sv                                ;         ;
+; FordwardUnit/ForwardUnit.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv                         ;         ;
+; ALU/Scalar/ALUScalar.sv                             ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv                             ;         ;
+; ALU/Scalar/Flag/ZeroFlag.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/ZeroFlag.sv                         ;         ;
+; ALU/Scalar/Flag/OverflowFlag.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/OverflowFlag.sv                     ;         ;
+; ALU/Scalar/Flag/NegativeFlag.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/NegativeFlag.sv                     ;         ;
+; ALU/Scalar/Flag/CarryFlag.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/CarryFlag.sv                        ;         ;
+; ALU/Vectorial/ALUVectorial.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv                       ;         ;
+; ALU/Scalar/Operations/Subtraction.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Subtraction.sv                ;         ;
+; ALU/Scalar/Operations/Multiplication.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Multiplication.sv             ;         ;
+; ALU/Scalar/Operations/Addition.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Addition.sv                   ;         ;
+; ALU/Vectorial/Operations/VectorialAddition.sv       ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialAddition.sv       ;         ;
+; ALU/Vectorial/Operations/VectorialSubtraction.sv    ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialSubtraction.sv    ;         ;
+; ALU/Vectorial/Operations/VectorialMultiplication.sv ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialMultiplication.sv ;         ;
+; Extender/Extender.sv                                ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Extender/Extender.sv                                ;         ;
+; CtrlUnit/SelectRegisterFile.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/SelectRegisterFile.sv                      ;         ;
+; ALU/Vectorial/Operations/VectorialDivision.sv       ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialDivision.sv       ;         ;
+; ALU/Scalar/Operations/Division.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Division.sv                   ;         ;
+; modules/fetch_module.sv                             ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv                             ;         ;
+; FlipFlop/FlipFlop.sv                                ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FlipFlop/FlipFlop.sv                                ;         ;
+; modules/execute_module.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv                           ;         ;
+; CondUnit/CondUnit.sv                                ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CondUnit/CondUnit.sv                                ;         ;
+; modules/memory_module.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/memory_module.sv                            ;         ;
+; /memdata/instructions.txt                           ; yes             ; Auto-Found File              ; /memdata/instructions.txt                                                                                                                                                                                ;         ;
++-----------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "MemoryController:DUT"                                                                  ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; rd      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; GPIO    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; GPIOEnR ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; GPIOEnG ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; GPIOEnB ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-=======
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 0     ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 0     ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 0     ;
+;     -- 5 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- <=3 input functions                  ; 0     ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 58    ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 58    ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |processors                ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 58   ; 0            ; |processors         ; processors  ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                          ;
++--------------------------------------------------------------------+----------------------------------------+
+; Register name                                                      ; Reason for Removal                     ;
++--------------------------------------------------------------------+----------------------------------------+
+; PipelineEx:pipeEx|R3_V3_3[32..127]                                 ; Stuck at GND due to stuck port data_in ;
+; PipelineEx:pipeEx|R_V_dest2[1..3]                                  ; Stuck at GND due to stuck port data_in ;
+; PipelineFetch:pipeFetch|op[0,1]                                    ; Stuck at GND due to stuck port data_in ;
+; PipelineFetch:pipeFetch|inst[0,1]                                  ; Stuck at GND due to stuck port data_in ;
+; PipelineFetch:pipeFetch|flagV                                      ; Stuck at GND due to stuck port data_in ;
+; PipelineFetch:pipeFetch|R2_V2_D[0..3]                              ; Stuck at GND due to stuck port data_in ;
+; PipelineFetch:pipeFetch|R3_V3_D[0..3]                              ; Stuck at GND due to stuck port data_in ;
+; PipelineFetch:pipeFetch|R1_V1[0]                                   ; Stuck at GND due to stuck port data_in ;
+; PipelineWB:pipewb|R_V_dest3[1..3]                                  ; Stuck at GND due to stuck port data_in ;
+; PipelineMem:pipeMem|R_V_dest1[0]                                   ; Stuck at GND due to stuck port data_in ;
+; PipelineMem:pipeMem|VF1                                            ; Stuck at GND due to stuck port data_in ;
+; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[0..31]     ; Lost fanout                            ;
+; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[0..31]     ; Lost fanout                            ;
+; PipelineWB:pipewb|ResRV2[0..127]                                   ; Lost fanout                            ;
+; PipelineWB:pipewb|wreg3                                            ; Lost fanout                            ;
+; PipelineEx:pipeEx|wreg2                                            ; Lost fanout                            ;
+; PipelineMem:pipeMem|wreg1                                          ; Lost fanout                            ;
+; PipelineEx:pipeEx|R_V_dest2[0]                                     ; Stuck at GND due to stuck port data_in ;
+; PipelineEx:pipeEx|VF2                                              ; Stuck at GND due to stuck port data_in ;
+; PipelineMem:pipeMem|rmem1                                          ; Stuck at GND due to stuck port data_in ;
+; PipelineMem:pipeMem|wmem1                                          ; Stuck at GND due to stuck port data_in ;
+; PipelineMem:pipeMem|CondEn1                                        ; Stuck at GND due to stuck port data_in ;
+; PipelineMem:pipeMem|jmpF1[1]                                       ; Stuck at GND due to stuck port data_in ;
+; PipelineMem:pipeMem|ALUIns1[1,2]                                   ; Stuck at GND due to stuck port data_in ;
+; PipelineMem:pipeMem|R2_V2_D1[0..3]                                 ; Stuck at GND due to stuck port data_in ;
+; PipelineMem:pipeMem|R3_V3_D1[0..3]                                 ; Stuck at GND due to stuck port data_in ;
+; PipelineMem:pipeMem|R2_V2_1[0..31]                                 ; Stuck at GND due to stuck port data_in ;
+; PipelineMem:pipeMem|R2_V3_1[0..31]                                 ; Stuck at GND due to stuck port data_in ;
+; PipelineWB:pipewb|R_V_dest3[0]                                     ; Stuck at GND due to stuck port data_in ;
+; PipelineWB:pipewb|VF3                                              ; Stuck at GND due to stuck port data_in ;
+; PipelineEx:pipeEx|rmem2                                            ; Stuck at GND due to stuck port data_in ;
+; PipelineEx:pipeEx|wmem2                                            ; Stuck at GND due to stuck port data_in ;
+; PipelineEx:pipeEx|ALURES2[32..127]                                 ; Stuck at GND due to stuck port data_in ;
+; PipelineMem:pipeMem|jmpF1[0]                                       ; Lost fanout                            ;
+; execute_module:execute|CondUnit:cond_Unit|FlipFlop:flipiflopi|q[2] ; Lost fanout                            ;
+; PipelineEx:pipeEx|ALURES2[0..31]                                   ; Lost fanout                            ;
+; PipelineEx:pipeEx|R3_V3_3[0..31]                                   ; Lost fanout                            ;
+; PipelineMem:pipeMem|ALUIns1[0]                                     ; Lost fanout                            ;
+; PipelineMem:pipeMem|ExtenSel1[0,1]                                 ; Lost fanout                            ;
+; Total Number of Removed Registers = 562                            ;                                        ;
++--------------------------------------------------------------------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                           ;
++------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
+; Register name                      ; Reason for Removal        ; Registers Removed due to This Register                                               ;
++------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
+; PipelineFetch:pipeFetch|flagV      ; Stuck at GND              ; PipelineMem:pipeMem|VF1,                                                             ;
+;                                    ; due to stuck port data_in ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[31],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[30],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[29],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[28],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[27],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[26],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[25],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[24],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[23],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[22],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[21],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[20],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[19],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[18],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[17],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[16],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[15],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[14],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[13],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[12],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[11],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[10],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[9],                          ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[8],                          ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[7],                          ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[6],                          ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[5],                          ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[4],                          ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[3],                          ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[2],                          ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[1],                          ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd2[0],                          ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[31],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[30],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[29],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[28],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[27],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[26],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[25],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[24],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[23],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[22],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[21],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[20],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[19],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[18],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[17],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[16],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[15],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[14],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[13],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[12],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[11],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[10],                         ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[9],                          ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[8],                          ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[7],                          ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[6],                          ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[5],                          ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[4],                          ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[3],                          ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[2],                          ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[1],                          ;
+;                                    ;                           ; decode_module:decode|VectorialRegisterFile:VRegFile|rd1[0],                          ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V2_1[31], PipelineMem:pipeMem|R2_V2_1[30],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V2_1[29], PipelineMem:pipeMem|R2_V2_1[28],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V2_1[27], PipelineMem:pipeMem|R2_V2_1[26],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V2_1[25], PipelineMem:pipeMem|R2_V2_1[24],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V2_1[23], PipelineMem:pipeMem|R2_V2_1[22],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V2_1[21], PipelineMem:pipeMem|R2_V2_1[20],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V2_1[19], PipelineMem:pipeMem|R2_V2_1[18],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V2_1[17], PipelineMem:pipeMem|R2_V2_1[16],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V2_1[15], PipelineMem:pipeMem|R2_V2_1[14],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V2_1[13], PipelineMem:pipeMem|R2_V2_1[12],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V2_1[11], PipelineMem:pipeMem|R2_V2_1[10],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V2_1[9], PipelineMem:pipeMem|R2_V2_1[8],                      ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V2_1[7], PipelineMem:pipeMem|R2_V2_1[6],                      ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V2_1[5], PipelineMem:pipeMem|R2_V2_1[4],                      ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V2_1[3], PipelineMem:pipeMem|R2_V2_1[2],                      ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V2_1[1], PipelineMem:pipeMem|R2_V2_1[0],                      ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V3_1[31], PipelineMem:pipeMem|R2_V3_1[30],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V3_1[29], PipelineMem:pipeMem|R2_V3_1[28],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V3_1[27], PipelineMem:pipeMem|R2_V3_1[26],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V3_1[25], PipelineMem:pipeMem|R2_V3_1[24],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V3_1[23], PipelineMem:pipeMem|R2_V3_1[22],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V3_1[21], PipelineMem:pipeMem|R2_V3_1[20],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V3_1[19], PipelineMem:pipeMem|R2_V3_1[18],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V3_1[17], PipelineMem:pipeMem|R2_V3_1[16],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V3_1[15], PipelineMem:pipeMem|R2_V3_1[14],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V3_1[13], PipelineMem:pipeMem|R2_V3_1[12],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V3_1[11], PipelineMem:pipeMem|R2_V3_1[10],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V3_1[9], PipelineMem:pipeMem|R2_V3_1[8],                      ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V3_1[7], PipelineMem:pipeMem|R2_V3_1[6],                      ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V3_1[5], PipelineMem:pipeMem|R2_V3_1[4],                      ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V3_1[3], PipelineMem:pipeMem|R2_V3_1[2],                      ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V3_1[1], PipelineMem:pipeMem|R2_V3_1[0],                      ;
+;                                    ;                           ; PipelineEx:pipeEx|ALURES2[28]                                                        ;
+; PipelineEx:pipeEx|R_V_dest2[3]     ; Stuck at GND              ; PipelineWB:pipewb|R_V_dest3[3], PipelineEx:pipeEx|ALURES2[31],                       ;
+;                                    ; due to stuck port data_in ; PipelineEx:pipeEx|ALURES2[30], PipelineEx:pipeEx|ALURES2[29],                        ;
+;                                    ;                           ; PipelineEx:pipeEx|R3_V3_3[31], PipelineEx:pipeEx|R3_V3_3[30],                        ;
+;                                    ;                           ; PipelineEx:pipeEx|R3_V3_3[29], PipelineEx:pipeEx|R3_V3_3[28],                        ;
+;                                    ;                           ; PipelineEx:pipeEx|R3_V3_3[27], PipelineEx:pipeEx|R3_V3_3[26],                        ;
+;                                    ;                           ; PipelineEx:pipeEx|R3_V3_3[25], PipelineEx:pipeEx|R3_V3_3[24],                        ;
+;                                    ;                           ; PipelineEx:pipeEx|R3_V3_3[23], PipelineEx:pipeEx|R3_V3_3[22],                        ;
+;                                    ;                           ; PipelineEx:pipeEx|R3_V3_3[21], PipelineEx:pipeEx|R3_V3_3[20],                        ;
+;                                    ;                           ; PipelineEx:pipeEx|R3_V3_3[19], PipelineEx:pipeEx|R3_V3_3[18],                        ;
+;                                    ;                           ; PipelineEx:pipeEx|R3_V3_3[17], PipelineEx:pipeEx|R3_V3_3[16],                        ;
+;                                    ;                           ; PipelineEx:pipeEx|R3_V3_3[15], PipelineEx:pipeEx|R3_V3_3[14],                        ;
+;                                    ;                           ; PipelineEx:pipeEx|R3_V3_3[13], PipelineEx:pipeEx|R3_V3_3[12],                        ;
+;                                    ;                           ; PipelineEx:pipeEx|R3_V3_3[11], PipelineEx:pipeEx|R3_V3_3[10],                        ;
+;                                    ;                           ; PipelineEx:pipeEx|R3_V3_3[9], PipelineEx:pipeEx|R3_V3_3[8],                          ;
+;                                    ;                           ; PipelineEx:pipeEx|R3_V3_3[7], PipelineEx:pipeEx|R3_V3_3[6],                          ;
+;                                    ;                           ; PipelineEx:pipeEx|R3_V3_3[5], PipelineEx:pipeEx|R3_V3_3[4],                          ;
+;                                    ;                           ; PipelineEx:pipeEx|R3_V3_3[3], PipelineEx:pipeEx|R3_V3_3[2],                          ;
+;                                    ;                           ; PipelineEx:pipeEx|R3_V3_3[1], PipelineEx:pipeEx|R3_V3_3[0],                          ;
+;                                    ;                           ; PipelineMem:pipeMem|ExtenSel1[1], PipelineMem:pipeMem|ExtenSel1[0]                   ;
+; PipelineEx:pipeEx|VF2              ; Stuck at GND              ; PipelineWB:pipewb|VF3, PipelineEx:pipeEx|ALURES2[27], PipelineEx:pipeEx|ALURES2[26], ;
+;                                    ; due to stuck port data_in ; PipelineEx:pipeEx|ALURES2[25], PipelineEx:pipeEx|ALURES2[24],                        ;
+;                                    ;                           ; PipelineEx:pipeEx|ALURES2[23], PipelineEx:pipeEx|ALURES2[22],                        ;
+;                                    ;                           ; PipelineEx:pipeEx|ALURES2[21], PipelineEx:pipeEx|ALURES2[20],                        ;
+;                                    ;                           ; PipelineEx:pipeEx|ALURES2[19], PipelineEx:pipeEx|ALURES2[18],                        ;
+;                                    ;                           ; PipelineEx:pipeEx|ALURES2[15], PipelineEx:pipeEx|ALURES2[14],                        ;
+;                                    ;                           ; PipelineEx:pipeEx|ALURES2[13], PipelineEx:pipeEx|ALURES2[12],                        ;
+;                                    ;                           ; PipelineEx:pipeEx|ALURES2[11], PipelineEx:pipeEx|ALURES2[10],                        ;
+;                                    ;                           ; PipelineEx:pipeEx|ALURES2[9], PipelineEx:pipeEx|ALURES2[8],                          ;
+;                                    ;                           ; PipelineEx:pipeEx|ALURES2[7], PipelineEx:pipeEx|ALURES2[6],                          ;
+;                                    ;                           ; PipelineEx:pipeEx|ALURES2[5], PipelineEx:pipeEx|ALURES2[4],                          ;
+;                                    ;                           ; PipelineEx:pipeEx|ALURES2[3], PipelineEx:pipeEx|ALURES2[2],                          ;
+;                                    ;                           ; PipelineEx:pipeEx|ALURES2[1], PipelineEx:pipeEx|ALURES2[0]                           ;
+; PipelineFetch:pipeFetch|op[1]      ; Stuck at GND              ; PipelineMem:pipeMem|rmem1, PipelineMem:pipeMem|wmem1, PipelineMem:pipeMem|CondEn1,   ;
+;                                    ; due to stuck port data_in ; PipelineMem:pipeMem|ALUIns1[2], PipelineMem:pipeMem|ALUIns1[1],                      ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V2_D1[3], PipelineMem:pipeMem|R2_V2_D1[2],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R2_V2_D1[1], PipelineMem:pipeMem|R2_V2_D1[0],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R3_V3_D1[3], PipelineMem:pipeMem|R3_V3_D1[2],                    ;
+;                                    ;                           ; PipelineMem:pipeMem|R3_V3_D1[1], PipelineMem:pipeMem|R3_V3_D1[0],                    ;
+;                                    ;                           ; PipelineEx:pipeEx|rmem2, PipelineEx:pipeEx|wmem2, PipelineMem:pipeMem|jmpF1[0],      ;
+;                                    ;                           ; execute_module:execute|CondUnit:cond_Unit|FlipFlop:flipiflopi|q[2]                   ;
+; PipelineFetch:pipeFetch|R2_V2_D[2] ; Stuck at GND              ; PipelineWB:pipewb|ResRV2[0], PipelineWB:pipewb|ResRV2[1],                            ;
+;                                    ; due to stuck port data_in ; PipelineWB:pipewb|ResRV2[2], PipelineWB:pipewb|ResRV2[3],                            ;
+;                                    ;                           ; PipelineWB:pipewb|ResRV2[4], PipelineWB:pipewb|ResRV2[5],                            ;
+;                                    ;                           ; PipelineWB:pipewb|ResRV2[6], PipelineWB:pipewb|ResRV2[7],                            ;
+;                                    ;                           ; PipelineWB:pipewb|ResRV2[8], PipelineEx:pipeEx|ALURES2[17],                          ;
+;                                    ;                           ; PipelineEx:pipeEx|ALURES2[16]                                                        ;
+; PipelineFetch:pipeFetch|R1_V1[0]   ; Stuck at GND              ; PipelineMem:pipeMem|R_V_dest1[0], PipelineEx:pipeEx|R_V_dest2[0],                    ;
+;                                    ; due to stuck port data_in ; PipelineWB:pipewb|R_V_dest3[0]                                                       ;
+; PipelineWB:pipewb|wreg3            ; Lost Fanouts              ; PipelineEx:pipeEx|wreg2, PipelineMem:pipeMem|wreg1                                   ;
+; PipelineEx:pipeEx|R_V_dest2[2]     ; Stuck at GND              ; PipelineWB:pipewb|R_V_dest3[2]                                                       ;
+;                                    ; due to stuck port data_in ;                                                                                      ;
+; PipelineEx:pipeEx|R_V_dest2[1]     ; Stuck at GND              ; PipelineWB:pipewb|R_V_dest3[1]                                                       ;
+;                                    ; due to stuck port data_in ;                                                                                      ;
++------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
 +-----------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: fetch_module:fetch|FlipFlop:PC ;
 +----------------+-------+----------------------------------------------------+
@@ -460,100 +813,173 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PipelineEx:pipeEx"                                                                                                                                                                   ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                          ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; R_V_dest1 ; Input ; Warning  ; Input port expression (4 bits) is wider than the input port (1 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "execute_module:execute|CondUnit:cond_Unit|FlipFlop:flipiflopi"                         ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; q[1..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; q[3]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "execute_module:execute|Mux2:ALUMux" ;
++------------------+-------+----------+--------------------------+
+; Port             ; Type  ; Severity ; Details                  ;
++------------------+-------+----------+--------------------------+
+; result0[127..32] ; Input ; Info     ; Stuck at GND             ;
++------------------+-------+----------+--------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "execute_module:execute|ALUVectorial:ALUV|Mux8:VM8"                                                                                                    ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                              ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input0 ; Input ; Warning  ; Input port expression (32 bits) is smaller than the input port (128 bits) it drives.  Extra input bit(s) "Input0[127..32]" will be connected to GND. ;
+; Input0 ; Input ; Info     ; Stuck at GND                                                                                                                                         ;
+; Input6 ; Input ; Warning  ; Input port expression (32 bits) is smaller than the input port (128 bits) it drives.  Extra input bit(s) "Input6[127..32]" will be connected to GND. ;
+; Input6 ; Input ; Info     ; Stuck at GND                                                                                                                                         ;
+; Input7 ; Input ; Warning  ; Input port expression (32 bits) is smaller than the input port (128 bits) it drives.  Extra input bit(s) "Input7[127..32]" will be connected to GND. ;
+; Input7 ; Input ; Info     ; Stuck at GND                                                                                                                                         ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "execute_module:execute|ALUVectorial:ALUV"                                                                                                      ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                         ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; A    ; Input ; Warning  ; Input port expression (32 bits) is smaller than the input port (128 bits) it drives.  Extra input bit(s) "A[127..32]" will be connected to GND. ;
+; B    ; Input ; Warning  ; Input port expression (32 bits) is smaller than the input port (128 bits) it drives.  Extra input bit(s) "B[127..32]" will be connected to GND. ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "execute_module:execute|ALUScalar:ALUS|Mux8:M8" ;
++--------+-------+----------+-----------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                       ;
++--------+-------+----------+-----------------------------------------------+
+; Input0 ; Input ; Info     ; Stuck at GND                                  ;
+; Input6 ; Input ; Info     ; Stuck at GND                                  ;
+; Input7 ; Input ; Info     ; Stuck at GND                                  ;
++--------+-------+----------+-----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "execute_module:execute|ForwardUnit:frwunit|Mux2:ExR3"                                                                                                                                   ;
++---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                                                              ;
++---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; result1 ; Input  ; Warning  ; Input port expression (128 bits) is wider than the input port (32 bits) it drives.  The 96 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; Out     ; Output ; Warning  ; Output or bidir port (32 bits) is smaller than the port expression (128 bits) it drives.  The 96 most-significant bit(s) in the port expression will be connected to GND.            ;
++---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "execute_module:execute|ForwardUnit:frwunit|Mux2:WbR3"                                                                                                                                  ;
++---------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                              ;
++---------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; result0 ; Input ; Warning  ; Input port expression (128 bits) is wider than the input port (32 bits) it drives.  The 96 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; result1 ; Input ; Warning  ; Input port expression (128 bits) is wider than the input port (32 bits) it drives.  The 96 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "execute_module:execute|ForwardUnit:frwunit|Mux2:ExR2"                                                                                                                                   ;
++---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                                                              ;
++---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; result1 ; Input  ; Warning  ; Input port expression (128 bits) is wider than the input port (32 bits) it drives.  The 96 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; Out     ; Output ; Warning  ; Output or bidir port (32 bits) is smaller than the port expression (128 bits) it drives.  The 96 most-significant bit(s) in the port expression will be connected to GND.            ;
++---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "execute_module:execute|ForwardUnit:frwunit|Mux2:WbR2"                                                                                                                                  ;
++---------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                              ;
++---------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; result0 ; Input ; Warning  ; Input port expression (128 bits) is wider than the input port (32 bits) it drives.  The 96 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; result1 ; Input ; Warning  ; Input port expression (128 bits) is wider than the input port (32 bits) it drives.  The 96 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                          ; Setting            ; Default Value      ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-<<<<<<< HEAD
-; Top-level entity name                                                           ; DataMemory_tb      ; ASIP-vectorial     ;
-=======
-; Top-level entity name                                                           ; ControlUnit_tb     ; ASIP-vectorial     ;
->>>>>>> main
-; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
-; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
-; Optimization Technique                                                          ; Speed              ; Balanced           ;
-; Synthesis Effort                                                                ; Fast               ; Auto               ;
-; Use smart compilation                                                           ; Off                ; Off                ;
-; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
-; Enable compact report table                                                     ; Off                ; Off                ;
-; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
-; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
-; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
-; Preserve fewer node names                                                       ; On                 ; On                 ;
-; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
-; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                                        ; Auto               ; Auto               ;
-; Safe State Machine                                                              ; Off                ; Off                ;
-; Extract Verilog State Machines                                                  ; On                 ; On                 ;
-; Extract VHDL State Machines                                                     ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
-; Parallel Synthesis                                                              ; On                 ; On                 ;
-; DSP Block Balancing                                                             ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                              ; On                 ; On                 ;
-; Power-Up Don't Care                                                             ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
-; Remove Duplicate Registers                                                      ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
-; Carry Chain Length                                                              ; 70                 ; 70                 ;
-; Auto Carry Chains                                                               ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
-; Auto ROM Replacement                                                            ; On                 ; On                 ;
-; Auto RAM Replacement                                                            ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
-; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
-; Strict RAM Replacement                                                          ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                           ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
-; Report Parameter Settings                                                       ; On                 ; On                 ;
-; Report Source Assignments                                                       ; On                 ; On                 ;
-; Report Connectivity Checks                                                      ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
-; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
-; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
-; HDL message level                                                               ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
-; Clock MUX Protection                                                            ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
-; Block Design Naming                                                             ; Auto               ; Auto               ;
-; SDC constraint protection                                                       ; Off                ; Off                ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
-; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
-; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
+; Port Connectivity Checks: "execute_module:execute|ForwardUnit:frwunit"                                                    ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; R2res2[127..32] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-<<<<<<< HEAD
-=======
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PipelineMem:pipeMem"                                                                           ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; R_V_dest1[3..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "decode_module:decode|Mux2:MuxAddrR3" ;
++---------+-------+----------+------------------------------------+
+; Port    ; Type  ; Severity ; Details                            ;
++---------+-------+----------+------------------------------------+
+; result1 ; Input ; Info     ; Stuck at GND                       ;
++---------+-------+----------+------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "decode_module:decode|Mux2:MuxAddrR2" ;
++---------+-------+----------+------------------------------------+
+; Port    ; Type  ; Severity ; Details                            ;
++---------+-------+----------+------------------------------------+
+; result1 ; Input ; Info     ; Stuck at GND                       ;
++---------+-------+----------+------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "decode_module:decode|Mux2:V3_R3Mux" ;
++----------------+-------+----------+----------------------------+
+; Port           ; Type  ; Severity ; Details                    ;
++----------------+-------+----------+----------------------------+
+; result0[95..0] ; Input ; Info     ; Stuck at GND               ;
++----------------+-------+----------+----------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "decode_module:decode|Mux2:V2_R2Mux" ;
++----------------+-------+----------+----------------------------+
+; Port           ; Type  ; Severity ; Details                    ;
++----------------+-------+----------+----------------------------+
+; result0[95..0] ; Input ; Info     ; Stuck at GND               ;
++----------------+-------+----------+----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fetch_module:fetch|InstructionMemory:instMem"                                                                                                                                      ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                                            ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; clk  ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rd   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "fetch_module:fetch|Addition:PC_1"                                                       ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -563,18 +989,43 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; B[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; Cout     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
->>>>>>> main
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+; boundary_port         ; 58                          ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat May 15 12:12:04 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ASIP-vectorial -c ASIP-vectorial --analysis_and_elaboration
+    Info: Processing started: Sat May 15 14:40:44 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ASIP-vectorial -c ASIP-vectorial
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file processor/processors.sv
+    Info (12023): Found entity 1: processors File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/imagerom_tb.sv
     Info (12023): Found entity 1: ImageROM_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/ImageROM_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/datamemory_tb.sv
@@ -605,40 +1056,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file pipelin
     Info (12023): Found entity 1: PipelineFetch File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineFetch.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelineex.sv
     Info (12023): Found entity 1: PipelineEx File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineEx.sv Line: 1
-<<<<<<< HEAD
-=======
-=======
-    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sat May 15 12:00:07 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ASIP-vectorial -c ASIP-vectorial --analysis_and_elaboration
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file muxes/mux8.sv
-    Info (12023): Found entity 1: Mux8 File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux8.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file muxes/mux2.sv
-    Info (12023): Found entity 1: Mux2 File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file modules/decode_module.sv
-    Info (12023): Found entity 1: decode_module File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file memories/vectorialregisterfile.sv
-    Info (12023): Found entity 1: VectorialRegisterFile File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/VectorialRegisterFile.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file memories/registerfile.sv
-    Info (12023): Found entity 1: RegisterFile File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/RegisterFile.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file memories/memorycontroller.sv
-    Info (12023): Found entity 1: MemoryController File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/MemoryController.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file memories/instructionmemory.sv
-    Info (12023): Found entity 1: InstructionMemory File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file memories/imagerom.sv
-    Info (12023): Found entity 1: ImageROM File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/ImageROM.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelinewb.sv
-    Info (12023): Found entity 1: PipelineWB File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineWB.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelinemem.sv
-    Info (12023): Found entity 1: PipelineMem File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineMem.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelinefetch.sv
-    Info (12023): Found entity 1: PipelineFetch File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineFetch.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelineex.sv
-    Info (12023): Found entity 1: PipelineEx File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineEx.sv Line: 1
->>>>>>> main
->>>>>>> main
-Info (12021): Found 0 design units, including 0 entities, in source file pipeline/pipelinedecode.sv
 Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/controlunit.sv
     Info (12023): Found entity 1: ControlUnit File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/extenddeco.sv
@@ -696,81 +1113,129 @@ Info (12021): Found 1 design units, including 1 entities, in source file tests/c
 Info (12021): Found 1 design units, including 1 entities, in source file tests/frwrdunit_tb.sv
     Info (12023): Found entity 1: frwrdUnit_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/frwrdUnit_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/controlunit_tb.sv
-<<<<<<< HEAD
     Info (12023): Found entity 1: ControlUnit_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/ControlUnit_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/memorycontroller_tb.sv
     Info (12023): Found entity 1: MemoryController_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/MemoryController_tb.sv Line: 1
-Info (12127): Elaborating entity "MemoryController_tb" for the top level hierarchy
-Info (12128): Elaborating entity "MemoryController" for hierarchy "MemoryController:DUT" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/MemoryController_tb.sv Line: 7
-Info (12128): Elaborating entity "DataMemory" for hierarchy "MemoryController:DUT|DataMemory:RAM" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/MemoryController.sv Line: 9
-Warning (10034): Output port "rd" at DataMemory.sv(3) has no driver File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv Line: 3
-Info (12128): Elaborating entity "ImageROM" for hierarchy "MemoryController:DUT|ImageROM:ROM" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/MemoryController.sv Line: 10
-Warning (10034): Output port "rd" at ImageROM.sv(3) has no driver File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/ImageROM.sv Line: 3
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4768 megabytes
-    Info: Processing ended: Sat May 15 12:12:15 2021
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:28
-=======
-    Info (12023): Found entity 1: ControlUnit_tb File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/ControlUnit_tb.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file processor/processors.sv
-    Info (12023): Found entity 1: processors File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at processors.sv(68): created implicit net for "GPI" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 68
 Info (12127): Elaborating entity "processors" for the top level hierarchy
-Info (12128): Elaborating entity "fetch_module" for hierarchy "fetch_module:fetch" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 4
-Info (12128): Elaborating entity "FlipFlop" for hierarchy "fetch_module:fetch|FlipFlop:PC" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 4
-Info (12128): Elaborating entity "Mux2" for hierarchy "fetch_module:fetch|Mux2:PCmux" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 6
-Info (12128): Elaborating entity "Addition" for hierarchy "fetch_module:fetch|Addition:PC_1" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 8
-Info (12128): Elaborating entity "InstructionMemory" for hierarchy "fetch_module:fetch|InstructionMemory:instMem" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 9
-Warning (10850): Verilog HDL warning at InstructionMemory.sv(7): number of words (0) in memory file does not match the number of elements in the address range [0:255] File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 7
-Warning (10030): Net "ROM.data_a" at InstructionMemory.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 4
-Warning (10030): Net "ROM.waddr_a" at InstructionMemory.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 4
-Warning (10030): Net "ROM.we_a" at InstructionMemory.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 4
-Info (12128): Elaborating entity "PipelineFetch" for hierarchy "PipelineFetch:pipeFetch" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 14
-Info (12128): Elaborating entity "decode_module" for hierarchy "decode_module:decode" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 24
-Info (12128): Elaborating entity "ControlUnit" for hierarchy "decode_module:decode|ControlUnit:ctrlUnit" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 8
-Info (12128): Elaborating entity "ExtendDeco" for hierarchy "decode_module:decode|ControlUnit:ctrlUnit|ExtendDeco:ExtDeco" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 12
-Info (12128): Elaborating entity "InstDeco" for hierarchy "decode_module:decode|ControlUnit:ctrlUnit|InstDeco:InstDecoO" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 13
-Info (12128): Elaborating entity "RegisterFile" for hierarchy "decode_module:decode|RegisterFile:regfile" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 10
-Info (12128): Elaborating entity "VectorialRegisterFile" for hierarchy "decode_module:decode|VectorialRegisterFile:VRegFile" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 12
-Info (12128): Elaborating entity "SelectRegisterFile" for hierarchy "decode_module:decode|SelectRegisterFile:selRegFile" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 14
-Info (12128): Elaborating entity "Extender" for hierarchy "decode_module:decode|Extender:extnd" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 16
-Info (12128): Elaborating entity "Mux2" for hierarchy "decode_module:decode|Mux2:V2_R2Mux" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 23
-Info (12128): Elaborating entity "Mux2" for hierarchy "decode_module:decode|Mux2:MuxAddrR2" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 25
-Info (12128): Elaborating entity "PipelineMem" for hierarchy "PipelineMem:pipeMem" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 41
-Warning (10240): Verilog HDL Always Construct warning at PipelineMem.sv(11): inferring latch(es) for variable "ExtenSel1", which holds its previous value in one or more paths through the always construct File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineMem.sv Line: 11
-Info (10041): Inferred latch for "ExtenSel1[0]" at PipelineMem.sv(28) File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineMem.sv Line: 28
-Info (10041): Inferred latch for "ExtenSel1[1]" at PipelineMem.sv(28) File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineMem.sv Line: 28
-Info (12128): Elaborating entity "execute_module" for hierarchy "execute_module:execute" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 52
-Info (12128): Elaborating entity "ForwardUnit" for hierarchy "execute_module:execute|ForwardUnit:frwunit" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 13
-Info (12128): Elaborating entity "ALUScalar" for hierarchy "execute_module:execute|ALUScalar:ALUS" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 15
-Info (12128): Elaborating entity "Subtraction" for hierarchy "execute_module:execute|ALUScalar:ALUS|Subtraction:Su" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 11
-Info (12128): Elaborating entity "Multiplication" for hierarchy "execute_module:execute|ALUScalar:ALUS|Multiplication:Mu" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 12
-Info (12128): Elaborating entity "Division" for hierarchy "execute_module:execute|ALUScalar:ALUS|Division:Di" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 13
-Info (12128): Elaborating entity "Mux8" for hierarchy "execute_module:execute|ALUScalar:ALUS|Mux8:M8" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 15
-Info (12128): Elaborating entity "NegativeFlag" for hierarchy "execute_module:execute|ALUScalar:ALUS|NegativeFlag:Ne" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 17
-Info (12128): Elaborating entity "ZeroFlag" for hierarchy "execute_module:execute|ALUScalar:ALUS|ZeroFlag:Ze" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 18
-Info (12128): Elaborating entity "OverflowFlag" for hierarchy "execute_module:execute|ALUScalar:ALUS|OverflowFlag:oV" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 19
-Info (12128): Elaborating entity "CarryFlag" for hierarchy "execute_module:execute|ALUScalar:ALUS|CarryFlag:Ca" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 20
-Info (12128): Elaborating entity "ALUVectorial" for hierarchy "execute_module:execute|ALUVectorial:ALUV" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 17
-Info (12128): Elaborating entity "VectorialAddition" for hierarchy "execute_module:execute|ALUVectorial:ALUV|VectorialAddition:VAd" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 8
-Info (12128): Elaborating entity "VectorialSubtraction" for hierarchy "execute_module:execute|ALUVectorial:ALUV|VectorialSubtraction:VSu" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 9
-Info (12128): Elaborating entity "VectorialMultiplication" for hierarchy "execute_module:execute|ALUVectorial:ALUV|VectorialMultiplication:VMu" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 10
-Info (12128): Elaborating entity "VectorialDivision" for hierarchy "execute_module:execute|ALUVectorial:ALUV|VectorialDivision:VDi" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 11
-Info (12128): Elaborating entity "Mux8" for hierarchy "execute_module:execute|ALUVectorial:ALUV|Mux8:VM8" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 13
-Info (12128): Elaborating entity "CondUnit" for hierarchy "execute_module:execute|CondUnit:cond_Unit" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 19
-Info (12128): Elaborating entity "FlipFlop" for hierarchy "execute_module:execute|CondUnit:cond_Unit|FlipFlop:flipiflopi" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CondUnit/CondUnit.sv Line: 12
-Info (12128): Elaborating entity "PipelineEx" for hierarchy "PipelineEx:pipeEx" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 65
-Info (12128): Elaborating entity "memory_module" for hierarchy "memory_module:memory" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 69
-Warning (10034): Output port "GPO" at memory_module.sv(2) has no driver File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/memory_module.sv Line: 2
-Info (12128): Elaborating entity "PipelineWB" for hierarchy "PipelineWB:pipewb" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 82
-Warning (12241): 7 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4785 megabytes
-    Info: Processing ended: Sat May 15 12:00:25 2021
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:38
->>>>>>> main
->>>>>>> main
+Info (12128): Elaborating entity "fetch_module" for hierarchy "fetch_module:fetch" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 6
+Info (12128): Elaborating entity "FlipFlop" for hierarchy "fetch_module:fetch|FlipFlop:PC" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 4
+Info (12128): Elaborating entity "Mux2" for hierarchy "fetch_module:fetch|Mux2:PCmux" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 6
+Info (12128): Elaborating entity "Addition" for hierarchy "fetch_module:fetch|Addition:PC_1" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 8
+Info (12128): Elaborating entity "InstructionMemory" for hierarchy "fetch_module:fetch|InstructionMemory:instMem" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 9
+Warning (10030): Net "ROM.data_a" at InstructionMemory.sv(5) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 5
+Warning (10030): Net "ROM.waddr_a" at InstructionMemory.sv(5) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 5
+Warning (10030): Net "ROM.we_a" at InstructionMemory.sv(5) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 5
+Info (12128): Elaborating entity "PipelineFetch" for hierarchy "PipelineFetch:pipeFetch" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 16
+Info (12128): Elaborating entity "decode_module" for hierarchy "decode_module:decode" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 26
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "decode_module:decode|ControlUnit:ctrlUnit" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 8
+Info (12128): Elaborating entity "ExtendDeco" for hierarchy "decode_module:decode|ControlUnit:ctrlUnit|ExtendDeco:ExtDeco" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 12
+Info (12128): Elaborating entity "InstDeco" for hierarchy "decode_module:decode|ControlUnit:ctrlUnit|InstDeco:InstDecoO" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 13
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "decode_module:decode|RegisterFile:regfile" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 10
+Info (12128): Elaborating entity "VectorialRegisterFile" for hierarchy "decode_module:decode|VectorialRegisterFile:VRegFile" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 12
+Info (12128): Elaborating entity "SelectRegisterFile" for hierarchy "decode_module:decode|SelectRegisterFile:selRegFile" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 14
+Info (12128): Elaborating entity "Extender" for hierarchy "decode_module:decode|Extender:extnd" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 16
+Info (12128): Elaborating entity "Mux2" for hierarchy "decode_module:decode|Mux2:V2_R2Mux" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 23
+Info (12128): Elaborating entity "Mux2" for hierarchy "decode_module:decode|Mux2:MuxAddrR2" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 25
+Info (12128): Elaborating entity "PipelineMem" for hierarchy "PipelineMem:pipeMem" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 43
+Info (12128): Elaborating entity "execute_module" for hierarchy "execute_module:execute" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 54
+Info (12128): Elaborating entity "ForwardUnit" for hierarchy "execute_module:execute|ForwardUnit:frwunit" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 13
+Info (12128): Elaborating entity "ALUScalar" for hierarchy "execute_module:execute|ALUScalar:ALUS" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 15
+Info (12128): Elaborating entity "Subtraction" for hierarchy "execute_module:execute|ALUScalar:ALUS|Subtraction:Su" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 11
+Info (12128): Elaborating entity "Multiplication" for hierarchy "execute_module:execute|ALUScalar:ALUS|Multiplication:Mu" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 12
+Info (12128): Elaborating entity "Division" for hierarchy "execute_module:execute|ALUScalar:ALUS|Division:Di" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 13
+Info (12128): Elaborating entity "Mux8" for hierarchy "execute_module:execute|ALUScalar:ALUS|Mux8:M8" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 15
+Info (12128): Elaborating entity "NegativeFlag" for hierarchy "execute_module:execute|ALUScalar:ALUS|NegativeFlag:Ne" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 17
+Info (12128): Elaborating entity "ZeroFlag" for hierarchy "execute_module:execute|ALUScalar:ALUS|ZeroFlag:Ze" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 18
+Info (12128): Elaborating entity "OverflowFlag" for hierarchy "execute_module:execute|ALUScalar:ALUS|OverflowFlag:oV" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 19
+Info (12128): Elaborating entity "CarryFlag" for hierarchy "execute_module:execute|ALUScalar:ALUS|CarryFlag:Ca" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 20
+Info (12128): Elaborating entity "ALUVectorial" for hierarchy "execute_module:execute|ALUVectorial:ALUV" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 17
+Info (12128): Elaborating entity "VectorialAddition" for hierarchy "execute_module:execute|ALUVectorial:ALUV|VectorialAddition:VAd" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 8
+Info (12128): Elaborating entity "VectorialSubtraction" for hierarchy "execute_module:execute|ALUVectorial:ALUV|VectorialSubtraction:VSu" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 9
+Info (12128): Elaborating entity "VectorialMultiplication" for hierarchy "execute_module:execute|ALUVectorial:ALUV|VectorialMultiplication:VMu" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 10
+Info (12128): Elaborating entity "VectorialDivision" for hierarchy "execute_module:execute|ALUVectorial:ALUV|VectorialDivision:VDi" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 11
+Info (12128): Elaborating entity "Mux8" for hierarchy "execute_module:execute|ALUVectorial:ALUV|Mux8:VM8" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 13
+Info (12128): Elaborating entity "CondUnit" for hierarchy "execute_module:execute|CondUnit:cond_Unit" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 19
+Info (12128): Elaborating entity "FlipFlop" for hierarchy "execute_module:execute|CondUnit:cond_Unit|FlipFlop:flipiflopi" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CondUnit/CondUnit.sv Line: 12
+Info (12128): Elaborating entity "PipelineEx" for hierarchy "PipelineEx:pipeEx" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 67
+Info (12128): Elaborating entity "memory_module" for hierarchy "memory_module:memory" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 69
+Info (12128): Elaborating entity "MemoryController" for hierarchy "memory_module:memory|MemoryController:mc" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/memory_module.sv Line: 7
+Info (12128): Elaborating entity "DataMemory" for hierarchy "memory_module:memory|MemoryController:mc|DataMemory:RAM" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/MemoryController.sv Line: 9
+Warning (10034): Output port "rd" at DataMemory.sv(3) has no driver File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv Line: 3
+Info (12128): Elaborating entity "ImageROM" for hierarchy "memory_module:memory|MemoryController:mc|ImageROM:ROM" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/MemoryController.sv Line: 10
+Warning (10034): Output port "rd" at ImageROM.sv(3) has no driver File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/ImageROM.sv Line: 3
+Info (12128): Elaborating entity "PipelineWB" for hierarchy "PipelineWB:pipewb" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 82
+Warning (286029): Timing-Driven Synthesis is skipped because the Synthesis Effort is set to Fast
+Warning (12241): 8 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "GPIO[0]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[1]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[2]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[3]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[4]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[5]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[6]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[7]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[8]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[9]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[10]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[11]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[12]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[13]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[14]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[15]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[16]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[17]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[18]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[19]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[20]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[21]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[22]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[23]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[24]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[25]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[26]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[27]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[28]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[29]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[30]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIO[31]" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 2
+    Warning (13410): Pin "GPIOEnR" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 3
+    Warning (13410): Pin "GPIOEnG" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 3
+    Warning (13410): Pin "GPIOEnB" is stuck at GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 3
+Info (17049): 264 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 23 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Warning (15610): No output dependent on input pin "rst" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Warning (15610): No output dependent on input pin "swInicio" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Warning (15610): No output dependent on input pin "swInR0" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Warning (15610): No output dependent on input pin "swInR25" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Warning (15610): No output dependent on input pin "swInR75" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Warning (15610): No output dependent on input pin "swInR100" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Warning (15610): No output dependent on input pin "swInG0" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Warning (15610): No output dependent on input pin "swInG25" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Warning (15610): No output dependent on input pin "swInG75" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Warning (15610): No output dependent on input pin "swInG100" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Warning (15610): No output dependent on input pin "swInB0" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Warning (15610): No output dependent on input pin "swInB25" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Warning (15610): No output dependent on input pin "swInB75" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Warning (15610): No output dependent on input pin "swInB100" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Warning (15610): No output dependent on input pin "swTD0" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Warning (15610): No output dependent on input pin "swTD25" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Warning (15610): No output dependent on input pin "swTD75" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Warning (15610): No output dependent on input pin "swTD100" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Warning (15610): No output dependent on input pin "swH" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Warning (15610): No output dependent on input pin "swV" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Warning (15610): No output dependent on input pin "swD" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Warning (15610): No output dependent on input pin "swP" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+Info (21057): Implemented 58 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 23 input pins
+    Info (21059): Implemented 35 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 67 warnings
+    Info: Peak virtual memory: 4812 megabytes
+    Info: Processing ended: Sat May 15 14:40:58 2021
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:32
 
 

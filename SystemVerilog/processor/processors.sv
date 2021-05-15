@@ -1,4 +1,6 @@
-module processors(input clk,rst);
+module processors(input clk, rst, swInicio, swInR0, swInR25, swInR75, swInR100, swInG0, swInG25, swInG75, swInG100, swInB0, swInB25, swInB75, swInB100, swTD0, swTD25, swTD75, swTD100, swH, swV, swD, swP,
+						output[31:0]GPIO,
+						output GPIOEnR, GPIOEnG, GPIOEnB, GPIOEn);
 	logic[31:0]curr_pc,ACIns;
 	fetch_module fetch(clk,rst,JmpSel,ALURES,
 	curr_pc,ACIns);
@@ -64,9 +66,7 @@ module processors(input clk,rst);
 						R_V_dest2,
 						VF2);
 	logic [127:0]ResRV;
-	logic GPO;
-	memory_module memory(clk,wmem2,rmem2,GPI,ALURES2,R3_V3_3,
-	ResRV,GPO);
+	memory_module memory(clk, wmem2, rmem2, VF2, swInicio, swInR0, swInR25, swInR75, swInR100, swInG0, swInG25, swInG75, swInG100, swInB0, swInB25, swInB75, swInB100, swTD0, swTD25, swTD75, swTD100, swH, swV, swD, swP, ALURES2, R3_V3_3, ResRV, GPIO, GPIOEnR, GPIOEnG, GPIOEnB, GPIOEn);
 	logic wreg3;
 	logic[127:0]ResRV2;
 	logic[3:0]R_V_dest3;

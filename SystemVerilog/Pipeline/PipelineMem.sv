@@ -31,7 +31,7 @@ module PipelineMem(input clk, rst,//rst is jmpenable
 			CondEn1 = CondEn;
 			jmpF1 = jmpF;
 			ALUIns1 = ALUIns;
-			ExtenSel1 = ExtenSel1;
+			ExtenSel1 = ExtnSel;
 			R2_V2_D1 = R2_V2_D0;
 			R3_V3_D1 = R3_V3_D0;
 			R_V_dest1 = R_V_dest;
