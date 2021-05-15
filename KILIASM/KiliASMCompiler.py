@@ -31,36 +31,38 @@ vectorialRegisterNumber = {
     'V6': '0110',
     'V7': '0111',
 
-
 }
 
-DI = {'STR': int('11'+'00'+'0', 2),
-      'LDR': int('11'+'01'+'0', 2),
-      'MOVR': int('11'+'10'+'0', 2),
-      'CMPR': int('11'+'11'+'0', 2),
-      'STRV': int('11'+'00'+'1', 2),
-      'LDRV': int('11'+'01'+'1', 2),
+P = {'STR': int('01' + '00' + '0', 2),
+     'CMPR': int('01' + '01' + '0', 2),
+     'STRV': int('01' + '00' + '1', 2),
+     }
+
+DI = {
+    'LDR': int('11' + '01' + '0', 2),
+    'MOVR': int('11' + '10' + '0', 2),
+    'LDRV': int('11' + '01' + '1', 2),
+}
+E = {
+    'MOVI': int('11' + '11' + '0', 2)
+}
+
+DT = {'ADD': int('10' + '00' + '0', 2),
+      'SUB': int('10' + '01' + '0', 2),
+      'MUL': int('10' + '10' + '0', 2),
+      'DIV': int('10' + '11' + '0', 2),
+      'ADDVV': int('10' + '00' + '1', 2),
+      'SUBVV': int('10' + '01' + '1', 2),
+      'MULVE': int('10' + '10' + '1', 2),
+      'DIVVE': int('10' + '11' + '1', 2),
       }
 
-DT = {'ADD': int('10'+'00'+'0', 2),
-      'SUB': int('10'+'01'+'0', 2),
-      'MUL': int('10'+'10'+'0', 2),
-      'DIV': int('10'+'11'+'0', 2),
-      'ADDVV': int('10'+'00'+'1', 2),
-      'SUBVV': int('10'+'01'+'1', 2),
-      'MULVE': int('10'+'10'+'1', 2),
-      'DIVVE': int('10'+'11'+'1', 2),
-      }
+I = {
+    'CMPI': int('01' + '10' + '0', 2)}
 
-I = {'MOVI': int('01'+'00'+'0', 2),
-      'CMPI': int('01'+'01'+'0', 2)}
-
-
-N = {'JMP': int('00'+'00'+'0', 2),
-     'JEQ': int('00'+'01'+'0', 2),
-     'STL': int('00'+'10'+'0', 2)}
-
-
+N = {'JMP': int('00' + '00' + '0', 2),
+     'JEQ': int('00' + '01' + '0', 2),
+     'STL': int('00' + '10' + '0', 2)}
 
 stallInst = {'ESP': int('01000', 2)}
 bitsBasura19 = '0000000000000000000'
@@ -71,6 +73,7 @@ jumpLabels = {}
 
 hexInstructions = []
 binInstructions = []
+
 
 def compile(codigo):
     KILIASMLexicalAnalizer(codigo)
@@ -88,7 +91,6 @@ def compile(codigo):
 
     hexDirection = []
     instruction = []
-
 
     dir = 0
     for statement in sintaxResult:
@@ -125,18 +127,53 @@ def analiceInst(inst, pc):
 
         elif operando1 in escalarRegisterNumber and operando2 in vectorialRegisterNumber:
             binCode += bitsBasura19
-            binCode +=  vectorialRegisterNumber.get(operando2) + escalarRegisterNumber.get(operando1)
+            binCode += vectorialRegisterNumber.get(operando2) + escalarRegisterNumber.get(operando1)
 
 
         elif operando1 in vectorialRegisterNumber and operando2 in escalarRegisterNumber:
             binCode += bitsBasura19
             binCode += escalarRegisterNumber.get(operando2) + vectorialRegisterNumber.get(operando1)
         else:
-            print('El registro ' + operando1 + " o " + operando2 +' no existe')
+            print('El registro ' + operando1 + " o " + operando2 + ' no existe')
             return
+    elif labelInstruccion in P:
+        binCode += str(format(P.get(inst[0]), '#010b'))[5:]
 
+        operando1 = str(inst[1])
+        operando2 = str(inst[2])
+        if operando1 in escalarRegisterNumber and operando2 in escalarRegisterNumber:
+            binCode += bitsBasura15
+            binCode += escalarRegisterNumber.get(operando2) + escalarRegisterNumber.get(operando1) + bitsBasura4
+
+
+        elif operando1 in escalarRegisterNumber and operando2 in vectorialRegisterNumber:
+            binCode += bitsBasura15
+            binCode += vectorialRegisterNumber.get(operando2) + escalarRegisterNumber.get(operando1) + bitsBasura4
+
+
+        elif operando1 in vectorialRegisterNumber and operando2 in escalarRegisterNumber:
+            binCode += bitsBasura15
+            binCode += escalarRegisterNumber.get(operando2) + vectorialRegisterNumber.get(operando1) + bitsBasura4
+        else:
+            print('El registro ' + operando1 + " o " + operando2 + ' no existe')
+            return
     elif labelInstruccion in I:
         binCode += str(format(I.get(inst[0]), '#010b'))[5:]
+        operando1 = str(inst[1])
+
+        operando2 = inst[2]
+        if operando1 in escalarRegisterNumber and isinstance(operando2, int):
+            imm = shiftNumber(str(bin(operando2))[2:], 19)
+            binCode += imm + escalarRegisterNumber.get(operando1) + bitsBasura4
+        else:
+            if not operando1 in escalarRegisterNumber:
+                print("El registro " + operando1 + " no existe")
+                return
+            else:
+                print("EL inmediato: " + str(operando2) + " es invalido")
+                return
+    elif labelInstruccion in E:
+        binCode += str(format(E.get(inst[0]), '#010b'))[5:]
         operando1 = str(inst[1])
 
         operando2 = inst[2]
@@ -145,10 +182,10 @@ def analiceInst(inst, pc):
             binCode += imm + escalarRegisterNumber.get(operando1)
         else:
             if not operando1 in escalarRegisterNumber:
-                print("El registro "+operando1+" no existe")
+                print("El registro " + operando1 + " no existe")
                 return
             else:
-                print("EL inmediato: "+str(operando2)+" es invalido")
+                print("EL inmediato: " + str(operando2) + " es invalido")
                 return
     elif labelInstruccion in DT:
         binCode += str(format(DT.get(inst[0]), '#010b'))[5:]
@@ -157,8 +194,10 @@ def analiceInst(inst, pc):
         operando3 = str(inst[3])
         if operando1 in escalarRegisterNumber and operando2 in escalarRegisterNumber and operando3 in escalarRegisterNumber:
             binCode += bitsBasura15
-            binCode += escalarRegisterNumber.get(operando3) + escalarRegisterNumber.get(operando2)+  escalarRegisterNumber.get(operando1)
-        elif operando1 in vectorialRegisterNumber and operando2 in vectorialRegisterNumber and (operando3 in vectorialRegisterNumber or operando3 in escalarRegisterNumber ):
+            binCode += escalarRegisterNumber.get(operando3) + escalarRegisterNumber.get(
+                operando2) + escalarRegisterNumber.get(operando1)
+        elif operando1 in vectorialRegisterNumber and operando2 in vectorialRegisterNumber and (
+                operando3 in vectorialRegisterNumber or operando3 in escalarRegisterNumber):
             binCode += bitsBasura15
 
             if operando3 in vectorialRegisterNumber:
@@ -169,7 +208,7 @@ def analiceInst(inst, pc):
                     operando2) + vectorialRegisterNumber.get(operando1)
 
         else:
-            print('Los registros '+operando1 +', '+operando2+', '+operando3+' son invalidos')
+            print('Los registros ' + operando1 + ', ' + operando2 + ', ' + operando3 + ' son invalidos')
             return
 
     elif labelInstruccion in N:
@@ -192,33 +231,25 @@ def analiceInst(inst, pc):
 
                 pcmenosjmpAdd = bin(pcmenosjmpAdd)[2:]
                 binCode += str(shiftNumber(pcmenosjmpAdd, 27))
-        elif(operando1 != "SLT"):
+        elif (operando1 != "SLT"):
             print("Se va a hacer un stall")
         else:
             print('La etiqueta a la que quiere saltar no existe' + str(operando1))
     else:
-        print("La instruccion : " + labelInstruccion+" no se encuentra en los diccionarios")
+        print("La instruccion : " + labelInstruccion + " no se encuentra en los diccionarios")
         return
     binInstructions.append(binCode)
-
 
     binCodeTemp = int(binCode, 2)
     hexCode = hex(binCodeTemp)
     lenHexCode = len(hexCode)
     if lenHexCode != 10:
-            hexCode = hexCode[2:]
-            while lenHexCode < 10:
-                hexCode = '0' + hexCode
-                lenHexCode += 1
-            hexCode = '0x' + hexCode
-    hexInstructions.append(hexCode + str(inst) + ' - ' + binCode + ' - ' +str(len(binCode)))
-
-
-
-
-
-
-
+        hexCode = hexCode[2:]
+        while lenHexCode < 10:
+            hexCode = '0' + hexCode
+            lenHexCode += 1
+        hexCode = '0x' + hexCode
+    hexInstructions.append(hexCode + str(inst) + ' - ' + binCode + ' - ' + str(len(binCode)))
 
 
 def shiftNumber(num, shift):
@@ -231,11 +262,11 @@ def shiftNumber(num, shift):
     else:
         return num
 
-def complementoADos(num):
 
+def complementoADos(num):
     num = shiftNumber(num, 27)
     num = num[::-1]
-    num  = list(num)
+    num = list(num)
 
     unoEncontrado = False
     i = 0

@@ -4,11 +4,13 @@ module Extender (input logic [26:0] inmeIn,
 	
 	always_comb
 		case(Sel)
-		// 23 bits
-		2'b01: inmeOut = {{9{inmeIn[26]}}, inmeIn[26:4]};
-		// 27 bits
-		2'b11: inmeOut = {{5{inmeIn[26]}}, inmeIn[26:0]};		
-		default: inmeOut = 'b0;
+			// 19 bits
+			2'b01: inmeOut = {{13{inmeIn[26]}}, inmeIn[26:8]};
+			// 23 bits
+			2'b10: inmeOut = {{9{inmeIn[26]}}, inmeIn[26:4]};
+			// 27 bits
+			2'b11: inmeOut = {{5{inmeIn[26]}}, inmeIn[26:0]};		
+			default: inmeOut = 'b0;
 		endcase
 		
 endmodule 
