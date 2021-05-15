@@ -10,165 +10,503 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-<<<<<<< HEAD
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:19 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv 
+# -- Compiling module processors
+# 
+# Top level modules:
+# 	processors
+# End time: 17:10:20 on May 15,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:12:30 on May 15,2021
+# Start time: 17:10:20 on May 15,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv 
 # -- Compiling module DataMemory
-=======
-<<<<<<< HEAD
-# vlog -sv -work work +incdir+C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit {C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:26:37 on May 11,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit" C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv 
-# -- Compiling module ControlUnit
->>>>>>> main
 # 
 # Top level modules:
 # 	DataMemory
-# End time: 12:12:30 on May 15,2021, Elapsed time: 0:00:00
+# End time: 17:10:20 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux8.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:20 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux8.sv 
+# -- Compiling module Mux8
+# 
+# Top level modules:
+# 	Mux8
+# End time: 17:10:20 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:20 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv 
+# -- Compiling module Mux2
+# 
+# Top level modules:
+# 	Mux2
+# End time: 17:10:21 on May 15,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:21 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv 
+# -- Compiling module decode_module
+# 
+# Top level modules:
+# 	decode_module
+# End time: 17:10:21 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/VectorialRegisterFile.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:21 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/VectorialRegisterFile.sv 
+# -- Compiling module VectorialRegisterFile
+# 
+# Top level modules:
+# 	VectorialRegisterFile
+# End time: 17:10:21 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/RegisterFile.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:21 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/RegisterFile.sv 
+# -- Compiling module RegisterFile
+# 
+# Top level modules:
+# 	RegisterFile
+# End time: 17:10:21 on May 15,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/MemoryController.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:12:30 on May 15,2021
+# Start time: 17:10:21 on May 15,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/MemoryController.sv 
 # -- Compiling module MemoryController
 # 
 # Top level modules:
 # 	MemoryController
-# End time: 12:12:30 on May 15,2021, Elapsed time: 0:00:00
+# End time: 17:10:21 on May 15,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/ImageROM.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:12:30 on May 15,2021
+# Start time: 17:10:21 on May 15,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/ImageROM.sv 
 # -- Compiling module ImageROM
 # 
 # Top level modules:
 # 	ImageROM
-# End time: 12:12:30 on May 15,2021, Elapsed time: 0:00:00
+# End time: 17:10:21 on May 15,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/MemoryController_tb.sv}
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineWB.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:12:30 on May 15,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/MemoryController_tb.sv 
-# -- Compiling module MemoryController_tb
+# Start time: 17:10:21 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineWB.sv 
+# -- Compiling module PipelineWB
 # 
 # Top level modules:
-# 	MemoryController_tb
-# End time: 12:12:31 on May 15,2021, Elapsed time: 0:00:01
+# 	PipelineWB
+# End time: 17:10:21 on May 15,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# 
-vsim work.MemoryController_tb
-# vsim work.MemoryController_tb 
-# Start time: 12:12:43 on May 15,2021
-# Loading sv_std.std
-# Loading work.MemoryController_tb
-# Loading work.MemoryController
-# Loading work.DataMemory
-# Loading work.ImageROM
-add wave -position insertpoint  \
-sim:/MemoryController_tb/addr \
-sim:/MemoryController_tb/clk \
-sim:/MemoryController_tb/GPIO \
-sim:/MemoryController_tb/GPIOEnB \
-sim:/MemoryController_tb/GPIOEnG \
-sim:/MemoryController_tb/GPIOEnR \
-sim:/MemoryController_tb/rd \
-sim:/MemoryController_tb/vf \
-sim:/MemoryController_tb/wd \
-sim:/MemoryController_tb/we
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: skryf  Hostname: DESKTOP-VRFLMRQ  ProcessID: 14548
-#           Attempting to use alternate WLF file "./wlfty8g021".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-<<<<<<< HEAD
-#           Using alternate file: ./wlfty8g021
-run 100
-# End time: 12:13:48 on May 15,2021, Elapsed time: 0:01:05
-# Errors: 0, Warnings: 2
-=======
-#           Using alternate file: ./wlftycxkim
-run -all
-# End time: 21:27:19 on May 11,2021, Elapsed time: 0:00:38
-# Errors: 0, Warnings: 3
-=======
-# vlog -sv -work work +incdir+C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes {C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:14 on May 11,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes" C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv 
-# -- Compiling module Mux2
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineMem.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:22 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineMem.sv 
+# -- Compiling module PipelineMem
 # 
 # Top level modules:
-# 	Mux2
-# End time: 23:08:14 on May 11,2021, Elapsed time: 0:00:00
+# 	PipelineMem
+# End time: 17:10:22 on May 15,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit {C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:14 on May 11,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit" C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv 
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineFetch.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:22 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineFetch.sv 
+# -- Compiling module PipelineFetch
+# 
+# Top level modules:
+# 	PipelineFetch
+# End time: 17:10:22 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineEx.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:22 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineEx.sv 
+# -- Compiling module PipelineEx
+# 
+# Top level modules:
+# 	PipelineEx
+# End time: 17:10:22 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:22 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 17:10:22 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ExtendDeco.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:22 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ExtendDeco.sv 
+# -- Compiling module ExtendDeco
+# 
+# Top level modules:
+# 	ExtendDeco
+# End time: 17:10:22 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/InstDeco.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:22 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/InstDeco.sv 
+# -- Compiling module InstDeco
+# 
+# Top level modules:
+# 	InstDeco
+# End time: 17:10:22 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:23 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv 
 # -- Compiling module ForwardUnit
-# ** Warning: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv(7): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-# ** Warning: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv(8): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-# ** Warning: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv(11): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-# ** Warning: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv(12): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # Top level modules:
 # 	ForwardUnit
-# End time: 23:08:14 on May 11,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 4
-# vlog -sv -work work +incdir+C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests {C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/frwrdUnit_tb.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:14 on May 11,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests" C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/frwrdUnit_tb.sv 
-# -- Compiling module frwrdUnit_tb
+# End time: 17:10:23 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:23 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv 
+# -- Compiling module ALUScalar
 # 
 # Top level modules:
-# 	frwrdUnit_tb
-# End time: 23:08:14 on May 11,2021, Elapsed time: 0:00:00
+# 	ALUScalar
+# End time: 17:10:23 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/ZeroFlag.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:23 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/ZeroFlag.sv 
+# -- Compiling module ZeroFlag
+# 
+# Top level modules:
+# 	ZeroFlag
+# End time: 17:10:23 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/OverflowFlag.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:23 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/OverflowFlag.sv 
+# -- Compiling module OverflowFlag
+# 
+# Top level modules:
+# 	OverflowFlag
+# End time: 17:10:23 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/NegativeFlag.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:23 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/NegativeFlag.sv 
+# -- Compiling module NegativeFlag
+# 
+# Top level modules:
+# 	NegativeFlag
+# End time: 17:10:23 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/CarryFlag.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:23 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/CarryFlag.sv 
+# -- Compiling module CarryFlag
+# 
+# Top level modules:
+# 	CarryFlag
+# End time: 17:10:24 on May 15,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:24 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv 
+# -- Compiling module ALUVectorial
+# 
+# Top level modules:
+# 	ALUVectorial
+# End time: 17:10:24 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Subtraction.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:24 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Subtraction.sv 
+# -- Compiling module Subtraction
+# 
+# Top level modules:
+# 	Subtraction
+# End time: 17:10:24 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Multiplication.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:24 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Multiplication.sv 
+# -- Compiling module Multiplication
+# 
+# Top level modules:
+# 	Multiplication
+# End time: 17:10:24 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Addition.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:24 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Addition.sv 
+# -- Compiling module Addition
+# 
+# Top level modules:
+# 	Addition
+# End time: 17:10:24 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialAddition.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:24 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialAddition.sv 
+# -- Compiling module VectorialAddition
+# 
+# Top level modules:
+# 	VectorialAddition
+# End time: 17:10:24 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialSubtraction.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:24 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialSubtraction.sv 
+# -- Compiling module VectorialSubtraction
+# 
+# Top level modules:
+# 	VectorialSubtraction
+# End time: 17:10:25 on May 15,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialMultiplication.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:25 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialMultiplication.sv 
+# -- Compiling module VectorialMultiplication
+# 
+# Top level modules:
+# 	VectorialMultiplication
+# End time: 17:10:25 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Extender {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Extender/Extender.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:25 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Extender" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Extender/Extender.sv 
+# -- Compiling module Extender
+# 
+# Top level modules:
+# 	Extender
+# End time: 17:10:25 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/SelectRegisterFile.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:25 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/SelectRegisterFile.sv 
+# -- Compiling module SelectRegisterFile
+# 
+# Top level modules:
+# 	SelectRegisterFile
+# End time: 17:10:25 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialDivision.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:25 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialDivision.sv 
+# -- Compiling module VectorialDivision
+# 
+# Top level modules:
+# 	VectorialDivision
+# End time: 17:10:25 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Division.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:25 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Division.sv 
+# -- Compiling module Division
+# 
+# Top level modules:
+# 	Division
+# End time: 17:10:25 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:26 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv 
+# -- Compiling module fetch_module
+# 
+# Top level modules:
+# 	fetch_module
+# End time: 17:10:26 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FlipFlop {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FlipFlop/FlipFlop.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:26 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FlipFlop" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FlipFlop/FlipFlop.sv 
+# -- Compiling module FlipFlop
+# 
+# Top level modules:
+# 	FlipFlop
+# End time: 17:10:26 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:26 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv 
+# -- Compiling module execute_module
+# 
+# Top level modules:
+# 	execute_module
+# End time: 17:10:26 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CondUnit {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CondUnit/CondUnit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:26 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CondUnit" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CondUnit/CondUnit.sv 
+# -- Compiling module CondUnit
+# 
+# Top level modules:
+# 	CondUnit
+# End time: 17:10:26 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/memory_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:26 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/memory_module.sv 
+# -- Compiling module memory_module
+# 
+# Top level modules:
+# 	memory_module
+# End time: 17:10:26 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/processor_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:27 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/processor_tb.sv 
+# -- Compiling module processor_tb
+# 
+# Top level modules:
+# 	processor_tb
+# End time: 17:10:27 on May 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/skryf/Documents/Arquitectura\ de\ Computadores\ II/Proyecto\ 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories {C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:27 on May 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories" C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv 
+# -- Compiling module InstructionMemory
+# 
+# Top level modules:
+# 	InstructionMemory
+# End time: 17:10:27 on May 15,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vsim work.frwrdUnit_tb
-# vsim work.frwrdUnit_tb 
-# Start time: 23:08:18 on May 11,2021
+vsim work.processor_tb
+# vsim work.processor_tb 
+# Start time: 17:10:39 on May 15,2021
 # Loading sv_std.std
-# Loading work.frwrdUnit_tb
-# Loading work.ForwardUnit
+# Loading work.processor_tb
+# Loading work.processors
+# Loading work.fetch_module
+# Loading work.FlipFlop
 # Loading work.Mux2
-# ** Warning: (vsim-3015) C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv(7): [PCDPC] - Port size (32) does not match connection size (128) for port 'result0'. The port definition is at: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /frwrdUnit_tb/frun/WbR2 File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv
-# ** Warning: (vsim-3015) C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv(7): [PCDPC] - Port size (32) does not match connection size (128) for port 'result1'. The port definition is at: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /frwrdUnit_tb/frun/WbR2 File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv
-# ** Warning: (vsim-3015) C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv(8): [PCDPC] - Port size (32) does not match connection size (128) for port 'result1'. The port definition is at: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /frwrdUnit_tb/frun/ExR2 File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv
-# ** Warning: (vsim-3015) C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv(8): [PCDPC] - Port size (32) does not match connection size (128) for port 'Out'. The port definition is at: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /frwrdUnit_tb/frun/ExR2 File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv
-# ** Warning: (vsim-3015) C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv(11): [PCDPC] - Port size (32) does not match connection size (128) for port 'result0'. The port definition is at: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /frwrdUnit_tb/frun/WbR3 File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv
-# ** Warning: (vsim-3015) C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv(11): [PCDPC] - Port size (32) does not match connection size (128) for port 'result1'. The port definition is at: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /frwrdUnit_tb/frun/WbR3 File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv
-# ** Warning: (vsim-3015) C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv(12): [PCDPC] - Port size (32) does not match connection size (128) for port 'result1'. The port definition is at: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /frwrdUnit_tb/frun/ExR3 File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv
-# ** Warning: (vsim-3015) C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv(12): [PCDPC] - Port size (32) does not match connection size (128) for port 'Out'. The port definition is at: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /frwrdUnit_tb/frun/ExR3 File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv
-add wave -position end sim:/frwrdUnit_tb/*
+# Loading work.Addition
+# Loading work.InstructionMemory
+# Loading work.PipelineFetch
+# Loading work.decode_module
+# Loading work.ControlUnit
+# Loading work.ExtendDeco
+# Loading work.InstDeco
+# Loading work.RegisterFile
+# Loading work.VectorialRegisterFile
+# Loading work.SelectRegisterFile
+# Loading work.Extender
+# Loading work.PipelineMem
+# Loading work.execute_module
+# Loading work.ForwardUnit
+# Loading work.ALUScalar
+# Loading work.Subtraction
+# Loading work.Multiplication
+# Loading work.Division
+# Loading work.Mux8
+# Loading work.NegativeFlag
+# Loading work.ZeroFlag
+# Loading work.OverflowFlag
+# Loading work.CarryFlag
+# Loading work.ALUVectorial
+# Loading work.VectorialAddition
+# Loading work.VectorialSubtraction
+# Loading work.VectorialMultiplication
+# Loading work.VectorialDivision
+# Loading work.CondUnit
+# Loading work.PipelineEx
+# Loading work.memory_module
+# Loading work.MemoryController
+# Loading work.DataMemory
+# Loading work.ImageROM
+# Loading work.PipelineWB
+add wave -position end  sim:/processor_tb/clk
+add wave -position end  sim:/processor_tb/rst
+add wave -position end  sim:/processor_tb/proce/ACIns
+add wave -position end  sim:/processor_tb/proce/R2_V2_D
+add wave -position end  sim:/processor_tb/proce/R3_V3_D
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: luisd  Hostname: DESKTOP-PKG39T9  ProcessID: 10344
-#           Attempting to use alternate WLF file "./wlftxwvvzf".
+#           File in use by: skryf  Hostname: DESKTOP-VRFLMRQ  ProcessID: 14548
+#           Attempting to use alternate WLF file "./wlftxfsxgq".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftxwvvzf
-run -all
-# No Forward check
-# R2 Forward check
-# R2 & R3 Forward check
-# R3 !R2 Forward check
-# !R3 !R2 Forward check
-# !R3 !R2 Forward check
-# !R3 !R2 Forward check
-# !R3 !R2 Forward check
-# !R3 !R2 Forward check
-# End time: 23:09:02 on May 11,2021, Elapsed time: 0:00:44
-# Errors: 0, Warnings: 10
->>>>>>> modules
->>>>>>> main
+#           Using alternate file: ./wlftxfsxgq
+add wave -position end  sim:/processor_tb/proce/R1_V1
+add wave -position end  sim:/processor_tb/proce/R2_V2
+add wave -position end  sim:/processor_tb/proce/R3_V3
+add wave -position end  sim:/processor_tb/proce/R_V_dest
+add wave -position end  sim:/processor_tb/proce/R2_V2_D1
+add wave -position end  sim:/processor_tb/proce/execute/R2_V2_2
+add wave -position end  sim:/processor_tb/proce/execute/R3_V3_2
+add wave -position end  sim:/processor_tb/proce/execute/ALURES
+add wave -position end  sim:/processor_tb/proce/execute/ALURES1
+add wave -position end  sim:/processor_tb/proce/execute/ALURES2
+# ** UI-Msg: (vish-4014) No objects found matching '/processor_tb/proce/execute/ALURES2'.
+add wave -position end  sim:/processor_tb/proce/memory/R3_V3_3
+add wave -position end  sim:/processor_tb/proce/memory/CS
+add wave -position end  sim:/processor_tb/proce/memory/ResRV
+add wave -position end  sim:/processor_tb/proce/pipewb/ResRV2
+add wave -position end  sim:/processor_tb/proce/pipewb/R_V_dest3
+add wave -position 18  sim:/processor_tb/proce/pipewb/R_V_dest2
+add wave -position 4  sim:/processor_tb/proce/R2_V2_D0
+add wave -position 7  sim:/processor_tb/proce/R3_V3_D0
+add wave -position 8  sim:/processor_tb/proce/R3_V3_D1
+add wave -position 12  sim:/processor_tb/proce/execute/R2_V2_1
+add wave -position 14  sim:/processor_tb/proce/execute/R3_V3_1
+run 100
+run 10000
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+add wave -position end  sim:/processor_tb/proce/JmpSel
+add wave -position end  sim:/processor_tb/proce/execute/cond_Unit/CondEn1
+add wave -position end  sim:/processor_tb/proce/execute/cond_Unit/flags
+add wave -position end  sim:/processor_tb/proce/execute/cond_Unit/flagso
+add wave -position end  sim:/processor_tb/proce/execute/cond_Unit/jmpF
+add wave -position end  sim:/processor_tb/proce/execute/cond_Unit/JmpSel
+add wave -position end  sim:/processor_tb/proce/execute/cond_Unit/rst
+run 100
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position 28  sim:/processor_tb/proce/decode/ctrlUnit/jmpF
+add wave -position 29  sim:/processor_tb/proce/pipeMem/jmpF
+add wave -position 30  sim:/processor_tb/proce/pipeMem/jmpF1
+restart
+run 100
+# GetModuleFileName: The specified module could not be found.
+# 
+# 

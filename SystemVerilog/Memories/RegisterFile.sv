@@ -7,11 +7,9 @@ module RegisterFile (input logic clk,
 	logic [31:0] regs[15:0];
 
 	always_ff @(negedge clk)
-		begin
-			if (we3) regs[wa3] <= wd3;
+		if (we3) regs[wa3] <= wd3;
 			
-			rd1 <= regs[ra1];
-			rd2 <= regs[ra2];
-		end
+	assign rd1 = regs[ra1];
+	assign rd2 = regs[ra2];
 
 endmodule 

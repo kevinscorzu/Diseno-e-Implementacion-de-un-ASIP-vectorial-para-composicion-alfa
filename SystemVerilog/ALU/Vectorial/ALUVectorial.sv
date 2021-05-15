@@ -10,6 +10,6 @@ module ALUVectorial #(parameter N = 128) (input logic [N-1:0] A, B,
 	VectorialMultiplication #(N) VMu(A, B, resultMultiply);
 	VectorialDivision #(N) VDi(A, B, resultDivide);
 	
-	Mux8 #(N) VM8('b0, A, resultAdd, resultSubtract, resultMultiply, resultDivide, 'b0, 'b0, Sel, C);
+	Mux8 #(128) VM8(128'b0, A, resultAdd, resultSubtract, resultMultiply, resultDivide, 128'b0, 128'b0, Sel, C);
 					
 endmodule 
