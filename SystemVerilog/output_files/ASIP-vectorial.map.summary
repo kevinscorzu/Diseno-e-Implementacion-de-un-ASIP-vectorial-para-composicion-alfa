@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Sat May 15 21:26:36 2021
-Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Analysis & Elaboration Status : Successful - Sat May 15 22:49:56 2021
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : ASIP-vectorial
-Top-level Entity Name : processor_tb
+Top-level Entity Name : processors
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge

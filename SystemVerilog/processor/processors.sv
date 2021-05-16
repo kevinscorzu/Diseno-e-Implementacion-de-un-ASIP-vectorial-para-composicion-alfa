@@ -26,39 +26,37 @@ module processors(input clk, rst, swInicio, swInR0, swInR25, swInR75, swInR100, 
 	curr_pc1,R2_V2_D,R3_V3_D,R1_V1,
 	Imme);
 	logic VF,wmem,rmem,wreg,CondEn;
-	logic[1:0]jmpF;
+	logic[1:0]jmpF,RMuxSel;
 	logic[2:0]ALUIns;
 	logic[1:0]ExtndSel;
 	logic[127:0]R2_V2,R3_V3;
 	logic[3:0]R2_V2_D0,R3_V3_D0,R_V_dest;
 	decode_module decode(clk,op,inst,flagV,R2_V2_D,R3_V3_D,R1_V1,
 	Imme,curr_pc1,ResRV2,R_V_dest3,VF3,wreg3,
-	VF,wmem,rmem,wreg,CondEn,jmpF,ALUIns,ExtndSel,
+	VF,wmem,rmem,wreg,CondEn,jmpF,RMuxSel,ALUIns,ExtndSel,
 	R2_V2,R3_V3,R2_V2_D0,R3_V3_D0,R_V_dest);
 	logic rmem1,wmem1,wreg1,CondEn1;
-	logic[1:0]jmpF1;
+	logic[1:0]jmpF1,RMuxSel1;
 	logic[2:0]ALUIns1;
 	logic[1:0]ExtenSel1;
 	logic[3:0]R2_V2_D1,R3_V3_D1,R_V_dest1;
 	logic[127:0]R2_V2_1,R3_V3_1;
 	logic VF1;
 	PipelineMem pipeMem(clk, rst,
-						 VF,wmem,rmem,wreg,CondEn,jmpF,ALUIns,
+						 VF,wmem,rmem,wreg,CondEn,jmpF,RMuxSel,ALUIns,
 						ExtndSel,R2_V2,R3_V3,
 						R_V_dest,R2_V2_D0,R3_V3_D0,
 						rmem1,wmem1,wreg1,CondEn1,
-						jmpF1,ALUIns1,
+						jmpF1,RMuxSel1,ALUIns1,
 						ExtenSel1,
 						R2_V2_D1,R3_V3_D1,R_V_dest1,
 						R2_V2_1,R3_V3_1,
 						VF1);
 	logic[127:0]R3_V3_2;
-
-	
 	logic[127:0]ALURES1;
 	execute_module execute(clk,rst,CondEn1,jmpF1,ALUIns1,
 							ExtenSel1,R2_V2_D1,R3_V3_D1,
-							R2_V2_1,R3_V3_1,VF1,
+							R2_V2_1,R3_V3_1,VF1,RMuxSel1,
 							VF2,R_V_dest2,ResRV,
 							VF3,R_V_dest3,ResRV2,
 							R3_V3_2,
