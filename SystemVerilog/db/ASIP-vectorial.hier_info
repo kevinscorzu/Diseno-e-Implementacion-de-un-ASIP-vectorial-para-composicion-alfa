@@ -12633,7 +12633,7 @@ flags[0] => flags[0].IN1
 flags[1] => flags[1].IN1
 flags[2] => flags[2].IN1
 flags[3] => flags[3].IN1
-JmpSel <= JmpSel.DB_MAX_OUTPUT_PORT_TYPE
+JmpSel1 <= JmpSel1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |processor_tb|processors:proce|execute_module:execute|CondUnit:cond_Unit|FlipFlop:flipiflopi
