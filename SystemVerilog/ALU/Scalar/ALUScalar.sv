@@ -12,7 +12,7 @@ module ALUScalar #(parameter N = 32) (input logic [N-1:0] A, B,
 	Multiplication #(N) Mu(A, B, resultMultiply, CarryOutMultiply);
 	Division #(N) Di(A, B, resultDivide, CarryOutDivide);
 	
-	Mux8 #(N) M8('b0, A, resultAdd, resultSubtract, resultMultiply, resultDivide, 'b0, 'b0, Sel, C);
+	Mux8 #(N) M8('b0, A, resultAdd, resultSubtract, resultMultiply, resultDivide, 'b0, B, Sel, C);
 			
 	NegativeFlag Ne(C[N-1], NFlag);
 	ZeroFlag #(N) Ze(C, ZFlag);

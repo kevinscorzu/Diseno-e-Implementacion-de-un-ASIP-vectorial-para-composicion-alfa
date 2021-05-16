@@ -4,7 +4,7 @@ module InstDeco(input [3:0]in,output logic [2:0]out);
 			4'b0100 : out = 3'b001; //Pass OP1 STR
 			4'b1101 : out = 3'b001; //Pass OP1 LDR
 			4'b1110 : out = 3'b001; //Pass OP1 MOVR
-			4'b1111 : out = 3'b001; //Pass OP1 MOVI
+			4'b1111 : out = 3'b111; //Pass OP2 MOVI
 			4'b1000 : out = 3'b010; //ADD
 			4'b1001 : out = 3'b011; //SUB
 			4'b1010 : out = 3'b100; //MUL
