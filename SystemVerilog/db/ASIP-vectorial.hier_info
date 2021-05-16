@@ -3,7 +3,7 @@
 
 |processor_tb|processors:proce
 clk => clk.IN8
-rst => rst.IN4
+rst => rst.IN5
 swInicio => swInicio.IN1
 swInR0 => swInR0.IN1
 swInR25 => swInR25.IN1
@@ -12625,9 +12625,9 @@ Out[127] <= Out.DB_MAX_OUTPUT_PORT_TYPE
 clk => comb.IN0
 rst => rst.IN1
 CondEn1 => comb.IN1
-jmpF[0] => Equal0.IN1
+jmpF[0] => Equal0.IN0
 jmpF[0] => Equal1.IN1
-jmpF[1] => Equal0.IN0
+jmpF[1] => Equal0.IN1
 jmpF[1] => Equal1.IN0
 flags[0] => flags[0].IN1
 flags[1] => flags[1].IN1

@@ -11,8 +11,8 @@ module InstDeco(input [3:0]in,output logic [2:0]out);
 			4'b1011 : out = 3'b101; //DIV
 			4'b0101 : out = 3'b011; //SUB CMPR
 			4'b0110 : out = 3'b011; //SUB CMPI
-			4'b0000 : out = 3'b001; //PASS OP1 
-			4'b0001 : out = 3'b001; //PASS OP1
+			4'b0000 : out = 3'b010; //ADD 
+			4'b0001 : out = 3'b010; //ADD
 			default  : out= 3'b000; //Dont do anything
 		endcase
 	end

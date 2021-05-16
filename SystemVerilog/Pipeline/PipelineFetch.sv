@@ -6,7 +6,7 @@ module PipelineFetch(input clk, rst, //rst is jmpenable
 		always_ff@(posedge clk or posedge rst)
 		if(rst) begin
 			op = 2'h0;
-			inst = 2'h0;
+			inst = 2'b01;
 			flagV=1'b0;
 			curr_pc1 = 32'b0;
 			R2_V2_D = 4'h0;

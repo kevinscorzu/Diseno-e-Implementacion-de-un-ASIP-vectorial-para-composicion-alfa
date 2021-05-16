@@ -42,7 +42,7 @@ module processors(input clk, rst, swInicio, swInR0, swInR25, swInR75, swInR100, 
 	logic[3:0]R2_V2_D1,R3_V3_D1,R_V_dest1;
 	logic[127:0]R2_V2_1,R3_V3_1;
 	logic VF1;
-	PipelineMem pipeMem(clk, rst|JmpSel1,//rst is jmpenable
+	PipelineMem pipeMem(clk, rst,
 						 VF,wmem,rmem,wreg,CondEn,jmpF,ALUIns,
 						ExtndSel,R2_V2,R3_V3,
 						R_V_dest,R2_V2_D0,R3_V3_D0,

@@ -4,7 +4,7 @@ module processor_tb();
 	processors proce(clk, rst, swInicio, swInR0, swInR25, swInR75, swInR100, swInG0, swInG25, swInG75, swInG100, swInB0, swInB25, swInB75, swInB100, swTD0, swTD25, swTD75, swTD100, swH, swV, swD, swP, GPIO, GPIOEnR, GPIOEnG, GPIOEnB, GPIOEn);
 	initial begin
 		clk = 1'b1;
-		rst = 1'b0;
+		rst = 1'b1;
 		swInicio = 1'b0;
 		swInR0 = 1'b0;
 		swInR25 = 1'b1;
@@ -26,9 +26,6 @@ module processor_tb();
 		swV = 1'b0;
 		swD = 1'b1;
 		swP = 1'b0;
-		
-		#1
-		rst = 1'b1;
 		
 		#1
 		rst = 1'b0;
