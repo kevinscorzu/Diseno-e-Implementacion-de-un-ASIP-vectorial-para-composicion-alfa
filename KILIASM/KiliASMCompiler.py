@@ -73,6 +73,8 @@ jumpLabels = {}
 
 hexInstructions = []
 binInstructions = []
+debugInstructions = []
+
 
 
 def compile(codigo):
@@ -110,6 +112,9 @@ def compile(codigo):
     with open('./OutputFiles/outputFile.txt', 'w') as f:
         for item in hexInstructions:
             f.write("%s\n" % item[2:])
+    with open('./OutputFiles/debugFile.txt', 'w') as f:
+        for item in debugInstructions:
+            f.write("%s\n" % item[2:])
 
 
 def analiceInst(inst, pc):
@@ -139,6 +144,7 @@ def analiceInst(inst, pc):
     elif labelInstruccion in P:
         binCode += str(format(P.get(inst[0]), '#010b'))[5:]
 
+
         operando1 = str(inst[1])
         operando2 = str(inst[2])
         if operando1 in escalarRegisterNumber and operando2 in escalarRegisterNumber:
@@ -146,14 +152,12 @@ def analiceInst(inst, pc):
             binCode += escalarRegisterNumber.get(operando2) + escalarRegisterNumber.get(operando1) + bitsBasura4
 
 
+
         elif operando1 in escalarRegisterNumber and operando2 in vectorialRegisterNumber:
             binCode += bitsBasura15
             binCode += vectorialRegisterNumber.get(operando2) + escalarRegisterNumber.get(operando1) + bitsBasura4
 
 
-        elif operando1 in vectorialRegisterNumber and operando2 in escalarRegisterNumber:
-            binCode += bitsBasura15
-            binCode += escalarRegisterNumber.get(operando2) + vectorialRegisterNumber.get(operando1) + bitsBasura4
         else:
             print('El registro ' + operando1 + " o " + operando2 + ' no existe')
             return
@@ -249,7 +253,10 @@ def analiceInst(inst, pc):
             hexCode = '0' + hexCode
             lenHexCode += 1
         hexCode = '0x' + hexCode
-    hexInstructions.append(hexCode + str(inst) + ' - ' + binCode + ' - ' + str(len(binCode)))
+
+    hexInstructions.append(hexCode)
+    debugInstructions.append(hexCode + str(inst) + ' - ' + binCode + ' - ' + str(len(binCode)))
+
 
 
 def shiftNumber(num, shift):
