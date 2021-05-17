@@ -15,6 +15,6 @@ module execute_module(input clk,rst,CondEn1,input[1:0]jmpF1,input[2:0]ALUIns1,
 	ALUScalar #(32) ALUS(R2_V2_2[31:0],R3_V3_2[31:0],ALUIns1,ALURES,flags);
 	logic[127:0]ALUVRES;
 	ALUVectorial #(128) ALUV(R2_V2_2,R3_V3_2,ALUIns1,ALUVRES);
-	Mux2 #(128)ALUMux({96'h0,ALURES},ALUVRES,~RMuxSel1[1]|~RMuxSel1[0],ALURES1);
+	Mux2 #(128)ALUMux({96'h0,ALURES},ALUVRES,RMuxSel1[1],ALURES1);
 	CondUnit cond_Unit(clk,rst,CondEn1,jmpF1,flags,JmpSel);
 endmodule
