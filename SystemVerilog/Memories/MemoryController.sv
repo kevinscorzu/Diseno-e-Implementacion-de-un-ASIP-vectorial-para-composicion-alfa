@@ -1,12 +1,12 @@
 module MemoryController (input logic clk, we, vf, swInicio, swInR0, swInR25, swInR75, swInR100, swInG0, swInG25, swInG75, swInG100, swInB0, swInB25, swInB75, swInB100, swTD0, swTD25, swTD75, swTD100, swH, swV, swD, swP, 
 								 input logic [127:0] addr, wd,
 								 output logic [127:0] rd,
-								 output logic [31:0] GPIO,
+								 output logic [127:0] GPIO,
 								 output logic GPIOEnR, GPIOEnG, GPIOEnB, GPIOEn);
 						 
 	logic [127:0] trueAddr, ROMRd, RAMRd;
 						 
-	DataMemory RAM(clk, we, vf, trueAddr, wd, RAMRd, GPIO, GPIOEnR, GPIOEnG, GPIOEnB);
+	DataMemory RAM(clk, we, vf, trueAddr, wd, RAMRd);
 	ImageROM ROM(clk, trueAddr, ROMRd);
 	
 	always_comb
@@ -151,7 +151,7 @@ module MemoryController (input logic clk, we, vf, swInicio, swInR0, swInR25, swI
 				end
 			else if (addr == 'd241021)
 				begin
-					GPIOEn = 1'd1;
+					GPIOEn = wd[0];
 					trueAddr = 128'b0;
 					rd = 128'b0;
 				end
@@ -160,6 +160,39 @@ module MemoryController (input logic clk, we, vf, swInicio, swInR0, swInR25, swI
 					GPIOEn = 1'd0;
 					trueAddr = 128'b0;
 					rd = 128'b0;
+				end
+		end
+	
+		
+	always_comb
+		begin
+			if (addr >= 'd120000 && addr <= 'd159999 && we && vf)
+				begin
+					GPIO = {wd[127:96], wd[95:64], wd[63:32], wd[31:0]};
+					GPIOEnR = we;
+					GPIOEnG = 1'b0;
+					GPIOEnB = 1'b0;
+				end
+			else if (addr >= 'd160000 && addr <= 'd199999 && we && vf)
+				begin
+					GPIO = {wd[127:96], wd[95:64], wd[63:32], wd[31:0]};
+					GPIOEnR = 1'b0;
+					GPIOEnG = we;
+					GPIOEnB = 1'b0;
+				end
+			else if (addr >= 'd200000 && addr <= 'd239999 && we && vf)
+				begin
+					GPIO = {wd[127:96], wd[95:64], wd[63:32], wd[31:0]};
+					GPIOEnR = 1'b0;
+					GPIOEnG = 1'b0;
+					GPIOEnB = we;
+				end
+			else
+				begin
+					GPIO = 128'b0;
+					GPIOEnR = 1'b0;
+					GPIOEnG = 1'b0;
+					GPIOEnB = 1'b0;
 				end
 		end
 						 

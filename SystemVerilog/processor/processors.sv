@@ -1,5 +1,5 @@
 module processors(input clk, rst, swInicio, swInR0, swInR25, swInR75, swInR100, swInG0, swInG25, swInG75, swInG100, swInB0, swInB25, swInB75, swInB100, swTD0, swTD25, swTD75, swTD100, swH, swV, swD, swP,
-						output[31:0]GPIO,
+						output[127:0]GPIO,
 						output GPIOEnR, GPIOEnG, GPIOEnB, GPIOEn);
 	logic JmpSel1;
 	logic[31:0]ALURES;
@@ -36,7 +36,7 @@ module processors(input clk, rst, swInicio, swInR0, swInR25, swInR75, swInR100, 
 	VF,wmem,rmem,wreg,CondEn,jmpF,RMuxSel,ALUIns,ExtndSel,
 	R2_V2,R3_V3,R2_V2_D0,R3_V3_D0,R_V_dest);
 	logic rmem1,wmem1,wreg1,CondEn1;
-	logic[1:0]jmpF1,RMuxSel1;
+	logic[1:0]jmpF1,RMuxSel1, RMuxSel2, RMuxSel3;
 	logic[2:0]ALUIns1;
 	logic[1:0]ExtenSel1;
 	logic[3:0]R2_V2_D1,R3_V3_D1,R_V_dest1;
@@ -56,9 +56,9 @@ module processors(input clk, rst, swInicio, swInR0, swInR25, swInR75, swInR100, 
 	logic[127:0]ALURES1;
 	execute_module execute(clk,rst,CondEn1,jmpF1,ALUIns1,
 							ExtenSel1,R2_V2_D1,R3_V3_D1,
-							R2_V2_1,R3_V3_1,VF1,RMuxSel1,
-							VF2,R_V_dest2,ResRV,
-							VF3,R_V_dest3,ResRV2,
+							R2_V2_1,R3_V3_1,RMuxSel1,
+							VF2, R_V_dest2,ResRV,
+							VF3, R_V_dest3,ResRV2,
 							R3_V3_2,
 							JmpSel1,ALURES,ALURES1);
 	logic rmem2,wmem2,wreg2;
@@ -68,7 +68,8 @@ module processors(input clk, rst, swInicio, swInR0, swInR25, swInR75, swInR100, 
 	PipelineEx pipeEx(clk, rst,
 						rmem1,wmem1,wreg1,
 						ALURES1,
-						VF1,R_V_dest1,
+						VF1,
+						R_V_dest1,
 						R3_V3_2,
 						rmem2,wmem2,wreg2,
 						ALURES2,R3_V3_3,

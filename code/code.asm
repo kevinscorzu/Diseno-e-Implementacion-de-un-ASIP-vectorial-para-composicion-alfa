@@ -1,7 +1,10 @@
+INICIO:
+
+
 start:
 	MOVI R10, 0x3AD68	;
 	LDR R10, R10		; // Obtiene de inicio
-	CMPI R10, 0x1		;
+	CMPI R10, 0x0		;
 	JEQ start		;
 	MOVI R10, 0x3AD79	;
 	LDR R10, R10		; // Obtiene la orientacion H
@@ -34,7 +37,7 @@ vertical_for_y:
 vertical_for_x:
 	CMPI R11, 0xC8		;
 	JEQ vertical_for_y	; // Si recorrio todas las columnas vuelve a el for y
-	STR R2, R12		; // Almacena el indice de las filas en las memorias 
+	STR R2, R12		; // Almacena el indice de las filas en las memorias
 	STR R3, R12		;
 	STR R4, R12		;
 	ADD R2, R2, R1		; // Dirigue a la siguiente direccion de la memoria
@@ -50,7 +53,7 @@ horizontal_for_y:
 horizontal_for_x:
 	CMPI R11, 0xC8		;
 	JEQ horizontal_for_y	; // Si recorrio todas las columnas vuelve a el for y
-	STR R2, R11		; // Almacena el indice de las columnas en las memorias 
+	STR R2, R11		; // Almacena el indice de las columnas en las memorias
 	STR R3, R11		;
 	STR R4, R11		;
 	ADD R2, R2, R1		; // Dirigue a la siguiente direccion de la memoria
@@ -85,9 +88,9 @@ proposed_for_x:
 	JEQ proposed_for_y	; // Si recorrio todas las columnas vuelve a el for y
 	ADD R5, R11, R12	; // x + y
 	SUB R6, R11, R12	; // x - y
-	STR R2, R5		; // Almacena el indice de las columnas en las memorias 
-	STR R3, R5		;
-	STR R4, R6		;
+	STR R2, R6		; // Almacena el indice de las columnas en las memorias
+	STR R3, R6		;
+	STR R4, R5		;
 	ADD R2, R2, R1		; // Dirigue a la siguiente direccion de la memoria
 	ADD R3, R3, R1		;
 	ADD R4, R4, R1		;
@@ -97,22 +100,22 @@ degraded:
 	MOVI R2, 0x1D4C0	; // Direccion Rojos
 	MOVI R3, 0x27100	; // Direccion Verdes
 	MOVI R4, 0x30D40	; // Direccion Blue
-	MOVI R14, 0x0		; // Contador
+	MOVI R14, 0x0		; // Intensidad
 	MOVI R11, 0x3AD69	;
 	LDR R11, R11		; // Intensidad Rojo
 	CMPI R11, 0x1		;
 	JEQ green		;
-	MOVI R14, 0x19		; // Contador
+	MOVI R14, 0x19		; // Contador 25
 	MOVI R11, 0x3AD6A	;
 	LDR R11, R11		; // Intensidad Rojo
 	CMPI R11, 0x1		;
 	JEQ green		;
-	MOVI R14, 0x4B		; // Contador
+	MOVI R14, 0x4B		; // Contador 75
 	MOVI R11, 0x3AD6B	;
 	LDR R11, R11		; // Intensidad Rojo
 	CMPI R11, 0x1		;
 	JEQ green		;
-	MOVI R14, 0x64		; // Contador
+	MOVI R14, 0x64		; // Contador 100
 	MOVI R11, 0x3AD6C	;
 	LDR R11, R11		; // Intensidad Rojo
 green:
@@ -139,22 +142,22 @@ blue:
 	MOVR R12, R14		; // Valor de intensidad de G
 	MOVI R14, 0x0		; // Contador
 	MOVI R13, 0x3AD71	;
-	LDR R13, R13		; // Intensidad Verde
+	LDR R13, R13		; // Intensidad Azul
 	CMPI R13, 0x1		;
 	JEQ degraded_aux	;
-	MOVI R13, 0x19		; // contador
+	MOVI R14, 0x19		; // contador
 	MOVI R13, 0x3AD72	;
-	LDR R13, R13		; // Intensidad Verde
+	LDR R13, R13		; // Intensidad Azul
 	CMPI R13, 0x1		;
 	JEQ degraded_aux	;
 	MOVI R14, 0x4B		; // Contador
 	MOVI R13, 0x3AD73	;
-	LDR R13, R13		; // Intensidad Verde
+	LDR R13, R13		; // Intensidad Azul
 	CMPI R13, 0x1		;
 	JEQ degraded_aux	;
 	MOVI R14, 0x64		; // Contador
 	MOVI R13, 0x3AD74	;
-	LDR R13, R13		; // Intensidad Verde
+	LDR R13, R13		; // Intensidad Azul
 degraded_aux:
 	MOVR R13, R14		; // Valor de la intesidad del Blue
 	MOVI R14, 0x0		; // Contador
@@ -164,13 +167,10 @@ degraded_aux:
 	MOVI R7, 0xC8		; // 200
 	MUL R11, R11, R5	; // R * 255
 	DIV R11, R11, R6	; // R = R * 255 / 100
-	DIV R11, R11, R7	; // Rsize = R * 255 / 100 / 255
 	MUL R12, R12, R5	; // G * 255
 	DIV R12, R12, R6	; // G = G * 255 / 100
-	DIV R12, R12, R7	; // Gsize = G * 255 / 100 / 255
 	MUL R13, R13, R5	; // B * 255
 	DIV R13, R13, R6	; // B = B * 255 / 100
-	DIV R13, R13, R7	; // Bsize = B * 255 / 100 / 255
 gradient_for:
 	CMPI R14, 0x9C40	;
 	JEQ alpha_composition	; // contador == 40000 salte a la composicion alfa
@@ -180,6 +180,9 @@ gradient_for:
 	MULVE V1, V1, R11	; // vector rojo * Rsize
 	MULVE V2, V2, R12	; // vector verde * Gsize
 	MULVE V3, V3, R13	; // vector azul * Bsize
+	DIVVE V1, V1, R7	; // vector rojo * Rsize / 200
+	DIVVE V2, V2, R7	; // vector verde * Rsize / 200
+	DIVVE V3, V3, R7	; // vector azul * Rsize / 200
 	STRV R2, V1		; // guarda los resultados en memoria RAM
 	STRV R3, V2		;
 	STRV R4, V3		;
@@ -189,9 +192,9 @@ gradient_for:
 	ADD R14, R14, R1	; // suma 4 al contador
 	JMP gradient_for	;
 alpha_composition:
-	MOVI R14, 0x1		; // Contador
 	MOVI R15, 0x3AD7D 	; // Inicio del fin
-	LDR R14, R15		;
+	MOVI R14, 0x1		; // 1
+	STR R15, R14		; // Escribe en 1 en el inicio del fin
 	MOVI R14, 0x0		; // Contador
 	MOVI R5, 0x3AD75	; // Transparencia
 	LDR R5, R5		;
@@ -217,12 +220,10 @@ alpha_aux:
 	MOVI R3, 0x27100	; // Direccion Verdes
 	MOVI R4, 0x30D40	; // Direccion Blue
 	MOVI R11, 0x0		; // ROM Rojos
-	MOVI R12, 0x9C4F	; // ROM Verdes
+	MOVI R12, 0x9C40	; // ROM Verdes
 	MOVI R13, 0x13880	; // ROM Blue
-	MOVI R6, 0x64		; // 100
-	SUB R7, R6, R5		; // 100 - transparencia degradado
-	DIV R7, R7, R6		; // (100 - transparencia degradado) / 100
-	DIV R6, R5, R6		; // transparencia degradado / 100
+	MOVI R15, 0x64		; // 100
+	SUB R7, R15, R5		; // R7 = a = 100 - transparencia degradado
 alpha_composition_for:
 	CMPI R14, 0x9C40		;
 	JEQ END			; // contador == 40000 -> termina
@@ -233,17 +234,20 @@ alpha_composition_for:
 	LDRV V4, R12		; // vector ROM verde
 	LDRV V5, R13		; // vector ROM azul
 	MULVE V3, V3, R7	; // ROJO vector imagen * a
-	MULVE V6, V6, R6	; // ROJO vector degradado * b
-	ADDVV V6, V6, V3 	; // ROJO imagen*a + degradado*b
-	STRV R2, V6		; // guarda el vector rojo
+	MULVE V7, V6, R5	; // ROJO vector degradado * b
+	ADDVV V6, V7, V3 	; // ROJO imagen*a + degradado*b
+	DIVVE V7, V6, R15	; // ans / 100
+	STRV R2, V7		; // guarda el vector rojo
 	MULVE V4, V4, R7	; // VERDE vector imagen * a
-	MULVE V1, V1, R6	; // VERDE vector degradado * b
-	ADDVV V1, V1, V4 	; // VERDE imagen*a + degradado*b
-	STRV R3, V1		; // guarda el vector verde
+	MULVE V7, V1, R5	; // VERDE vector degradado * b
+	ADDVV V1, V7, V4 	; // VERDE imagen*a + degradado*b
+	DIVVE V7, V1, R15	; // ans / 100
+	STRV R3, V7		; // guarda el vector verde
 	MULVE V5, V5, R7	; // AZUL vector imagen * a
-	MULVE V2, V2, R6	; // AZUL vector degradado * b
-	ADDVV V2, V2, V5 	; // AZUL imagen*a + degradado*b
-	STRV R4, V2		; // guarda el vector azul
+	MULVE V7, V2, R5	; // AZUL vector degradado * b
+	ADDVV V2, V7, V5 	; // AZUL imagen*a + degradado*b
+	DIVVE V7, V2, R15	; // ans / 100
+	STRV R4, V7		; // guarda el vector azul
 	ADD R2, R2, R1		; // suma 4 a la direccion de las RAM
 	ADD R3, R3, R1		;
 	ADD R4, R4, R1		;
@@ -251,6 +255,7 @@ alpha_composition_for:
 	ADD R12, R12, R1	;
 	ADD R13, R13, R1	;
 	ADD R14, R14, R1	; // suma 4 al contador
-	JMP alpha_composition_for ;		
+	JMP alpha_composition_for ;
 END:
-	MOVI R1, 0x45		;
+	JMP END;
+FIN

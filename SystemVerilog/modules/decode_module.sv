@@ -17,8 +17,8 @@ module decode_module(input clk,input [1:0] op,inst, input flagV, input [3:0]R2_V
 		SelectRegisterFile selRegFile(Wreg3,VF3,EnReg,EnVec);
 		logic[31:0]ExtndRes;
 		Extender extnd(Imme,ExtndSel,ExtndRes);
-		//Mux2 #(4)MuxRDest(R1_V1,{4'h0},ExtndSel[1]|ExtndSel[0],R_V_dest);
-		assign R_V_dest = R1_V1;
+		Mux2 #(4)MuxRDest(R1_V1,{4'h0},ExtndSel[1]&ExtndSel[0],R_V_dest);
+		//assign R_V_dest = R1_V1;
 		logic [31:0] PC_R2;
 		Mux2 #(32)PCR2(R2r,curr_pc1,jmpSel,PC_R2);
 		logic [31:0]R3_Im;
