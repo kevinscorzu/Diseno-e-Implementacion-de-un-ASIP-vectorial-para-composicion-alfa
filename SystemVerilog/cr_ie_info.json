@@ -1,0 +1,22 @@
+{
+	"system" : {
+		"platform" : "windows64",
+		"os_name" : "Windows 10",
+		"os_version" : "10.0"
+	},
+	"error" : {
+		"executable" : "quartus",
+		"comment" : "none",
+		"error_message" : "Path (length 261): C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/incremental_db/compiled_partitions/ASIP-vectorial.db_info\n",
+		"source_file" : "/quartus/ccl/fio/fio_path.cpp",
+		"line" : "83",
+		"stack_trace" : "\t0x7ff9576b46ad: CCL_ERR + 0x46ad (?err_report_internal_error@@YAXPEBD00H@Z + 0x2d)\n\t0x7ff9576fa659: CCL_FIO + 0xa659 (?fio_display_path_too_long_assert_message@@YAXPEBD@Z + 0x229)\n\t0x7ff9576fb735: CCL_FIO + 0xb735 (?fullpath@FIO_PATH@@QEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ + 0x45)\n\t0x7ff95bd2541c: DB_DBM + 0x541c (dbm_read_db_info + 0x15c)\n\t0x7ff95bd26756: DB_DBM + 0x6756 (?get_version@DBM_INFO@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEBD@Z + 0x46)\n\t0x7ff95bd26b01: DB_DBM + 0x6b01 (?is_version_consistent@DBM_INFO@@SA_NPEBD_N1@Z + 0xd1)\n\t0x7ff938c767f6: db_qtk + 0x567f6 (qtk_db_util_is_valid_incremental_db + 0x176)\n\t0x7ff95aa0c47a: sys_proj + 0xc47a (?prepare_databases@PROJ_PROJECT@@AEAA?AW4PROJ_STATUS@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z + 0xeaa)\n\t0x7ff95aa03cf6: sys_proj + 0x3cf6 (??0PROJ_PROJECT@@AEAA@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0_N0@Z + 0x1b6)\n\t0x7ff95aa0acd1: sys_proj + 0xacd1 (?open@PROJ_PROJECT@@SA?AW4PROJ_STATUS@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0_N0@Z + 0x401)\n\t0x7ff93f497aa5: SYS_QUI + 0x47aa5 (?open_project@QUI_PRJ_UI_MGR@@UEAA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@00@Z + 0x6b5)\n\t0x7ff93f461e5f: SYS_QUI + 0x11e5f (?process_cmdline_arguments_post_main_wnd_show@QUI_APP@@MEAAXPEAVQUI_CMDLINE@@@Z + 0x34f)\n\t0x7ff93f460674: SYS_QUI + 0x10674 (?init_instance@QUI_APP@@UEAA_NHPEAPEBDPEAVQUI_CMDLINE@@@Z + 0x4c4)\n\t0x7ff95c131ef6: SYS_QGQ + 0x1ef6 (?init_instance@QGQ_APP@@UEAA_NHPEAPEBDPEAVQUI_CMDLINE@@@Z + 0xd6)\n\t0x7ff60f4c1971: quartus + 0x1971 (?qgq_main@@YAHHPEAPEBD@Z + 0x71)\n\t0x7ff957742e98: CCL_MSG + 0x12e98 (?msg_main_thread@@YAPEAXPEAX@Z + 0x18)\n\t0x7ff95774467e: CCL_MSG + 0x1467e (?msg_thread_wrapper@@YAPEAXP6APEAXPEAX@Z0@Z + 0x6e)\n\t0x7ff957846660: ccl_mem + 0x16660 (?mem_thread_wrapper@@YAPEAXP6APEAXPEAX@Z0@Z + 0x70)\n\t0x7ff957742761: CCL_MSG + 0x12761 (?msg_exe_main@@YAHHPEAPEBDP6AHH0@Z@Z + 0xa1)\n\t0x7ff60f4c24e7: quartus + 0x24e7 (WinMain + 0x127)\n\t0x7ff60f4c1e58: quartus + 0x1e58 (__tmainCRTStartup + 0x148)\n\t0x7ff969a17033: KERNEL32 + 0x17033 (BaseThreadInitThunk + 0x13)\n\t0x7ff96b9c2650: ntdll + 0x52650 (RtlUserThreadStart + 0x20)\n",
+		"subsystem" : "FIO"
+	},
+	"quartus" : {
+		"quartus_bits" : "64",
+		"version" : "18.0.0",
+		"build" : "614",
+		"edition" : "Lite Edition"
+	}
+}
