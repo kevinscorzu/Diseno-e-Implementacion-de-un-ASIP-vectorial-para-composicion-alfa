@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY processor_tb
+set_global_assignment -name TOP_LEVEL_ENTITY ALUVectorial_tb
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:04:22  MAY 03, 2021"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -104,6 +104,13 @@ set_global_assignment -name SYSTEMVERILOG_FILE tests/MemoryController_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tests/processor_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tests/PipelineMem_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE CtrlUnit/muxRDeco.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tests/RegisterFile_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tests/VectorialRegisterFile_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tests/InstructionMemory_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tests/SelectRegisterFile_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tests/Extender_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tests/ALUScalar_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tests/ALUVectorial_tb.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
