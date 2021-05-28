@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 start_analysis_elaboration:s:00:00:14
 start_eda_rtl_simulation:s:00:00:49
+=======
+start_analysis_elaboration:s:00:00:24
+start_eda_rtl_simulation:s:00:00:35
+>>>>>>> main

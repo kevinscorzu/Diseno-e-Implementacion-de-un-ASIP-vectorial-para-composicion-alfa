@@ -1,6 +1,11 @@
 Analysis & Elaboration report for ASIP-vectorial
+<<<<<<< HEAD
 Fri May 28 17:10:54 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+=======
+Fri May 28 16:23:26 2021
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+>>>>>>> main
 
 
 ---------------------
@@ -9,6 +14,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
+<<<<<<< HEAD
   4. Parameter Settings for User Entity Instance: ALUVectorial:DUT
   5. Parameter Settings for User Entity Instance: ALUVectorial:DUT|VectorialAddition:VAd
   6. Parameter Settings for User Entity Instance: ALUVectorial:DUT|VectorialSubtraction:VSu
@@ -19,15 +25,20 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  11. Port Connectivity Checks: "ALUVectorial:DUT|Mux8:VM8"
  12. Port Connectivity Checks: "ALUVectorial:DUT"
  13. Analysis & Elaboration Messages
+=======
+  4. Analysis & Elaboration Settings
+  5. Port Connectivity Checks: "ControlUnit:CUnit"
+  6. Analysis & Elaboration Messages
+>>>>>>> main
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -37,18 +48,24 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Elaboration Status ; Successful - Fri May 28 17:10:54 2021       ;
 ; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                 ; ASIP-vectorial                              ;
 ; Top-level Entity Name         ; ALUVectorial_tb                             ;
+=======
+; Analysis & Elaboration Status ; Successful - Fri May 28 16:23:26 2021       ;
+; Quartus Prime Version         ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                 ; ASIP-vectorial                              ;
+; Top-level Entity Name         ; ControlUnit_tb                              ;
+>>>>>>> main
 ; Family                        ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
 ; Total registers               ; N/A until Partition Merge                   ;
@@ -65,8 +82,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -76,6 +93,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
+<<<<<<< HEAD
 +---------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: ALUVectorial:DUT ;
 +----------------+-------+--------------------------------------+
@@ -136,13 +154,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
+=======
+>>>>>>> main
 +---------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+<<<<<<< HEAD
 ; Top-level entity name                                                           ; ALUVectorial_tb    ; ASIP-vectorial     ;
+=======
+; Top-level entity name                                                           ; ControlUnit_tb     ; ASIP-vectorial     ;
+>>>>>>> main
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
 ; Allow Any RAM Size For Recognition                                              ; On                 ; Off                ;
@@ -224,6 +248,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
+<<<<<<< HEAD
 +-------------------------------------------------------+
 ; Port Connectivity Checks: "ALUVectorial:DUT|Mux8:VM8" ;
 +--------+-------+----------+---------------------------+
@@ -241,6 +266,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; C    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
+=======
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ControlUnit:CUnit"                                                                      ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; wmem     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rmem     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; wreg     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; CondEn   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; jmpSel   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; VF       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; jmpF     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; RMuxSel  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ALUins   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ExtndSel ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+>>>>>>> main
 
 
 +---------------------------------+
@@ -248,107 +291,113 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
+<<<<<<< HEAD
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
     Info: Processing started: Fri May 28 17:10:41 2021
+=======
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Fri May 28 16:23:03 2021
+>>>>>>> main
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ASIP-vectorial -c ASIP-vectorial --analysis_and_elaboration
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file processor/processors.sv
-    Info (12023): Found entity 1: processors File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+    Info (12023): Found entity 1: processors File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/imagerom_tb.sv
-    Info (12023): Found entity 1: ImageROM_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/ImageROM_tb.sv Line: 1
+    Info (12023): Found entity 1: ImageROM_tb File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/ImageROM_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/datamemory_tb.sv
-    Info (12023): Found entity 1: DataMemory_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/DataMemory_tb.sv Line: 1
+    Info (12023): Found entity 1: DataMemory_tb File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/DataMemory_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file memories/datamemory.sv
-    Info (12023): Found entity 1: DataMemory File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv Line: 1
+    Info (12023): Found entity 1: DataMemory File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file muxes/mux8.sv
-    Info (12023): Found entity 1: Mux8 File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux8.sv Line: 1
+    Info (12023): Found entity 1: Mux8 File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux8.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file muxes/mux2.sv
-    Info (12023): Found entity 1: Mux2 File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv Line: 1
+    Info (12023): Found entity 1: Mux2 File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modules/decode_module.sv
-    Info (12023): Found entity 1: decode_module File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 1
+    Info (12023): Found entity 1: decode_module File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file memories/vectorialregisterfile.sv
-    Info (12023): Found entity 1: VectorialRegisterFile File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/VectorialRegisterFile.sv Line: 1
+    Info (12023): Found entity 1: VectorialRegisterFile File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/VectorialRegisterFile.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file memories/registerfile.sv
-    Info (12023): Found entity 1: RegisterFile File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/RegisterFile.sv Line: 1
+    Info (12023): Found entity 1: RegisterFile File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/RegisterFile.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file memories/memorycontroller.sv
-    Info (12023): Found entity 1: MemoryController File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/MemoryController.sv Line: 1
+    Info (12023): Found entity 1: MemoryController File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/MemoryController.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file memories/instructionmemory.sv
-    Info (12023): Found entity 1: InstructionMemory File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 1
+    Info (12023): Found entity 1: InstructionMemory File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file memories/imagerom.sv
-    Info (12023): Found entity 1: ImageROM File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/ImageROM.sv Line: 1
+    Info (12023): Found entity 1: ImageROM File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/ImageROM.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelinewb.sv
-    Info (12023): Found entity 1: PipelineWB File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineWB.sv Line: 1
+    Info (12023): Found entity 1: PipelineWB File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineWB.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelinemem.sv
-    Info (12023): Found entity 1: PipelineMem File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineMem.sv Line: 1
+    Info (12023): Found entity 1: PipelineMem File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineMem.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelinefetch.sv
-    Info (12023): Found entity 1: PipelineFetch File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineFetch.sv Line: 1
+    Info (12023): Found entity 1: PipelineFetch File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineFetch.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelineex.sv
-    Info (12023): Found entity 1: PipelineEx File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineEx.sv Line: 1
+    Info (12023): Found entity 1: PipelineEx File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineEx.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/controlunit.sv
-    Info (12023): Found entity 1: ControlUnit File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 1
+    Info (12023): Found entity 1: ControlUnit File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/extenddeco.sv
-    Info (12023): Found entity 1: ExtendDeco File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ExtendDeco.sv Line: 1
+    Info (12023): Found entity 1: ExtendDeco File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ExtendDeco.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/instdeco.sv
-    Info (12023): Found entity 1: InstDeco File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/InstDeco.sv Line: 1
+    Info (12023): Found entity 1: InstDeco File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/InstDeco.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fordwardunit/forwardunit.sv
-    Info (12023): Found entity 1: ForwardUnit File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv Line: 1
+    Info (12023): Found entity 1: ForwardUnit File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/aluscalar.sv
-    Info (12023): Found entity 1: ALUScalar File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 1
+    Info (12023): Found entity 1: ALUScalar File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/flag/zeroflag.sv
-    Info (12023): Found entity 1: ZeroFlag File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/ZeroFlag.sv Line: 1
+    Info (12023): Found entity 1: ZeroFlag File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/ZeroFlag.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/flag/overflowflag.sv
-    Info (12023): Found entity 1: OverflowFlag File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/OverflowFlag.sv Line: 1
+    Info (12023): Found entity 1: OverflowFlag File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/OverflowFlag.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/flag/negativeflag.sv
-    Info (12023): Found entity 1: NegativeFlag File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/NegativeFlag.sv Line: 1
+    Info (12023): Found entity 1: NegativeFlag File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/NegativeFlag.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/flag/carryflag.sv
-    Info (12023): Found entity 1: CarryFlag File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/CarryFlag.sv Line: 1
+    Info (12023): Found entity 1: CarryFlag File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/CarryFlag.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/vectorial/aluvectorial.sv
-    Info (12023): Found entity 1: ALUVectorial File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 1
+    Info (12023): Found entity 1: ALUVectorial File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/operations/subtraction.sv
-    Info (12023): Found entity 1: Subtraction File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Subtraction.sv Line: 1
+    Info (12023): Found entity 1: Subtraction File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Subtraction.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/operations/multiplication.sv
-    Info (12023): Found entity 1: Multiplication File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Multiplication.sv Line: 1
+    Info (12023): Found entity 1: Multiplication File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Multiplication.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/operations/addition.sv
-    Info (12023): Found entity 1: Addition File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Addition.sv Line: 1
+    Info (12023): Found entity 1: Addition File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Addition.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/vectorial/operations/vectorialaddition.sv
-    Info (12023): Found entity 1: VectorialAddition File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialAddition.sv Line: 1
+    Info (12023): Found entity 1: VectorialAddition File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialAddition.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/vectorial/operations/vectorialsubtraction.sv
-    Info (12023): Found entity 1: VectorialSubtraction File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialSubtraction.sv Line: 1
+    Info (12023): Found entity 1: VectorialSubtraction File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialSubtraction.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/vectorial/operations/vectorialmultiplication.sv
-    Info (12023): Found entity 1: VectorialMultiplication File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialMultiplication.sv Line: 1
+    Info (12023): Found entity 1: VectorialMultiplication File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialMultiplication.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file extender/extender.sv
-    Info (12023): Found entity 1: Extender File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Extender/Extender.sv Line: 1
+    Info (12023): Found entity 1: Extender File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Extender/Extender.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/selectregisterfile.sv
-    Info (12023): Found entity 1: SelectRegisterFile File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/SelectRegisterFile.sv Line: 1
+    Info (12023): Found entity 1: SelectRegisterFile File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/SelectRegisterFile.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/vectorial/operations/vectorialdivision.sv
-    Info (12023): Found entity 1: VectorialDivision File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialDivision.sv Line: 1
+    Info (12023): Found entity 1: VectorialDivision File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialDivision.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/operations/division.sv
-    Info (12023): Found entity 1: Division File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Division.sv Line: 1
+    Info (12023): Found entity 1: Division File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Division.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modules/fetch_module.sv
-    Info (12023): Found entity 1: fetch_module File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 1
+    Info (12023): Found entity 1: fetch_module File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file flipflop/flipflop.sv
-    Info (12023): Found entity 1: FlipFlop File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FlipFlop/FlipFlop.sv Line: 1
+    Info (12023): Found entity 1: FlipFlop File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FlipFlop/FlipFlop.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modules/execute_module.sv
-    Info (12023): Found entity 1: execute_module File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 1
+    Info (12023): Found entity 1: execute_module File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file condunit/condunit.sv
-    Info (12023): Found entity 1: CondUnit File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CondUnit/CondUnit.sv Line: 1
+    Info (12023): Found entity 1: CondUnit File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CondUnit/CondUnit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modules/memory_module.sv
-    Info (12023): Found entity 1: memory_module File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/memory_module.sv Line: 1
+    Info (12023): Found entity 1: memory_module File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/memory_module.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/execute_module_tb.sv
-    Info (12023): Found entity 1: execute_module_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/execute_module_tb.sv Line: 1
+    Info (12023): Found entity 1: execute_module_tb File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/execute_module_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/condunit_tb.sv
-    Info (12023): Found entity 1: CondUnit_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/CondUnit_tb.sv Line: 1
+    Info (12023): Found entity 1: CondUnit_tb File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/CondUnit_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/frwrdunit_tb.sv
-    Info (12023): Found entity 1: frwrdUnit_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/frwrdUnit_tb.sv Line: 1
+    Info (12023): Found entity 1: frwrdUnit_tb File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/frwrdUnit_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/controlunit_tb.sv
-    Info (12023): Found entity 1: ControlUnit_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/ControlUnit_tb.sv Line: 1
+    Info (12023): Found entity 1: ControlUnit_tb File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/ControlUnit_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/memorycontroller_tb.sv
-    Info (12023): Found entity 1: MemoryController_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/MemoryController_tb.sv Line: 1
+    Info (12023): Found entity 1: MemoryController_tb File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/MemoryController_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/processor_tb.sv
-    Info (12023): Found entity 1: processor_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/processor_tb.sv Line: 1
+    Info (12023): Found entity 1: processor_tb File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/processor_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/pipelinemem_tb.sv
-    Info (12023): Found entity 1: PipelineMem_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/PipelineMem_tb.sv Line: 1
+    Info (12023): Found entity 1: PipelineMem_tb File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/PipelineMem_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/muxrdeco.sv
+<<<<<<< HEAD
     Info (12023): Found entity 1: muxRDeco File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/muxRDeco.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/registerfile_tb.sv
     Info (12023): Found entity 1: RegisterFile_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/RegisterFile_tb.sv Line: 1
@@ -376,5 +425,18 @@ Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 0 warnings
     Info: Processing ended: Fri May 28 17:10:54 2021
     Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:31
+=======
+    Info (12023): Found entity 1: muxRDeco File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/muxRDeco.sv Line: 1
+Info (12127): Elaborating entity "ControlUnit_tb" for the top level hierarchy
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:CUnit" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/ControlUnit_tb.sv Line: 8
+Info (12128): Elaborating entity "ExtendDeco" for hierarchy "ControlUnit:CUnit|ExtendDeco:ExtDeco" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 12
+Info (12128): Elaborating entity "InstDeco" for hierarchy "ControlUnit:CUnit|InstDeco:InstDecoO" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 13
+Info (12128): Elaborating entity "muxRDeco" for hierarchy "ControlUnit:CUnit|muxRDeco:MDECO" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 14
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4768 megabytes
+    Info: Processing ended: Fri May 28 16:23:26 2021
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:54
+>>>>>>> main
 
 

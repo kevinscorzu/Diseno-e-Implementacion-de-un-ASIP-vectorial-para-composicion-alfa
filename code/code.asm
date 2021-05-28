@@ -87,9 +87,8 @@ proposed_for_x:
 	CMPI R11, 0xC8		;
 	JEQ proposed_for_y	; // Si recorrio todas las columnas vuelve a el for y
 	ADD R5, R11, R12	; // x + y
-	SUB R6, R11, R12	; // x - y
-	STR R2, R6		; // Almacena el indice de las columnas en las memorias
-	STR R3, R6		;
+	STR R2, R11		; // Almacena el indice de las columnas en las memorias
+	STR R3, R12		;
 	STR R4, R5		;
 	ADD R2, R2, R1		; // Dirigue a la siguiente direccion de la memoria
 	ADD R3, R3, R1		;
