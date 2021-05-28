@@ -1,6 +1,6 @@
 Analysis & Elaboration report for ASIP-vectorial
-Tue May 11 21:00:52 2021
-Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Wed May 19 22:39:13 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -9,18 +9,58 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "ControlUnit:CUnit"
-  6. Analysis & Elaboration Messages
+  4. Parameter Settings for User Entity Instance: processors:proce|fetch_module:fetch|FlipFlop:PC
+  5. Parameter Settings for User Entity Instance: processors:proce|fetch_module:fetch|Mux2:PCmux
+  6. Parameter Settings for User Entity Instance: processors:proce|fetch_module:fetch|Addition:PC_1
+  7. Parameter Settings for User Entity Instance: processors:proce|decode_module:decode|Mux2:MuxRDest
+  8. Parameter Settings for User Entity Instance: processors:proce|decode_module:decode|Mux2:PCR2
+  9. Parameter Settings for User Entity Instance: processors:proce|decode_module:decode|Mux2:ExtndMux
+ 10. Parameter Settings for User Entity Instance: processors:proce|decode_module:decode|Mux2:V2_R2Mux
+ 11. Parameter Settings for User Entity Instance: processors:proce|decode_module:decode|Mux2:V3_R3Mux
+ 12. Parameter Settings for User Entity Instance: processors:proce|decode_module:decode|Mux2:MuxAddrR2
+ 13. Parameter Settings for User Entity Instance: processors:proce|decode_module:decode|Mux2:MuxAddrR3
+ 14. Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ForwardUnit:frwunit|Mux2:WbR2
+ 15. Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ForwardUnit:frwunit|Mux2:ExR2
+ 16. Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ForwardUnit:frwunit|Mux2:WbR3
+ 17. Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ForwardUnit:frwunit|Mux2:ExR3
+ 18. Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUScalar:ALUS
+ 19. Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUScalar:ALUS|Addition:Ad
+ 20. Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUScalar:ALUS|Subtraction:Su
+ 21. Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUScalar:ALUS|Multiplication:Mu
+ 22. Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUScalar:ALUS|Division:Di
+ 23. Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUScalar:ALUS|Mux8:M8
+ 24. Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUScalar:ALUS|ZeroFlag:Ze
+ 25. Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUVectorial:ALUV
+ 26. Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUVectorial:ALUV|VectorialAddition:VAd
+ 27. Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUVectorial:ALUV|VectorialSubtraction:VSu
+ 28. Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUVectorial:ALUV|VectorialMultiplication:VMu
+ 29. Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUVectorial:ALUV|VectorialDivision:VDi
+ 30. Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUVectorial:ALUV|Mux8:VM8
+ 31. Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|Mux2:ALUMux
+ 32. Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|CondUnit:cond_Unit|FlipFlop:flipiflopi
+ 33. Parameter Settings for User Entity Instance: processors:proce|memory_module:memory|Mux2:Memmux
+ 34. Analysis & Elaboration Settings
+ 35. Port Connectivity Checks: "processors:proce|execute_module:execute|CondUnit:cond_Unit|FlipFlop:flipiflopi"
+ 36. Port Connectivity Checks: "processors:proce|execute_module:execute|Mux2:ALUMux"
+ 37. Port Connectivity Checks: "processors:proce|execute_module:execute|ALUVectorial:ALUV|Mux8:VM8"
+ 38. Port Connectivity Checks: "processors:proce|execute_module:execute|ALUScalar:ALUS|Mux8:M8"
+ 39. Port Connectivity Checks: "processors:proce|decode_module:decode|Mux2:MuxAddrR3"
+ 40. Port Connectivity Checks: "processors:proce|decode_module:decode|Mux2:MuxAddrR2"
+ 41. Port Connectivity Checks: "processors:proce|decode_module:decode|Mux2:V3_R3Mux"
+ 42. Port Connectivity Checks: "processors:proce|decode_module:decode|Mux2:V2_R2Mux"
+ 43. Port Connectivity Checks: "processors:proce|decode_module:decode|Mux2:MuxRDest"
+ 44. Port Connectivity Checks: "processors:proce|fetch_module:fetch|Addition:PC_1"
+ 45. Port Connectivity Checks: "processors:proce"
+ 46. Analysis & Elaboration Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -30,17 +70,18 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Tue May 11 21:00:52 2021       ;
-; Quartus Prime Version         ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Analysis & Elaboration Status ; Successful - Wed May 19 22:39:13 2021       ;
+; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                 ; ASIP-vectorial                              ;
-; Top-level Entity Name         ; ControlUnit_tb                              ;
+; Top-level Entity Name         ; processor_tb                                ;
 ; Family                        ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
 ; Total registers               ; N/A until Partition Merge                   ;
@@ -57,8 +98,8 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -68,15 +109,318 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|fetch_module:fetch|FlipFlop:PC ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|fetch_module:fetch|Mux2:PCmux ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|fetch_module:fetch|Addition:PC_1 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|decode_module:decode|Mux2:MuxRDest ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|decode_module:decode|Mux2:PCR2 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|decode_module:decode|Mux2:ExtndMux ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|decode_module:decode|Mux2:V2_R2Mux ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|decode_module:decode|Mux2:V3_R3Mux ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|decode_module:decode|Mux2:MuxAddrR2 ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|decode_module:decode|Mux2:MuxAddrR3 ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ForwardUnit:frwunit|Mux2:WbR2 ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ForwardUnit:frwunit|Mux2:ExR2 ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ForwardUnit:frwunit|Mux2:WbR3 ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ForwardUnit:frwunit|Mux2:ExR3 ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUScalar:ALUS ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUScalar:ALUS|Addition:Ad ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUScalar:ALUS|Subtraction:Su ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUScalar:ALUS|Multiplication:Mu ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUScalar:ALUS|Division:Di ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUScalar:ALUS|Mux8:M8 ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUScalar:ALUS|ZeroFlag:Ze ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUVectorial:ALUV ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                                ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUVectorial:ALUV|VectorialAddition:VAd ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUVectorial:ALUV|VectorialSubtraction:VSu ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUVectorial:ALUV|VectorialMultiplication:VMu ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                                                            ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUVectorial:ALUV|VectorialDivision:VDi ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|ALUVectorial:ALUV|Mux8:VM8 ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|Mux2:ALUMux ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|execute_module:execute|CondUnit:cond_Unit|FlipFlop:flipiflopi ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                                                                     ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processors:proce|memory_module:memory|Mux2:Memmux ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; N              ; 128   ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; ControlUnit_tb     ; ASIP-vectorial     ;
+; Top-level entity name                                                           ; processor_tb       ; ASIP-vectorial     ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
+; Allow Any RAM Size For Recognition                                              ; On                 ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; On                 ; Off                ;
+; Synthesis Effort                                                                ; Fast               ; Auto               ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
@@ -124,8 +468,6 @@ refer to the applicable agreement for further details.
 ; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
 ; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
 ; Auto Resource Sharing                                                           ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
 ; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
 ; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
 ; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
@@ -145,7 +487,6 @@ refer to the applicable agreement for further details.
 ; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
 ; Block Design Naming                                                             ; Auto               ; Auto               ;
 ; SDC constraint protection                                                       ; Off                ; Off                ;
-; Synthesis Effort                                                                ; Auto               ; Auto               ;
 ; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
 ; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
 ; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
@@ -156,21 +497,112 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processors:proce|execute_module:execute|CondUnit:cond_Unit|FlipFlop:flipiflopi"        ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; q[1..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; q[3]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processors:proce|execute_module:execute|Mux2:ALUMux" ;
++------------------+-------+----------+-------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                   ;
++------------------+-------+----------+-------------------------------------------+
+; result0[127..32] ; Input ; Info     ; Stuck at GND                              ;
++------------------+-------+----------+-------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processors:proce|execute_module:execute|ALUVectorial:ALUV|Mux8:VM8" ;
++--------+-------+----------+--------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                            ;
++--------+-------+----------+--------------------------------------------------------------------+
+; Input0 ; Input ; Info     ; Stuck at GND                                                       ;
+; Input6 ; Input ; Info     ; Stuck at GND                                                       ;
++--------+-------+----------+--------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processors:proce|execute_module:execute|ALUScalar:ALUS|Mux8:M8" ;
++--------+-------+----------+----------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                        ;
++--------+-------+----------+----------------------------------------------------------------+
+; Input0 ; Input ; Info     ; Stuck at GND                                                   ;
+; Input6 ; Input ; Info     ; Stuck at GND                                                   ;
++--------+-------+----------+----------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processors:proce|decode_module:decode|Mux2:MuxAddrR3" ;
++---------+-------+----------+-----------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                             ;
++---------+-------+----------+-----------------------------------------------------+
+; result1 ; Input ; Info     ; Stuck at GND                                        ;
++---------+-------+----------+-----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processors:proce|decode_module:decode|Mux2:MuxAddrR2" ;
++---------+-------+----------+-----------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                             ;
++---------+-------+----------+-----------------------------------------------------+
+; result1 ; Input ; Info     ; Stuck at GND                                        ;
++---------+-------+----------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processors:proce|decode_module:decode|Mux2:V3_R3Mux" ;
++------------------+-------+----------+-------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                   ;
++------------------+-------+----------+-------------------------------------------+
+; result0[127..32] ; Input ; Info     ; Stuck at GND                              ;
++------------------+-------+----------+-------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processors:proce|decode_module:decode|Mux2:V2_R2Mux" ;
++------------------+-------+----------+-------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                   ;
++------------------+-------+----------+-------------------------------------------+
+; result0[127..32] ; Input ; Info     ; Stuck at GND                              ;
++------------------+-------+----------+-------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processors:proce|decode_module:decode|Mux2:MuxRDest" ;
++---------+-------+----------+----------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                            ;
++---------+-------+----------+----------------------------------------------------+
+; result1 ; Input ; Info     ; Stuck at GND                                       ;
++---------+-------+----------+----------------------------------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ControlUnit:CUnit"                                                                      ;
+; Port Connectivity Checks: "processors:proce|fetch_module:fetch|Addition:PC_1"                                      ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port     ; Type   ; Severity ; Details                                                                             ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
-; wmem     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; rmem     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; wreg     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; CondEn   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; jmpSel   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; VF       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; jmpF     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ALUins   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ExtndSel ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; B[31..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; B[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; Cout     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processors:proce"                                                                      ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; GPIO    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; GPIOEnR ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; GPIOEnG ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; GPIOEnB ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; GPIOEn  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +---------------------------------+
@@ -178,101 +610,166 @@ refer to the applicable agreement for further details.
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
-    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Tue May 11 21:00:34 2021
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Wed May 19 22:38:58 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ASIP-vectorial -c ASIP-vectorial --analysis_and_elaboration
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file processor/processors.sv
+    Info (12023): Found entity 1: processors File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tests/imagerom_tb.sv
+    Info (12023): Found entity 1: ImageROM_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/ImageROM_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tests/datamemory_tb.sv
+    Info (12023): Found entity 1: DataMemory_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/DataMemory_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memories/datamemory.sv
+    Info (12023): Found entity 1: DataMemory File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file muxes/mux8.sv
-    Info (12023): Found entity 1: Mux8 File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux8.sv Line: 1
+    Info (12023): Found entity 1: Mux8 File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux8.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file muxes/mux2.sv
-    Info (12023): Found entity 1: Mux2 File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv Line: 1
+    Info (12023): Found entity 1: Mux2 File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Muxes/Mux2.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modules/decode_module.sv
-    Info (12023): Found entity 1: decode_module File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 1
+    Info (12023): Found entity 1: decode_module File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file memories/vectorialregisterfile.sv
-    Info (12023): Found entity 1: VectorialRegisterFile File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/VectorialRegisterFile.sv Line: 1
+    Info (12023): Found entity 1: VectorialRegisterFile File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/VectorialRegisterFile.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file memories/registerfile.sv
-    Info (12023): Found entity 1: RegisterFile File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/RegisterFile.sv Line: 1
+    Info (12023): Found entity 1: RegisterFile File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/RegisterFile.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file memories/memorycontroller.sv
-    Info (12023): Found entity 1: MemoryController File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/MemoryController.sv Line: 1
+    Info (12023): Found entity 1: MemoryController File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/MemoryController.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file memories/instructionmemory.sv
-    Info (12023): Found entity 1: InstructionMemory File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 1
+    Info (12023): Found entity 1: InstructionMemory File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file memories/imagerom.sv
-    Info (12023): Found entity 1: ImageROM File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/ImageROM.sv Line: 1
+    Info (12023): Found entity 1: ImageROM File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/ImageROM.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelinewb.sv
-    Info (12023): Found entity 1: PipelineWB File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineWB.sv Line: 1
+    Info (12023): Found entity 1: PipelineWB File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineWB.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelinemem.sv
-    Info (12023): Found entity 1: PipelineMem File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineMem.sv Line: 1
+    Info (12023): Found entity 1: PipelineMem File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineMem.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelinefetch.sv
-    Info (12023): Found entity 1: PipelineFetch File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineFetch.sv Line: 1
+    Info (12023): Found entity 1: PipelineFetch File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineFetch.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline/pipelineex.sv
-    Info (12023): Found entity 1: PipelineEx File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineEx.sv Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file pipeline/pipelinedecode.sv
+    Info (12023): Found entity 1: PipelineEx File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Pipeline/PipelineEx.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/controlunit.sv
-    Info (12023): Found entity 1: ControlUnit File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 1
+    Info (12023): Found entity 1: ControlUnit File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/extenddeco.sv
-    Info (12023): Found entity 1: ExtendDeco File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ExtendDeco.sv Line: 1
+    Info (12023): Found entity 1: ExtendDeco File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ExtendDeco.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/instdeco.sv
-    Info (12023): Found entity 1: InstDeco File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/InstDeco.sv Line: 1
+    Info (12023): Found entity 1: InstDeco File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/InstDeco.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fordwardunit/forwardunit.sv
-    Info (12023): Found entity 1: ForwardUnit File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv Line: 1
+    Info (12023): Found entity 1: ForwardUnit File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FordwardUnit/ForwardUnit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/aluscalar.sv
-    Info (12023): Found entity 1: ALUScalar File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 1
+    Info (12023): Found entity 1: ALUScalar File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/flag/zeroflag.sv
-    Info (12023): Found entity 1: ZeroFlag File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/ZeroFlag.sv Line: 1
+    Info (12023): Found entity 1: ZeroFlag File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/ZeroFlag.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/flag/overflowflag.sv
-    Info (12023): Found entity 1: OverflowFlag File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/OverflowFlag.sv Line: 1
+    Info (12023): Found entity 1: OverflowFlag File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/OverflowFlag.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/flag/negativeflag.sv
-    Info (12023): Found entity 1: NegativeFlag File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/NegativeFlag.sv Line: 1
+    Info (12023): Found entity 1: NegativeFlag File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/NegativeFlag.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/flag/carryflag.sv
-    Info (12023): Found entity 1: CarryFlag File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/CarryFlag.sv Line: 1
+    Info (12023): Found entity 1: CarryFlag File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Flag/CarryFlag.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/vectorial/aluvectorial.sv
-    Info (12023): Found entity 1: ALUVectorial File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 1
+    Info (12023): Found entity 1: ALUVectorial File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/operations/subtraction.sv
-    Info (12023): Found entity 1: Subtraction File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Subtraction.sv Line: 1
+    Info (12023): Found entity 1: Subtraction File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Subtraction.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/operations/multiplication.sv
-    Info (12023): Found entity 1: Multiplication File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Multiplication.sv Line: 1
+    Info (12023): Found entity 1: Multiplication File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Multiplication.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/operations/addition.sv
-    Info (12023): Found entity 1: Addition File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Addition.sv Line: 1
+    Info (12023): Found entity 1: Addition File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Addition.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/vectorial/operations/vectorialaddition.sv
-    Info (12023): Found entity 1: VectorialAddition File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialAddition.sv Line: 1
+    Info (12023): Found entity 1: VectorialAddition File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialAddition.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/vectorial/operations/vectorialsubtraction.sv
-    Info (12023): Found entity 1: VectorialSubtraction File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialSubtraction.sv Line: 1
+    Info (12023): Found entity 1: VectorialSubtraction File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialSubtraction.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/vectorial/operations/vectorialmultiplication.sv
-    Info (12023): Found entity 1: VectorialMultiplication File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialMultiplication.sv Line: 1
+    Info (12023): Found entity 1: VectorialMultiplication File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialMultiplication.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file extender/extender.sv
-    Info (12023): Found entity 1: Extender File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Extender/Extender.sv Line: 1
+    Info (12023): Found entity 1: Extender File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Extender/Extender.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/selectregisterfile.sv
-    Info (12023): Found entity 1: SelectRegisterFile File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/SelectRegisterFile.sv Line: 1
+    Info (12023): Found entity 1: SelectRegisterFile File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/SelectRegisterFile.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/vectorial/operations/vectorialdivision.sv
-    Info (12023): Found entity 1: VectorialDivision File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialDivision.sv Line: 1
+    Info (12023): Found entity 1: VectorialDivision File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/Operations/VectorialDivision.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu/scalar/operations/division.sv
-    Info (12023): Found entity 1: Division File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Division.sv Line: 1
+    Info (12023): Found entity 1: Division File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/Operations/Division.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modules/fetch_module.sv
-    Info (12023): Found entity 1: fetch_module File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 1
+    Info (12023): Found entity 1: fetch_module File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file flipflop/flipflop.sv
-    Info (12023): Found entity 1: FlipFlop File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FlipFlop/FlipFlop.sv Line: 1
+    Info (12023): Found entity 1: FlipFlop File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/FlipFlop/FlipFlop.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modules/execute_module.sv
-    Info (12023): Found entity 1: execute_module File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 1
+    Info (12023): Found entity 1: execute_module File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file condunit/condunit.sv
-    Info (12023): Found entity 1: CondUnit File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CondUnit/CondUnit.sv Line: 1
+    Info (12023): Found entity 1: CondUnit File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CondUnit/CondUnit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modules/memory_module.sv
-    Info (12023): Found entity 1: memory_module File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/memory_module.sv Line: 1
+    Info (12023): Found entity 1: memory_module File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/memory_module.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/execute_module_tb.sv
-    Info (12023): Found entity 1: execute_module_tb File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/execute_module_tb.sv Line: 1
+    Info (12023): Found entity 1: execute_module_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/execute_module_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/condunit_tb.sv
-    Info (12023): Found entity 1: CondUnit_tb File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/CondUnit_tb.sv Line: 1
+    Info (12023): Found entity 1: CondUnit_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/CondUnit_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/frwrdunit_tb.sv
-    Info (12023): Found entity 1: frwrdUnit_tb File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/frwrdUnit_tb.sv Line: 1
+    Info (12023): Found entity 1: frwrdUnit_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/frwrdUnit_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tests/controlunit_tb.sv
-    Info (12023): Found entity 1: ControlUnit_tb File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/ControlUnit_tb.sv Line: 1
-Info (12127): Elaborating entity "ControlUnit_tb" for the top level hierarchy
-Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:CUnit" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/ControlUnit_tb.sv Line: 8
-Info (12128): Elaborating entity "ExtendDeco" for hierarchy "ControlUnit:CUnit|ExtendDeco:ExtDeco" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 12
-Info (12128): Elaborating entity "InstDeco" for hierarchy "ControlUnit:CUnit|InstDeco:InstDecoO" File: C:/Users/luisd/Documents/FPGA_Projects/Proyecto2-Arqui2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 13
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4766 megabytes
-    Info: Processing ended: Tue May 11 21:00:52 2021
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:38
+    Info (12023): Found entity 1: ControlUnit_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/ControlUnit_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tests/memorycontroller_tb.sv
+    Info (12023): Found entity 1: MemoryController_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/MemoryController_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tests/processor_tb.sv
+    Info (12023): Found entity 1: processor_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/processor_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tests/pipelinemem_tb.sv
+    Info (12023): Found entity 1: PipelineMem_tb File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/PipelineMem_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ctrlunit/muxrdeco.sv
+    Info (12023): Found entity 1: muxRDeco File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/muxRDeco.sv Line: 1
+Info (12127): Elaborating entity "processor_tb" for the top level hierarchy
+Warning (10755): Verilog HDL warning at processor_tb.sv(36): assignments to clk create a combinational loop File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/processor_tb.sv Line: 36
+Info (12128): Elaborating entity "processors" for hierarchy "processors:proce" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/processor_tb.sv Line: 4
+Info (12128): Elaborating entity "fetch_module" for hierarchy "processors:proce|fetch_module:fetch" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 17
+Info (12128): Elaborating entity "FlipFlop" for hierarchy "processors:proce|fetch_module:fetch|FlipFlop:PC" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 4
+Info (12128): Elaborating entity "Mux2" for hierarchy "processors:proce|fetch_module:fetch|Mux2:PCmux" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 6
+Info (12128): Elaborating entity "Addition" for hierarchy "processors:proce|fetch_module:fetch|Addition:PC_1" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 8
+Info (12128): Elaborating entity "InstructionMemory" for hierarchy "processors:proce|fetch_module:fetch|InstructionMemory:instMem" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/fetch_module.sv Line: 9
+Warning (10850): Verilog HDL warning at InstructionMemory.sv(8): number of words (238) in memory file does not match the number of elements in the address range [0:255] File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 8
+Warning (10030): Net "ROM.data_a" at InstructionMemory.sv(5) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 5
+Warning (10030): Net "ROM.waddr_a" at InstructionMemory.sv(5) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 5
+Warning (10030): Net "ROM.we_a" at InstructionMemory.sv(5) has no driver or initial value, using a default initial value '0' File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/InstructionMemory.sv Line: 5
+Info (12128): Elaborating entity "PipelineFetch" for hierarchy "processors:proce|PipelineFetch:pipeFetch" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 27
+Info (12128): Elaborating entity "decode_module" for hierarchy "processors:proce|decode_module:decode" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 37
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "processors:proce|decode_module:decode|ControlUnit:ctrlUnit" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 11
+Info (12128): Elaborating entity "ExtendDeco" for hierarchy "processors:proce|decode_module:decode|ControlUnit:ctrlUnit|ExtendDeco:ExtDeco" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 12
+Info (12128): Elaborating entity "InstDeco" for hierarchy "processors:proce|decode_module:decode|ControlUnit:ctrlUnit|InstDeco:InstDecoO" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 13
+Info (12128): Elaborating entity "muxRDeco" for hierarchy "processors:proce|decode_module:decode|ControlUnit:ctrlUnit|muxRDeco:MDECO" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CtrlUnit/ControlUnit.sv Line: 14
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "processors:proce|decode_module:decode|RegisterFile:regfile" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 13
+Info (12128): Elaborating entity "VectorialRegisterFile" for hierarchy "processors:proce|decode_module:decode|VectorialRegisterFile:VRegFile" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 15
+Info (12128): Elaborating entity "SelectRegisterFile" for hierarchy "processors:proce|decode_module:decode|SelectRegisterFile:selRegFile" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 17
+Info (12128): Elaborating entity "Extender" for hierarchy "processors:proce|decode_module:decode|Extender:extnd" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 19
+Info (12128): Elaborating entity "Mux2" for hierarchy "processors:proce|decode_module:decode|Mux2:MuxRDest" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 20
+Info (12128): Elaborating entity "Mux2" for hierarchy "processors:proce|decode_module:decode|Mux2:V2_R2Mux" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/decode_module.sv Line: 26
+Info (12128): Elaborating entity "PipelineMem" for hierarchy "processors:proce|PipelineMem:pipeMem" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 54
+Info (12128): Elaborating entity "execute_module" for hierarchy "processors:proce|execute_module:execute" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 63
+Info (12128): Elaborating entity "ForwardUnit" for hierarchy "processors:proce|execute_module:execute|ForwardUnit:frwunit" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 13
+Info (12128): Elaborating entity "ALUScalar" for hierarchy "processors:proce|execute_module:execute|ALUScalar:ALUS" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 15
+Info (12128): Elaborating entity "Subtraction" for hierarchy "processors:proce|execute_module:execute|ALUScalar:ALUS|Subtraction:Su" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 11
+Info (12128): Elaborating entity "Multiplication" for hierarchy "processors:proce|execute_module:execute|ALUScalar:ALUS|Multiplication:Mu" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 12
+Info (12128): Elaborating entity "Division" for hierarchy "processors:proce|execute_module:execute|ALUScalar:ALUS|Division:Di" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 13
+Info (12128): Elaborating entity "Mux8" for hierarchy "processors:proce|execute_module:execute|ALUScalar:ALUS|Mux8:M8" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 15
+Info (12128): Elaborating entity "NegativeFlag" for hierarchy "processors:proce|execute_module:execute|ALUScalar:ALUS|NegativeFlag:Ne" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 17
+Info (12128): Elaborating entity "ZeroFlag" for hierarchy "processors:proce|execute_module:execute|ALUScalar:ALUS|ZeroFlag:Ze" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 18
+Info (12128): Elaborating entity "OverflowFlag" for hierarchy "processors:proce|execute_module:execute|ALUScalar:ALUS|OverflowFlag:oV" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 19
+Info (12128): Elaborating entity "CarryFlag" for hierarchy "processors:proce|execute_module:execute|ALUScalar:ALUS|CarryFlag:Ca" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Scalar/ALUScalar.sv Line: 20
+Info (12128): Elaborating entity "ALUVectorial" for hierarchy "processors:proce|execute_module:execute|ALUVectorial:ALUV" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 17
+Info (12128): Elaborating entity "VectorialAddition" for hierarchy "processors:proce|execute_module:execute|ALUVectorial:ALUV|VectorialAddition:VAd" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 8
+Info (12128): Elaborating entity "VectorialSubtraction" for hierarchy "processors:proce|execute_module:execute|ALUVectorial:ALUV|VectorialSubtraction:VSu" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 9
+Info (12128): Elaborating entity "VectorialMultiplication" for hierarchy "processors:proce|execute_module:execute|ALUVectorial:ALUV|VectorialMultiplication:VMu" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 10
+Info (12128): Elaborating entity "VectorialDivision" for hierarchy "processors:proce|execute_module:execute|ALUVectorial:ALUV|VectorialDivision:VDi" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 11
+Info (12128): Elaborating entity "Mux8" for hierarchy "processors:proce|execute_module:execute|ALUVectorial:ALUV|Mux8:VM8" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/ALU/Vectorial/ALUVectorial.sv Line: 13
+Info (12128): Elaborating entity "CondUnit" for hierarchy "processors:proce|execute_module:execute|CondUnit:cond_Unit" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/execute_module.sv Line: 19
+Info (12128): Elaborating entity "FlipFlop" for hierarchy "processors:proce|execute_module:execute|CondUnit:cond_Unit|FlipFlop:flipiflopi" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/CondUnit/CondUnit.sv Line: 12
+Info (12128): Elaborating entity "PipelineEx" for hierarchy "processors:proce|PipelineEx:pipeEx" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 77
+Info (12128): Elaborating entity "memory_module" for hierarchy "processors:proce|memory_module:memory" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 79
+Info (12128): Elaborating entity "MemoryController" for hierarchy "processors:proce|memory_module:memory|MemoryController:mc" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/modules/memory_module.sv Line: 7
+Info (12128): Elaborating entity "DataMemory" for hierarchy "processors:proce|memory_module:memory|MemoryController:mc|DataMemory:RAM" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/MemoryController.sv Line: 9
+Warning (10034): Output port "rd" at DataMemory.sv(3) has no driver File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/DataMemory.sv Line: 3
+Info (12128): Elaborating entity "ImageROM" for hierarchy "processors:proce|memory_module:memory|MemoryController:mc|ImageROM:ROM" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/MemoryController.sv Line: 10
+Warning (10034): Output port "rd" at ImageROM.sv(3) has no driver File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/Memories/ImageROM.sv Line: 3
+Info (12128): Elaborating entity "PipelineWB" for hierarchy "processors:proce|PipelineWB:pipewb" File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/processor/processors.sv Line: 92
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "clk" is missing source, defaulting to GND File: C:/Users/skryf/Documents/Arquitectura de Computadores II/Proyecto 2/Diseno-e-Implementacion-de-un-ASIP-vectorial-para-composicion-alfa/SystemVerilog/tests/processor_tb.sv Line: 2
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4796 megabytes
+    Info: Processing ended: Wed May 19 22:39:13 2021
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:35
 
 

@@ -6,5 +6,5 @@ module fetch_module(input clk,rst,jmpSel,input[31:0]ALURes,
 	Mux2 #(32)PCmux(pc_p1,ALURes,jmpSel,next_PC);
 	logic none;
 	Addition #(32)PC_1(curr_pc,32'h1,pc_p1,none);	
-	InstructionMemory instMem(curr_pc,ACIns);
-endmodule
+	InstructionMemory instMem(clk,curr_pc,ACIns);
+endmodule 
