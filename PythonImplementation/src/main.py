@@ -16,11 +16,7 @@ def generacionDegradado(R,G,B,pos,size):
     dR = np.zeros((size,size))
     dG = np.zeros((size,size))
     dB = np.zeros((size,size))
-    # print(deg.shape)
-    Bsize=B/size
-    Gsize=G/size
-    Rsize=R/size
-    print(f"Rsize: {Rsize}, Gsize: {Gsize}, Bsize: {Bsize}")
+
     if(pos=="v"): #horizontal
         for y in range(size):
             for x in range(size):
@@ -42,31 +38,37 @@ def generacionDegradado(R,G,B,pos,size):
     if(pos=="p"):
         for y in range(size):
             for x in range(size):
-                dR[x][y] = int(x-y)
-                dB[x][y] = int(x+y)
-                dG[x][y] = int(x-y)
+                dR[x][y] = int(y)
+                dB[x][y] = int(x)
+                dG[x][y] = int(x+y)
 
     deg = np.zeros((200, 200, 3))
     for y in range(size):
         for x in range(size):
-            deg[x][y][0] = int(dR[x][y] * Rsize)
-            deg[x][y][1] = int(dB[x][y] * Bsize)
-            deg[x][y][2] = int(dG[x][y] * Gsize)
+            deg[x][y][0] = int(dB[x][y] * B / size)
+            deg[x][y][1] = int(dB[x][y] * G / size)
+            deg[x][y][2] = int(dR[x][y] * R / size)
+            if x == 199 and y == 2:
+                print(deg[x][y][0])
+                print(deg[x][y][1])
+                print(deg[x][y][2])
+
     return deg
 
 
 def composicionAlfa(transparenciaDegradado, pixelesDegradado):
-    imagen = cv2.imread("choco.png")
+    imagen = cv2.imread("puppies.jpg")
     resultado = np.zeros((200, 200, 3))
     print(np.shape(degradado))
     print(np.shape(imagen))
-    a = (100-transparenciaDegradado) / 100
-    b = transparenciaDegradado / 100
+    a = (100 - transparenciaDegradado)
+    b = transparenciaDegradado
     for i in range(200):
         for j in range(200):
-            resultado[i][j][0] = int(imagen[i][j][0] * a + degradado[i][j][0] * b)
-            resultado[i][j][1] = int(imagen[i][j][1] * (1 - transparenciaDegradado) + degradado[i][j][1] * transparenciaDegradado)
-            resultado[i][j][2] = int(imagen[i][j][2] * (1 - transparenciaDegradado) + degradado[i][j][2] * transparenciaDegradado)
+            resultado[i][j][0] = int((imagen[i][j][0] * a + degradado[i][j][0] * b) / 100)
+            resultado[i][j][1] = int((imagen[i][j][1] * a + degradado[i][j][1] * b) / 100)
+            resultado[i][j][2] = int((imagen[i][j][2] * a + degradado[i][j][2] * b) / 100)
+            # print(resultado[i][j][2])
 
     cv2.imwrite("deg.jpg", pixelesDegradado)
     cv2.imwrite("holi.jpg", resultado)
@@ -81,13 +83,13 @@ def composicionAlfa(transparenciaDegradado, pixelesDegradado):
             for j in range(200):
                 r = hex(imagen[i + offset][j][0])[2:] if len(hex(imagen[i + offset][j][0])[2:]) == 2 \
                     else ("0" + hex(imagen[i + offset][j][0])[2:])
-                fileR.write(f"{r}\n")
+                fileB.write(f"{r}\n")
                 g = hex(imagen[i + offset][j][1])[2:] if len(hex(imagen[i + offset][j][1])[2:]) == 2 \
                     else ("0" + hex(imagen[i + offset][j][1])[2:])
                 fileG.write(f"{g}\n")
                 b = hex(imagen[i + offset][j][2])[2:] if len(hex(imagen[i + offset][j][2])[2:]) == 2 \
                     else ("0" + hex(imagen[i + offset][j][2])[2:])
-                fileB.write(f"{b}\n")
+                fileR.write(f"{b}\n")
         offset += 50
         fileR.close()
         fileG.close()
